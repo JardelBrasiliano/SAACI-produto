@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SAACI — Escopo do MVP</title>
+<link rel="stylesheet" href="../../shared/base.css">
+</head>
+<body>
+
+<nav class="crumbs"><a href="../../index.html">SAACI</a> › <a href="../README.md">Documentação</a> › Produto</nav>
+<h1>SAACI — Escopo do MVP</h1>
+<div class="subtitle">O que precisa estar funcionando para o lançamento do MVP</div>
+<div class="atualizado">Última atualização: 21/09/2026</div>
+<nav class="siblings">
+  <a href="visao-produto.html">Visão de Produto</a>
+  <span class="atual">Escopo do MVP</span>
+  <a href="requisitos.html">Requisitos</a>
+  <a href="backlog-roadmap.html">Backlog</a>
+  <a href="pesquisa-questionario.html">Pesquisa com Alunos</a>
+</nav>
+
+<div class="box">
+<strong>Fonte de verdade para:</strong> o que entra e o que fica fora do MVP, e por quê.
+Requisito funcional/não funcional detalhado de cada item está em <code>requisitos.html</code>.
+Tudo fora do MVP com racional próprio está em <code>backlog-roadmap.html</code>.
+</div>
+
+<h2>1. Critério de corte</h2>
+<p>
+O planejamento original do projeto reserva uma janela de tempo limitada para todo o produto,
+com uma fase final dedicada a "dashboard e ajustes finais". O MVP é o que precisa estar
+funcionando e testável para o lançamento, não o que seria desejável ter.
+</p>
+
+<h2>2. Dentro do MVP</h2>
+
+<table>
+<tr><th>Módulo</th><th>Escopo</th><th>Origem da decisão</th></tr>
+<tr>
+  <td><span class="txt-accent">Cadastro e login institucional</span></td>
+  <td>Cadastro exclusivo com e-mail institucional, verificação por link, login, logout.</td>
+  <td>Levantamento de requisitos original (RF01–RF07).</td>
+</tr>
+<tr>
+  <td><span class="txt-accent">Recuperação de senha</span></td>
+  <td>Redefinição de senha via e-mail institucional.</td>
+  <td><strong>Promovido de Opcional para MVP:</strong> decisão do usuário durante o bootstrap. O levantamento original (RF08) marcava como opcional. Sem recuperação de senha, o produto tranca o aluno fora da própria conta, o que é inaceitável mesmo em MVP.</td>
+</tr>
+<tr>
+  <td><span class="txt-accent">Perfil com informações do curso</span></td>
+  <td>Departamento, curso, semestre e semestre de início.</td>
+  <td>Levantamento de requisitos original (RF09, RF11).</td>
+</tr>
+<tr>
+  <td><span class="txt-accent">Registro de horas complementares</span></td>
+  <td>Registrar atividade, cálculo automático pela regra do curso.</td>
+  <td>Levantamento de requisitos original (RF13–RF15).</td>
+</tr>
+<tr>
+  <td><span class="txt-accent">Upload de comprovante</span></td>
+  <td>Anexar o certificado/comprovante ao registrar a atividade.</td>
+  <td><strong>Promovido de ausente para MVP:</strong> funcionalidade mais pedida no questionário (33/39) e prevista no cronograma ("Upload de documentos comprobatórios"), mas nunca teve RF no levantamento original. Lacuna fechada em <code>requisitos.html</code>.</td>
+</tr>
+<tr>
+  <td><span class="txt-accent">Painel de progresso</span></td>
+  <td>Total acumulado e progresso por categoria, visível na tela inicial.</td>
+  <td><strong>Promovido de Opcional (RF16) para MVP:</strong> decisão do usuário durante o bootstrap. É o diferencial que a própria pesquisa de mercado do drive/ destaca em negrito como exclusivo do SAACI frente aos quatro concorrentes analisados. Deixá-lo opcional contradiria a tese do produto.</td>
+</tr>
+</table>
+
+<h2>3. Fora do MVP</h2>
+
+<table>
+<tr><th>Módulo</th><th>Motivo do corte</th></tr>
+<tr>
+  <td><span class="txt-danger">Registro de documentos de estágio</span></td>
+  <td>Opcional desde o levantamento original; domínio distinto (regras de estágio, não de AC) que dobraria o escopo de cálculo sem validação de demanda equivalente à de horas complementares.</td>
+</tr>
+<tr>
+  <td><span class="txt-danger">Cardápio do RU colaborativo</span></td>
+  <td>Opcional desde o levantamento original; não tem relação com o problema central (gestão de horas) e depende de adoção coletiva para ter dado útil desde o dia 1.</td>
+</tr>
+<tr>
+  <td><span class="txt-danger">Grade curricular com feedback sintetizado por IA</span></td>
+  <td>Opcional desde o levantamento original; exige volume de feedback acumulado por disciplina para a síntese fazer sentido, o que não existe no dia 1 de um produto novo.</td>
+</tr>
+<tr>
+  <td><span class="txt-danger">Perfil de coordenação / validação institucional</span></td>
+  <td>Decisão do usuário durante o bootstrap: MVP é só do aluno. O cronograma promete "validação pela coordenação" e "painel aluno e coordenação", mas isso exige acordo real com uma coordenação de curso, o que não se resolve no curto prazo. Ver conflito registrado em <code>backlog-roadmap.html</code>.</td>
+</tr>
+<tr>
+  <td><span class="txt-danger">Sugestões de eventos e atividades</span></td>
+  <td>3ª funcionalidade mais pedida no questionário (29/39), sem RF no levantamento original. Decisão do usuário: <strong>não é MVP, mas é marco pós-MVP</strong>, com prioridade alta declarada em <code>backlog-roadmap.html</code> e <code>../roadmap/README.md</code>. Não é backlog indiferenciado.</td>
+</tr>
+<tr>
+  <td><span class="txt-danger">Pontuação de contribuição (gamificação)</span></td>
+  <td>Opcional desde o levantamento original (RF12); depende de o sistema já ter uso ativo para fazer sentido pontuar.</td>
+</tr>
+</table>
+
+<div class="box box-info">
+<strong>Regra geral:</strong> qualquer funcionalidade citada no cronograma original do projeto ou no
+questionário que não tiver RF/RNF correspondente em <code>requisitos.html</code> não existe
+até ser explicitamente adicionada, nunca por suposição.
+</div>
+
+<div class="meta">Documento vivo. Divergência com outro arquivo do repositório resolve pelo mais específico.</div>
+
+</body>
+</html>

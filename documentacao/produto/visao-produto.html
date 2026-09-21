@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SAACI — Visão de Produto</title>
+<link rel="stylesheet" href="../../shared/base.css">
+</head>
+<body>
+
+<nav class="crumbs"><a href="../../index.html">SAACI</a> › <a href="../README.md">Documentação</a> › Produto</nav>
+<h1>SAACI — Visão de Produto</h1>
+<div class="subtitle">Sistema de Apoio Acadêmico Colaborativo do IFCE</div>
+<div class="atualizado">Última atualização: 21/09/2026</div>
+<nav class="siblings">
+  <span class="atual">Visão de Produto</span>
+  <a href="escopo-mvp.html">Escopo do MVP</a>
+  <a href="requisitos.html">Requisitos</a>
+  <a href="backlog-roadmap.html">Backlog</a>
+  <a href="pesquisa-questionario.html">Pesquisa com Alunos</a>
+</nav>
+
+<div class="box">
+<strong>Fonte de verdade para:</strong> problema, público, tese do produto e leitura do
+mercado. Escopo do MVP está em <code>escopo-mvp.html</code>; requisitos detalhados em
+<code>requisitos.html</code>; funcionalidades fora do MVP em <code>backlog-roadmap.html</code>.
+</div>
+
+<h2>1. O problema</h2>
+
+<p>
+Para se formar em cursos superiores no IFCE, o aluno precisa cumprir uma carga horária
+mínima de <strong>atividades complementares</strong>: cursos, palestras, monitorias, eventos.
+O problema não é falta de lugar para guardar certificado. É que <strong>ninguém entende a
+regra</strong>: quais atividades contam, quanto cada uma vale, qual o limite por categoria, e
+como comprovar sem que a coordenação recuse por erro de forma.
+</p>
+
+<p>
+Isso foi validado com um questionário respondido por <strong>39 alunos do IFCE</strong> em
+outubro de 2025. O retrato (dado completo, gráfico por gráfico, em
+<a href="pesquisa-questionario.html">Pesquisa com Alunos</a>):
+</p>
+
+<div class="stat-row">
+  <div class="stat"><div class="n">27/39</div><div class="l">não sabem quais atividades contam</div></div>
+  <div class="stat"><div class="n">27/39</div><div class="l">sentem falta de plataforma clara pra registrar</div></div>
+  <div class="stat"><div class="n">25/39</div><div class="l">nunca tentaram validar nenhuma atividade</div></div>
+  <div class="stat"><div class="n">20/39</div><div class="l">ainda não organizam nada</div></div>
+</div>
+
+<div class="stat-row">
+  <div class="stat"><div class="n">39/39</div><div class="l">usariam a plataforma</div></div>
+  <div class="stat"><div class="n">38/39</div><div class="l">se sentiriam mais motivados com um sistema automatizado</div></div>
+</div>
+
+<p class="fonte">Fonte: SAACI - repostas questionario.xlsx, out. 2025 — dashboard completo em <a href="pesquisa-questionario.html">Pesquisa com Alunos</a>. Arquivo original mantido no Google Drive do mantenedor, fora deste repositório.</p>
+
+<blockquote>
+"No IF do campus Boa Viagem, por exemplo, um certificado de uma palestra que durou 5 horas,
+só vale 1 hora — esses pontos acho interessante bem explicado para o aluno, em cada categoria,
+uma vez que muitas vezes a coordenação coloca os arquivos nos grupos achando que lá está
+esclarecido, quando falta, e por vezes lota eles de mensagens."
+<div class="fonte">— resposta 16 do questionário</div>
+</blockquote>
+
+<blockquote>
+"Já tenho os comprovantes necessários para as 120h do meu curso, porém dá mó preguiça juntar
+tudo, fazer o cálculo, e ainda tenho receio da coordenação não aceitar algumas delas."
+<div class="fonte">— resposta 40 do questionário</div>
+</blockquote>
+
+<h2>2. Persona</h2>
+
+<div class="box">
+<strong>Uma persona só: o aluno que não sabe a regra.</strong> Não existe segmentação por
+semestre. Dos veteranos (7º período ou em fase de conclusão), <strong>12 de 21</strong> também
+não sabem quais atividades contam, quase a mesma proporção dos iniciantes (9 de 12). O
+desconhecimento da regra é transversal e não um sintoma de calouro.
+</div>
+
+<p>
+O único eixo que varia de fato com o semestre é <strong>conhecer a meta total de horas</strong>
+(veterano sabe: 20/21; iniciante não sabe: 8/12). Isso se resolve com uma informação visível
+na tela, não com dois produtos ou dois modos de interface.
+</p>
+
+<h3>Consequência de design</h3>
+<p>
+A orientação sobre a regra ("o que conta, quanto vale, qual o limite") é uma <strong>camada
+embutida no ato de registrar a atividade</strong>. Não é uma tela de onboarding separada, nem
+um tutorial, nem um "modo iniciante". Ver <code>../design-system/principios-ui.html</code>.
+</p>
+
+<h3>Curso-piloto das regras de cálculo</h3>
+<p>
+<strong>Engenharia de Computação</strong> é o curso-piloto: acesso direto ao PPC e à
+coordenação, sem depender de terceiros no curto prazo. <strong>Licenciatura em Teatro</strong>
+entra como segundo curso. É o maior grupo do questionário (18 de 39 respostas) e prova que as
+regras de cálculo são parametrizáveis por curso (ver RF15 em <code>requisitos.html</code>).
+</p>
+
+<table>
+<tr><th>Perfil do curso, nas 39 respostas</th><th>Nº</th></tr>
+<tr><td>Licenciatura em Teatro</td><td>18</td></tr>
+<tr><td>Análise e Desenvolvimento de Sistemas</td><td>9</td></tr>
+<tr><td>Engenharia de Computação</td><td>5</td></tr>
+<tr><td>Lic. Artes Visuais</td><td>2</td></tr>
+<tr><td>Eng. Telecomunicações, Eng. Mecatrônica, Lic. Física, Téc. Manut. Automotiva, outro</td><td>1 cada</td></tr>
+</table>
+
+<h2>3. Tese do produto</h2>
+
+<p>
+O SAACI não se propõe a substituir o sistema acadêmico institucional (matrícula, notas,
+turmas). Ele é a camada centrada no aluno que <strong>orienta antes do envio</strong>: mostra
+a regra, calcula automaticamente e avisa quando um limite é atingido, em vez de ser só um
+repositório de solicitações que a coordenação decifra depois.
+</p>
+
+<h2>4. Leitura de mercado (benchmarking)</h2>
+
+<p>
+Pesquisa realizada com quatro soluções analisadas em seu escopo pleno, para comparação justa
+com o SAACI (que, além do MVP, prevê estágio, cardápio do RU e grade curricular como backlog).
+</p>
+
+<table>
+<tr><th>Critério</th><th>SIGAA (UFC)</th><th>SUAP (IFs)</th><th>PWAC-IFRS</th><th>Sou UFPR</th><th>SAACI</th></tr>
+<tr><td>Tipo</td><td>ERP acadêmico</td><td>ERP dos IFs</td><td>Protótipo de AC</td><td>App de serviços</td><td>Plataforma do aluno</td></tr>
+<tr><td>Gestão de atividades complementares</td><td>Sim</td><td>Sim</td><td>Sim</td><td>Não</td><td>Sim</td></tr>
+<tr><td>Cálculo automático de horas</td><td>Não</td><td>Sim</td><td>Sim</td><td>N/A</td><td>Sim</td></tr>
+<tr><td>Controle de limite por categoria</td><td>Não inf.</td><td>Sim</td><td>Sim</td><td>N/A</td><td>Sim</td></tr>
+<tr><td>Orientação/simulação antes do envio</td><td>Não</td><td>Não</td><td>Parcial</td><td>N/A</td><td><strong>Sim</strong></td></tr>
+<tr><td>Painel visual de progresso</td><td>Não</td><td>Não</td><td>Não</td><td>Não</td><td><strong>Sim</strong></td></tr>
+<tr><td>Foco na experiência do aluno (UX)</td><td>Baixo</td><td>Baixo</td><td>Baixo</td><td>Alto</td><td><strong>Alto</strong></td></tr>
+<tr><td>Situação</td><td>Em produção</td><td>Em produção</td><td>Protótipo (TCC)</td><td>Beta (2025)</td><td>Proposto</td></tr>
+</table>
+<p class="fonte">N/A = fora do escopo da solução. Não inf. = sem informação pública verificável. Fonte: SAACI - pesquisa de mercado.docx. Arquivo original mantido no Google Drive do mantenedor, fora deste repositório.</p>
+
+<h3>Leitura por concorrente</h3>
+<ul>
+<li><strong>SIGAA (UFC):</strong> ERP completo (Java EE). AC é módulo secundário e funciona
+como repositório de solicitações, com pouca orientação prévia, o que gera retrabalho de
+análise.</li>
+<li><strong>SUAP (Rede Federal):</strong> ERP multicampi (Django/PostgreSQL) com forte
+parametrização por matriz, mas ênfase administrativa. Cálculo só no processamento, sem
+simulação prévia.</li>
+<li><strong>PWAC-IFRS:</strong> protótipo de TCC (Java/JSF/PostgreSQL) focado só em AC.
+Calcula automaticamente e impede ultrapassar limite, mas nunca operou institucionalmente e
+não tem perfil do aluno, estágio, RU ou grade curricular.</li>
+<li><strong>Sou UFPR:</strong> app de serviços, não acadêmico, forte em UX e sem nenhum
+fluxo de AC. Cardápio institucional, não colaborativo.</li>
+</ul>
+
+<h3>Conclusão</h3>
+<p>
+Cálculo automático e controle de limite já existem isoladamente (PWAC-IFRS, SUAP); boa UX
+de serviços já existe isoladamente (Sou UFPR). Nenhum desses itens sozinho é diferencial do
+SAACI. O diferencial é reunir, com boa usabilidade, o que hoje está fragmentado: gestão
+orientada de horas, cardápio colaborativo, grade curricular com feedback sintetizado por IA e
+painel visual de progresso: uma combinação ausente em todas as quatro soluções analisadas.
+</p>
+
+<h2>5. Horizonte</h2>
+<p>
+O lançamento do MVP é o <strong>Marco 1</strong>, não o fim do produto. Intenção declarada:
+repositório público no GitHub, seguindo padrões OSS. Veja <code>../roadmap/README.md</code>
+para os marcos além do lançamento.
+</p>
+
+<div class="meta">Documento vivo. Divergência com outro arquivo do repositório resolve pelo mais específico.</div>
+
+</body>
+</html>

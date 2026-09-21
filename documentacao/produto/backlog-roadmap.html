@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SAACI — Backlog</title>
+<link rel="stylesheet" href="../../shared/base.css">
+</head>
+<body>
+
+<nav class="crumbs"><a href="../../index.html">SAACI</a> › <a href="../README.md">Documentação</a> › Produto</nav>
+<h1>SAACI — Backlog</h1>
+<div class="subtitle">Funcionalidades fora do MVP, com racional preservado</div>
+<div class="atualizado">Última atualização: 21/09/2026</div>
+<nav class="siblings">
+  <a href="visao-produto.html">Visão de Produto</a>
+  <a href="escopo-mvp.html">Escopo do MVP</a>
+  <a href="requisitos.html">Requisitos</a>
+  <span class="atual">Backlog</span>
+  <a href="pesquisa-questionario.html">Pesquisa com Alunos</a>
+</nav>
+
+<div class="box">
+<strong>Fonte de verdade para:</strong> tudo que foi considerado e adiado, e por quê. Nada
+aqui é tarefa do roadmap ativo (<code>../roadmap/roadmap.html</code>). É candidato a marco
+futuro, sujeito a nova priorização quando o Marco 1 estiver fechado.
+</div>
+
+<h2>1. Sugestões de eventos e atividades (marco pós-MVP)</h2>
+<p><span class="badge badge-info">Prioridade alta</span></p>
+<p>
+3ª funcionalidade mais pedida do questionário (29 de 39 respostas), sem nenhum RF no
+levantamento original nem no cronograma original do projeto. Decisão do usuário durante o
+bootstrap: não entra no MVP, mas também não fica misturado ao backlog indiferenciado. É o
+próximo marco depois do Marco 1, com prioridade declarada.
+</p>
+<p>
+Escopo a refinar quando a skill <code>saaci-funcionalidade</code> for rodada sobre este item:
+lista de eventos do campus, curadoria (quem publica?), relação com as categorias de RF14 (o
+evento já vem com a conversão de horas prevista?). Nenhuma dessas perguntas está respondida
+ainda. Não presumir.
+</p>
+
+<h2>2. Registro de documentos de estágio</h2>
+<p>Opcional desde o levantamento original (RF18–RF21). Regras de estágio (4h ou 6h diárias,
+cálculo por data de início) são um domínio distinto do cálculo de horas complementares e
+exigem modelagem própria, sem overlap direto com o motor de cálculo do MVP.</p>
+
+<h2>3. Cardápio do RU colaborativo</h2>
+<p>Opcional desde o levantamento original (RF22–RF25). Depende de adoção coletiva para gerar
+dado útil desde o primeiro dia: um cardápio colaborativo vazio não serve a ninguém. Faz mais
+sentido como marco pós-lançamento, quando já existir base de usuários ativa.</p>
+
+<h2>4. Grade curricular com feedback sintetizado por IA</h2>
+<p>Opcional desde o levantamento original (RF26–RF30). Mesmo problema de massa crítica do
+item 3: a síntese por IA exige volume de feedback acumulado por disciplina para não ser
+enganosa com poucos dados. RNF08–RNF10 (moderação, transparência de que é IA) já estão
+registrados em <code>requisitos.html</code> para quando este módulo for retomado.</p>
+
+<h2>5. Perfil de coordenação / validação institucional</h2>
+<div class="box box-danger">
+<strong>Conflito registrado, não resolvido por suposição.</strong> O
+<code>Cronograma de Desenvolvimento - SAACI.pdf</code> (drive/, já descartado) promete, para a
+fase "Desenvolvimento - Módulos complementares" (17 a 30/10/2026): <em>"Upload de documentos
+comprobatórios, cálculo automático de horas, Validação pela coordenação"</em>; e para
+"Dashboard e ajustes finais": <em>"Painel de acompanhamento (aluno e coordenação)"</em>. Nenhum
+dos 30 RFs do levantamento original cobre coordenador como usuário, e RNF04 diz o oposto
+("cada usuário só pode acessar/alterar seus próprios dados"). Duas respostas do questionário
+pediram isso espontaneamente (resposta 39: dashboard por turma para coordenador; resposta 13:
+perfil para professores/orientadores lançarem certificações de extensão).
+</div>
+<p>
+Decisão do usuário durante o bootstrap: <strong>fora do MVP.</strong> O SAACI, no MVP, é a
+camada que orienta o aluno antes do envio. O deferimento continua acontecendo onde já
+acontece hoje, fora do sistema. Entrar com validação institucional exige negociar acesso e
+regras com uma coordenação de curso real, o que não se resolve no curto prazo.
+Candidato natural a marco de continuidade pós-lançamento, junto com a intenção de adoção
+institucional (ver <code>../roadmap/README.md</code>).
+</p>
+
+<h2>6. Pontuação de contribuição (gamificação)</h2>
+<p>Opcional desde o levantamento original (RF12). Depende de uso ativo do sistema para fazer
+sentido pontuar: não há o que gamificar em produto recém-lançado sem base de usuários.</p>
+
+<h2>7. Descartado antes mesmo do bootstrap (registro histórico)</h2>
+<p>
+O levantamento de requisitos original já continha uma seção "Descartados", de uma versão
+anterior do próprio levantamento, preservada aqui por rastreabilidade, não reaberta:
+</p>
+<ul>
+<li><strong>Postagem de provas antigas e trabalhos</strong>, com posts anônimos, curtidas,
+comentários, compartilhamento e tags por disciplina.</li>
+<li>Registro de postagens do usuário associado ao perfil (visualizar/gerenciar).</li>
+</ul>
+<p>
+Já havia sido removido do escopo pelos autores originais antes do bootstrap, sem motivo
+registrado no documento fonte. Não é candidato ativo a nenhum marco; entra aqui só para que a
+decisão anterior não se perca com o descarte do <code>drive/</code>.
+</p>
+
+<div class="meta">Documento vivo. Item promovido daqui para o roadmap ativo precisa de marco com objetivo de negócio e critério de destrave. Ver <code>../roadmap/README.md</code>.</div>
+
+</body>
+</html>

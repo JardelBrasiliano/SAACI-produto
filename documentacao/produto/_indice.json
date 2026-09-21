@@ -1,0 +1,42 @@
+{
+  "pasta": "produto",
+  "descricao": "Problema, escopo, requisitos e backlog do SAACI. Ler antes de qualquer decisão de produto",
+  "atualizado": "2026-09-21",
+  "documentos": [
+    {
+      "arquivo": "visao-produto.html",
+      "titulo": "Visão de Produto",
+      "status": "fechado",
+      "resumo": "Problema (39 alunos, 27/39 não sabem quais atividades contam), persona única (aluno que não sabe a regra), tese (orientar antes do envio), benchmarking com 4 concorrentes.",
+      "ids": []
+    },
+    {
+      "arquivo": "escopo-mvp.html",
+      "titulo": "Escopo do MVP",
+      "status": "fechado",
+      "resumo": "O que entra até 09/11/2026 (cadastro, login, recuperação de senha, perfil, registro com comprovante, cálculo automático, painel de progresso) e o que vai para o backlog.",
+      "ids": []
+    },
+    {
+      "arquivo": "requisitos.html",
+      "titulo": "Requisitos Funcionais e Não Funcionais",
+      "status": "fechado",
+      "resumo": "RF01–RF34 e RNF01–RNF23, reconciliados com o MVP. RF31–RF34 e RNF23 são novos (upload, regra de conversão visível, exclusão de conta/LGPD, acessibilidade). RF08 reclassificado de Opcional para MVP.",
+      "ids": ["RF01-RF34", "RNF01-RNF23"]
+    },
+    {
+      "arquivo": "backlog-roadmap.html",
+      "titulo": "Backlog",
+      "status": "fechado",
+      "resumo": "Estágio, cardápio do RU, grade curricular com IA, coordenação (conflito registrado com o cronograma original), fora do MVP. Sugestões de eventos é marco pós-MVP, prioridade alta.",
+      "ids": []
+    },
+    {
+      "arquivo": "pesquisa-questionario.html",
+      "titulo": "Pesquisa com Alunos",
+      "status": "fechado",
+      "resumo": "Dashboard visual das 39 respostas do questionário Aluno IF (out. 2025): perfil, conhecimento da regra, dificuldades, validação de demanda e funcionalidades desejadas, com recorte iniciante x veterano.",
+      "ids": []
+    }
+  ]
+}

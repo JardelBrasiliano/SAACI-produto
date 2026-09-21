@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SAACI</title>
+<meta name="description" content="SAACI: Sistema de Apoio Acadêmico Colaborativo do IFCE. Fundação de produto, design e processo.">
+<link rel="stylesheet" href="shared/base.css">
+<style>
+  .menu { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin: 24px 0 40px; }
+  @media (max-width: 560px) { .menu { grid-template-columns: 1fr; } }
+  .menu a { display: block; border: 1px solid var(--line); border-radius: 8px; padding: 16px 18px; text-decoration: none; color: var(--ink); }
+  .menu a:hover { border-color: var(--accent); }
+  .menu .t { font-weight: 700; margin-bottom: 4px; }
+  .menu .d { font-size: 0.85rem; color: var(--muted); }
+
+  .destaque { display: block; text-decoration: none; color: var(--ink); border: 2px solid var(--info); border-radius: 10px; padding: 20px 22px; margin: 28px 0; background: var(--info-bg); }
+  .destaque:hover { border-color: var(--ink); }
+  .destaque .tag { display: inline-block; font-size: 0.7rem; font-weight: 700; letter-spacing: 0.04em; text-transform: uppercase; color: var(--info); margin-bottom: 6px; }
+  .destaque .t { font-weight: 700; font-size: 1.15rem; margin-bottom: 4px; }
+  .destaque .d { font-size: 0.88rem; color: var(--muted); margin-bottom: 10px; }
+  .destaque .cta { font-size: 0.85rem; font-weight: 700; color: var(--info); }
+</style>
+</head>
+<body>
+
+<h1>SAACI</h1>
+<div class="subtitle">Sistema de Apoio Acadêmico Colaborativo do IFCE</div>
+<div class="atualizado">Última atualização: 21/09/2026</div>
+
+<div class="box">
+Para se formar, o aluno do IFCE precisa cumprir horas de atividades complementares, mas não
+sabe a regra: o que conta, quanto vale, qual o limite por categoria. Validado com 39 alunos:
+27/39 não sabem quais atividades contam, 39/39 usariam uma plataforma que resolvesse isso. O
+SAACI é a camada que <strong>orienta antes do envio</strong>, em vez de deixar o aluno
+descobrir a regra quando a coordenação já recusou.
+</div>
+
+<a class="destaque" href="documentacao/roadmap/roadmap.html#marco-0">
+  <div class="tag">Comece por aqui</div>
+  <div class="t">Trilha de revisão do Marco 0</div>
+  <div class="d">Todo documento abaixo foi criado neste bootstrap sem revisão sua. Esta trilha
+  organiza o que falta revisar em cada um, com dependência entre atividades e o comando pronto
+  para rodar em cada nó.</div>
+  <span class="cta">Abrir a trilha →</span>
+</a>
+
+<div class="menu">
+  <a href="documentacao/produto/visao-produto.html">
+    <div class="t">Produto</div>
+    <div class="d">Problema, escopo do MVP, requisitos, backlog</div>
+  </a>
+  <a href="documentacao/marca/identidade-marca.md">
+    <div class="t">Marca</div>
+    <div class="d">Nome, tom de voz, promessa</div>
+  </a>
+  <a href="documentacao/design-system/principios-ui.html">
+    <div class="t">Design System</div>
+    <div class="d">Princípios de UI, escrita de interface, estados obrigatórios</div>
+  </a>
+  <a href="documentacao/roadmap/roadmap.html">
+    <div class="t">Roadmap</div>
+    <div class="d">Racional de negócio e trilha executável, por marco</div>
+  </a>
+  <a href="README.md">
+    <div class="t">README do repositório</div>
+    <div class="d">Como este projeto está organizado, como contribuir</div>
+  </a>
+  <a href="TODO/pendencias.md">
+    <div class="t">Código-fonte: ainda não existe</div>
+    <div class="d">Repositório de desenvolvimento será criado à parte. Ver pendências</div>
+  </a>
+</div>
+
+<div class="meta">Página de entrada do GitHub Pages. A fonte de verdade de cada tema continua sendo o documento em <code>documentacao/</code>, nunca esta página.</div>
+
+</body>
+</html>

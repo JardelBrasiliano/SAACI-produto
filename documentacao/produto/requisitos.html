@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SAACI — Requisitos</title>
+<link rel="stylesheet" href="../../shared/base.css">
+</head>
+<body>
+
+<nav class="crumbs"><a href="../../index.html">SAACI</a> › <a href="../README.md">Documentação</a> › Produto</nav>
+<h1>SAACI — Requisitos Funcionais e Não Funcionais</h1>
+<div class="subtitle">Documento derivado do levantamento original, reconciliado com o escopo do MVP e as lacunas fechadas no bootstrap</div>
+<div class="atualizado">Última atualização: 21/09/2026</div>
+<nav class="siblings">
+  <a href="visao-produto.html">Visão de Produto</a>
+  <a href="escopo-mvp.html">Escopo do MVP</a>
+  <span class="atual">Requisitos</span>
+  <a href="backlog-roadmap.html">Backlog</a>
+  <a href="pesquisa-questionario.html">Pesquisa com Alunos</a>
+</nav>
+
+<div class="box">
+<strong>Fonte de verdade para:</strong> requisito específico, numerado, rastreável. Decisão de
+o-que-entra-no-MVP em nível de módulo está em <code>escopo-mvp.html</code>. Legenda:
+<span class="badge badge-info">MVP</span> obrigatório para o lançamento ·
+<span class="badge badge-warn">Opcional</span> desejável, não bloqueante ·
+<span class="badge badge-purple">Novo</span> requisito criado durante o bootstrap, sem RF original correspondente.
+</div>
+
+<h2>1. Requisitos Funcionais</h2>
+
+<h3>1.1 Cadastro e Login</h3>
+<table>
+<tr><th>ID</th><th>Requisito</th><th>Escopo</th></tr>
+<tr><td>RF01</td><td>O sistema deve permitir o cadastro exclusivamente com e-mail institucional do IF.</td><td><span class="badge badge-info">MVP</span></td></tr>
+<tr><td>RF02</td><td>O sistema deve validar o domínio do e-mail, rejeitando e-mails não institucionais.</td><td><span class="badge badge-info">MVP</span></td></tr>
+<tr><td>RF03</td><td>O sistema deve enviar um link de confirmação ao e-mail após o cadastro.</td><td><span class="badge badge-info">MVP</span></td></tr>
+<tr><td>RF04</td><td>O sistema deve ativar a conta somente após a confirmação do e-mail.</td><td><span class="badge badge-info">MVP</span></td></tr>
+<tr><td>RF05</td><td>O sistema deve bloquear o acesso de contas não verificadas.</td><td><span class="badge badge-info">MVP</span></td></tr>
+<tr><td>RF06</td><td>O sistema deve permitir o login de usuários com conta verificada.</td><td><span class="badge badge-info">MVP</span></td></tr>
+<tr><td>RF07</td><td>O sistema deve permitir o encerramento da sessão (logout).</td><td><span class="badge badge-info">MVP</span></td></tr>
+<tr><td>RF08</td><td>O sistema deve permitir recuperação/redefinição de senha via e-mail institucional.</td><td><span class="badge badge-info">MVP</span></td></tr>
+</table>
+<p class="box" style="font-size:.86rem">
+<strong>RF08 reclassificado.</strong> Estava marcado <em>Opcional</em> em
+<code>SAACI - rf e rnf.docx</code> (arquivo mantido no Google Drive do mantenedor, fora deste
+repositório). Decisão do usuário durante o bootstrap: promovido a MVP. Sem recuperação de senha, um aluno que esquece a senha fica
+permanentemente fora da própria conta, o que não é aceitável nem na primeira versão.
+</p>
+
+<h3>1.2 Perfil com Informações do Curso</h3>
+<table>
+<tr><th>ID</th><th>Requisito</th><th>Escopo</th></tr>
+<tr><td>RF09</td><td>O sistema deve registrar e exibir as informações do curso do usuário (departamento, curso e semestre).</td><td><span class="badge badge-info">MVP</span></td></tr>
+<tr><td>RF10</td><td>O sistema deve permitir a edição das informações do perfil.</td><td><span class="badge badge-warn">Opcional</span></td></tr>
+<tr><td>RF11</td><td>O sistema deve registrar e exibir o semestre de início do usuário.</td><td><span class="badge badge-info">MVP</span></td></tr>
+<tr><td>RF12</td><td>O sistema deve calcular e exibir a pontuação de contribuição do usuário.</td><td><span class="badge badge-warn">Opcional</span></td></tr>
+</table>
+
+<h3>1.3 Registro de Horas Complementares</h3>
+<table>
+<tr><th>ID</th><th>Requisito</th><th>Escopo</th></tr>
+<tr><td>RF13</td><td>O sistema deve permitir que o usuário registre suas horas complementares.</td><td><span class="badge badge-info">MVP</span></td></tr>
+<tr><td>RF14</td><td>O sistema deve calcular automaticamente as horas com base nas regras da instituição ou do curso.</td><td><span class="badge badge-info">MVP</span></td></tr>
+<tr><td>RF15</td><td>O sistema deve manter as regras de cálculo por curso, permitindo diferentes critérios (parametrização por matriz/curso, ver RNF21). Curso-piloto: Engenharia de Computação. Segundo curso para provar a parametrização: Licenciatura em Teatro.</td><td><span class="badge badge-info">MVP</span></td></tr>
+<tr><td>RF16</td><td>O sistema deve exibir o total acumulado e o progresso em relação à carga horária exigida, por categoria.</td><td><span class="badge badge-info">MVP</span></td></tr>
+<tr><td>RF17</td><td>O sistema deve permitir visualizar, editar e remover os registros de horas.</td><td><span class="badge badge-warn">Opcional</span></td></tr>
+<tr><td>RF31</td><td>O sistema deve permitir anexar um arquivo de comprovante (certificado) ao registrar uma atividade.</td><td><span class="badge badge-info">MVP</span> <span class="badge badge-purple">Novo</span></td></tr>
+<tr><td>RF32</td><td>O sistema deve exibir ao aluno, antes do envio, a regra de conversão aplicada ao tipo de atividade escolhido (ex.: "5h de palestra = 1h computada"), evitando que ele descubra a proporção só depois de registrar.</td><td><span class="badge badge-info">MVP</span> <span class="badge badge-purple">Novo</span></td></tr>
+</table>
+<div class="box box-purple">
+<strong>RF31 e RF32 são requisitos novos, sem RF original correspondente.</strong>
+RF31 fecha a lacuna entre o levantamento original (que nunca previu upload) e o pedido mais
+comum do questionário (33/39, "registro de atividade com anexo de comprovante") e o próprio
+cronograma original do projeto ("Upload de documentos comprobatórios"). RF32 fecha a lacuna descrita
+literalmente na resposta 16 do questionário: a regra de proporção (ex.: palestra de 5h só
+valer 1h) é hoje invisível ao aluno até a coordenação recusar o pedido. O SAACI existe para
+evitar exatamente isso.
+</div>
+
+<h3>1.4 Conta e Dados Pessoais (LGPD)</h3>
+<table>
+<tr><th>ID</th><th>Requisito</th><th>Escopo</th></tr>
+<tr><td>RF33</td><td>O sistema deve permitir que o usuário exclua a própria conta.</td><td><span class="badge badge-info">MVP</span> <span class="badge badge-purple">Novo</span></td></tr>
+<tr><td>RF34</td><td>Antes de excluir a conta, o sistema deve oferecer a opção de baixar os dados já armazenados (certificados e registros de horas).</td><td><span class="badge badge-warn">Opcional</span> <span class="badge badge-purple">Novo</span></td></tr>
+</table>
+<div class="box box-purple">
+RF33/RF34 são novos. Pedido explicitamente pela resposta 16 do questionário ("editar e excluir
+informações pessoais... e todos os dados ligados a ela... poderia adicionar para caso a pessoa,
+ao escolher deletar a conta, se quer ou não baixar os dados já armazenados") e exigido pela
+LGPD (ver RNF05/RNF06). Sem RF33 o sistema coleta dado pessoal sem via de saída, o que viola
+minimização e direito de exclusão.
+</div>
+
+<h2>2. Backlog: fora do MVP, documentado em <code>backlog-roadmap.html</code></h2>
+<p>Os RFs a seguir permanecem no levantamento original mas não fazem parte do MVP. Não foram
+apagados. Continuam numerados e rastreáveis, e reaparecem com racional próprio no backlog.</p>
+<table>
+<tr><th>Módulo</th><th>IDs originais</th></tr>
+<tr><td>Registro de Documentos de Estágio</td><td>RF18–RF21</td></tr>
+<tr><td>Cardápio do RU a partir da Colaboração dos Alunos</td><td>RF22–RF25</td></tr>
+<tr><td>Grade Curricular com Feedback por IA</td><td>RF26–RF30</td></tr>
+</table>
+
+<h2>3. Requisitos Não Funcionais</h2>
+
+<h3>3.1 Segurança</h3>
+<table>
+<tr><th>ID</th><th>Requisito</th><th>Aplica-se a</th></tr>
+<tr><td>RNF01</td><td>As senhas devem ser armazenadas com hash e salt, nunca em texto puro.</td><td>Geral</td></tr>
+<tr><td>RNF02</td><td>Toda comunicação entre cliente e servidor deve ocorrer por HTTPS.</td><td>Geral</td></tr>
+<tr><td>RNF03</td><td>O link de confirmação de e-mail deve ter validade limitada e ser de uso único.</td><td>Geral</td></tr>
+<tr><td>RNF04</td><td>O acesso deve exigir autenticação; cada usuário só pode acessar/alterar seus próprios dados.</td><td>Geral</td></tr>
+</table>
+
+<h3>3.2 Privacidade e Conformidade</h3>
+<table>
+<tr><th>ID</th><th>Requisito</th><th>Aplica-se a</th></tr>
+<tr><td>RNF05</td><td>O tratamento de dados pessoais deve estar em conformidade com a LGPD (Lei nº 13.709/2018).</td><td>Geral</td></tr>
+<tr><td>RNF06</td><td>O sistema deve coletar apenas os dados necessários (minimização de dados).</td><td>Geral</td></tr>
+<tr><td>RNF07</td><td>Os feedbacks de disciplinas devem ser exibidos apenas de forma sintetizada, sem identificar o autor.</td><td>Backlog</td></tr>
+</table>
+
+<h3>3.3 Inteligência Artificial, Feedback de Disciplinas (backlog)</h3>
+<table>
+<tr><th>ID</th><th>Requisito</th><th>Aplica-se a</th></tr>
+<tr><td>RNF08</td><td>A síntese gerada por IA deve basear-se exclusivamente nos feedbacks registrados pelos alunos.</td><td>Backlog</td></tr>
+<tr><td>RNF09</td><td>O sistema deve moderar/filtrar conteúdo ofensivo ou impróprio nos feedbacks antes da síntese.</td><td>Backlog</td></tr>
+<tr><td>RNF10</td><td>Deve ficar claro ao usuário que o resumo é gerado por IA e pode conter imprecisões.</td><td>Backlog</td></tr>
+</table>
+
+<h3>3.4 Qualidade dos Dados Colaborativos (backlog)</h3>
+<table>
+<tr><th>ID</th><th>Requisito</th><th>Aplica-se a</th></tr>
+<tr><td>RNF11</td><td>O cardápio colaborativo deve possuir mecanismos de validação que garantam a confiabilidade das informações.</td><td>Backlog</td></tr>
+</table>
+
+<h3>3.5 Usabilidade e Acessibilidade</h3>
+<table>
+<tr><th>ID</th><th>Requisito</th><th>Aplica-se a</th></tr>
+<tr><td>RNF12</td><td>A interface deve ser intuitiva, permitindo concluir as tarefas principais sem treinamento.</td><td>Geral</td></tr>
+<tr><td>RNF13</td><td>As mensagens de erro devem ser claras e orientar o usuário sobre como corrigir a ação.</td><td>Geral</td></tr>
+<tr><td>RNF23</td><td>A interface deve considerar usuários com dificuldade de acesso à tecnologia e neurodivergentes, evitando jargão de sistema e fluxos com etapas escondidas.</td><td>Geral <span class="badge badge-purple">Novo</span></td></tr>
+</table>
+<div class="box box-purple">
+RNF23 é novo. Pedido explicitamente pelas respostas 16 e 35 do questionário: a 35 nomeia
+"pessoas neuroatípicas" e "pessoas que têm dificuldade com acesso a tecnologia" como parte do
+público real. Detalhado em <code>../design-system/principios-ui.html</code>.
+</div>
+
+<h3>3.6 Desempenho</h3>
+<table>
+<tr><th>ID</th><th>Requisito</th><th>Aplica-se a</th></tr>
+<tr><td>RNF14</td><td>As telas principais devem carregar em até 3 segundos em condições normais de rede.</td><td>Geral</td></tr>
+<tr><td>RNF15</td><td>O e-mail de verificação deve ser disparado em até 1 minuto após o cadastro.</td><td>Geral</td></tr>
+<tr><td>RNF16</td><td>A geração da síntese por IA deve ocorrer em tempo aceitável, sem travar a navegação.</td><td>Backlog</td></tr>
+</table>
+
+<h3>3.7 Compatibilidade e Portabilidade</h3>
+<table>
+<tr><th>ID</th><th>Requisito</th><th>Aplica-se a</th></tr>
+<tr><td>RNF17</td><td>A interface deve ser responsiva, funcionando em dispositivos desktop e mobile.</td><td>Geral</td></tr>
+<tr><td>RNF18</td><td>O sistema deve ser compatível com as versões atuais dos principais navegadores.</td><td>Geral</td></tr>
+</table>
+
+<h3>3.8 Disponibilidade e Confiabilidade</h3>
+<table>
+<tr><th>ID</th><th>Requisito</th><th>Aplica-se a</th></tr>
+<tr><td>RNF19</td><td>O sistema deve ter meta de disponibilidade adequada ao contexto acadêmico (ex.: ≥ 99% no horário letivo).</td><td>Geral</td></tr>
+<tr><td>RNF20</td><td>O cálculo de horas deve produzir resultados consistentes e reproduzíveis.</td><td>Geral</td></tr>
+</table>
+
+<h3>3.9 Manutenibilidade e Integração</h3>
+<table>
+<tr><th>ID</th><th>Requisito</th><th>Aplica-se a</th></tr>
+<tr><td>RNF21</td><td>As regras de cálculo de horas por curso devem ser parametrizáveis, sem alterar o código-fonte.</td><td>Geral</td></tr>
+<tr><td>RNF22</td><td>Quando possível, os dados de grade curricular devem ser integrados (somente leitura) ao sistema acadêmico oficial, evitando divergências.</td><td>Backlog</td></tr>
+</table>
+
+<div class="meta">
+Documento base para validação técnica quando o repositório de desenvolvimento nascer. Metas
+numéricas (tempos, disponibilidade) são pontos de partida do levantamento original, ainda não
+ajustadas à arquitetura real. Documento vivo; divergência resolve pelo mais específico.
+</div>
+
+</body>
+</html>

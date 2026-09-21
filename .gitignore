@@ -1,0 +1,17 @@
+# Pasta temporária de contexto inicial — nunca versionada (contém material bruto do bootstrap)
+drive/
+
+# Node (tooling: Husky, Prettier, commitlint)
+node_modules/
+npm-debug.log*
+
+# Sistema
+.DS_Store
+Thumbs.db
+
+# Editor
+.vscode/*
+!.vscode/extensions.json
+
+# Cache local de ferramenta do editor (gerado automaticamente, não é conteúdo do repositório)
+.impeccable/

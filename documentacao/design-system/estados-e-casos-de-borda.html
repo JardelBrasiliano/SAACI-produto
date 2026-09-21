@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SAACI — Estados e Casos de Borda</title>
+<link rel="stylesheet" href="../../shared/base.css">
+</head>
+<body>
+
+<nav class="crumbs"><a href="../../index.html">SAACI</a> › <a href="../README.md">Documentação</a> › Design System</nav>
+<h1>SAACI — Estados e Casos de Borda</h1>
+<div class="subtitle">O que toda tela precisa prever, além do caminho feliz</div>
+<div class="atualizado">Última atualização: 21/09/2026</div>
+<nav class="siblings">
+  <a href="principios-ui.html">Princípios de UI</a>
+  <a href="escrita-de-interface.html">Escrita de Interface</a>
+  <span class="atual">Estados e Casos de Borda</span>
+  <a href="tokens-visuais.md">Tokens Visuais (rascunho)</a>
+  <a href="referencias-visuais.md">Referências Visuais (rascunho)</a>
+</nav>
+
+<div class="box">
+<strong>Fonte de verdade para:</strong> os 4 estados obrigatórios de qualquer tela (consumidos
+por <code>saaci-prompt-tela</code> em todo prompt gerado) e os casos de borda específicos do
+domínio do SAACI. Regra de escrita de cada mensagem está em
+<code>escrita-de-interface.html</code>.
+</div>
+
+<h2>1. Os 4 estados obrigatórios</h2>
+<p>Todo prompt gerado por <code>saaci-prompt-tela</code> precisa cobrir estes quatro, sem
+exceção. A ausência de um deles é falha da skill, não escolha de escopo.</p>
+
+<div class="estado">
+<div class="n">Estado 1</div>
+<h3>Vazio</h3>
+<p>Aluno recém-cadastrado, sem nenhuma atividade registrada. Não é "tela quebrada sem dado", e
+sim oportunidade de reforçar o Princípio 1 (orientação embutida): mostrar a meta total do
+curso e convidar ao primeiro registro, não só um espaço em branco com "nenhum item".</p>
+</div>
+
+<div class="estado">
+<div class="n">Estado 2</div>
+<h3>Erro de conexão</h3>
+<p>Falha ao carregar ou ao enviar (ex.: upload de comprovante cai no meio). Mensagem diz o que
+falhou e se o que já foi digitado ou anexado ficou perdido ou está salvo. Nunca deixar o aluno
+sem saber se precisa repetir o formulário inteiro.</p>
+</div>
+
+<div class="estado">
+<div class="n">Estado 3</div>
+<h3>Texto longo</h3>
+<p>Nome de atividade, nome de instituição emissora do certificado, ou observação do aluno
+excedendo o espaço da tela, comum em cursos com nome extenso (ex.: "Curso de Extensão em
+Libras para Profissionais da Educação: Módulo II"). Truncar com reticências e permitir ver
+completo, nunca quebrar o layout do cartão.</p>
+</div>
+
+<div class="estado">
+<div class="n">Estado 4</div>
+<h3>Campo obrigatório</h3>
+<p>Tentativa de enviar sem comprovante anexado (RF31) ou sem categoria escolhida. Mensagem
+aponta o campo específico, nunca um erro genérico de formulário (ver exemplo em
+<code>escrita-de-interface.html</code>).</p>
+</div>
+
+<h2>2. Casos de borda do domínio</h2>
+<p>Específicos do SAACI, forçados pela skill <code>saaci-fluxo</code> ao desenhar cada módulo.
+Nenhum fluxo é considerado fechado sem passar por eles.</p>
+
+<table>
+<tr><th>Caso</th><th>O que o SAACI precisa fazer</th></tr>
+<tr>
+  <td>Categoria já atingiu o limite (RF14/RF16)</td>
+  <td>Deixar claro <em>antes</em> do envio que a atividade não vai contar ali. RF32 existe
+  exatamente para isso, e a tela pode sugerir se ela cabe em outra categoria, quando
+  aplicável.</td>
+</tr>
+<tr>
+  <td>Certificado com carga horária desproporcional (ex.: palestra de 5h que só vale 1h)</td>
+  <td>Mostrar a regra de conversão antes do envio (RF32). É o caso citado literalmente na
+  resposta 16 do questionário original.</td>
+</tr>
+<tr>
+  <td>Atividade sem categoria clara para o aluno</td>
+  <td>Nunca travar o formulário sem saída. Oferecer "não sei qual categoria" como opção
+  válida que segue para revisão, em vez de forçar uma escolha errada.</td>
+</tr>
+<tr>
+  <td>Aluno troca de curso (Eng. Computação → outro)</td>
+  <td>Regras de cálculo são por curso (RF15/RNF21). Decisão de o que acontece com horas já
+  registradas no curso anterior ainda não está fechada. Registrar em
+  <code>../../TODO/pendencias.md</code> quando a skill <code>saaci-fluxo</code> chegar no
+  módulo de perfil.</td>
+</tr>
+<tr>
+  <td>Exclusão de conta com atividades pendentes de revisão (RF33)</td>
+  <td>Oferecer download dos dados antes da exclusão (RF34). Não apagar comprovante que o
+  aluno pode precisar fora do sistema.</td>
+</tr>
+<tr>
+  <td>Arquivo de comprovante grande ou em formato não esperado</td>
+  <td>Ainda não há RF de formato ou tamanho máximo de upload. Pendência a fechar quando RF31
+  for detalhado tecnicamente no repositório de desenvolvimento.</td>
+</tr>
+</table>
+
+<div class="meta">Documento vivo. Novo caso de borda identificado durante o desenho de um fluxo entra aqui, não só no arquivo do fluxo específico.</div>
+
+</body>
+</html>

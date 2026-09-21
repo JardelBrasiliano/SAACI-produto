@@ -1,0 +1,137 @@
+/*
+  SAACI — folha de estilo compartilhada por todo documento HTML "fechado" em documentacao/.
+  Ferramental de apoio, não é conteúdo — nunca decide nada sobre o produto.
+  Referenciada via <link rel="stylesheet" href="../../shared/base.css">. Nome sem "_" no
+  início de propósito — GitHub Pages (Jekyll) ignora por padrão pastas prefixadas com "_".
+*/
+
+:root {
+  --ink: #1a1a2e;
+  --muted: #5a5a72;
+  --line: #e2e2ea;
+  --bg: #fdfdfc;
+
+  /* Verde e vermelho: cor oficial da Rede Federal (Manual de Uso da Marca dos Institutos
+     Federais, Portaria SETEC nº 31/2015 — redefederal.mec.gov.br/images/pdf/manual.pdf).
+     Verde: RGB(50,160,65) / CMYK(75,0,100,15) / Pantone 362 C.
+     Vermelho: RGB(200,25,30) / CMYK(0,100,100,15) / Pantone 187 C.
+     Azul, âmbar e roxo abaixo são escolha própria (o manual não define paleta semântica de
+     UI) — permanecem proposta, a validar como o resto de tokens-visuais. */
+  --accent: #2f9e41;      /* progresso, sucesso, dentro do escopo — verde oficial (preenchimento, borda) */
+  --accent-text: #217530; /* mesmo matiz, mais escuro — só p/ texto: #2f9e41 como texto fica
+                              3,0–3,4:1 contra fundo claro, abaixo do mínimo AA (4,5:1) */
+  --accent-bg: #e7f5ea;
+  --info: #1f5c8a;        /* MVP, ação primária, prioridade alta — proposta própria */
+  --info-bg: #e8f2fa;
+  --warn: #8a5a00;        /* opcional, pendente, atenção — proposta própria */
+  --warn-bg: #fdf1e0;
+  --danger: #cd191e;      /* conflito, erro real, fora do escopo — vermelho oficial */
+  --danger-bg: #fbeaea;
+  --purple: #7a2d8a;      /* requisito/decisão novo(a) no bootstrap — proposta própria */
+  --purple-bg: #f3e8f7;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 24px 24px 96px;
+  color: var(--ink);
+  background: var(--bg);
+  line-height: 1.6;
+}
+
+/* Navegação — breadcrumb + docs irmãos da mesma pasta */
+nav.crumbs {
+  font-size: 0.82rem;
+  color: var(--muted);
+  margin-bottom: 8px;
+}
+nav.crumbs a { color: var(--info); text-decoration: none; }
+nav.crumbs a:hover { text-decoration: underline; }
+nav.siblings {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px 14px;
+  font-size: 0.82rem;
+  margin: 10px 0 28px;
+  padding: 10px 14px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: #f7f7fa;
+}
+nav.siblings a { color: var(--ink); text-decoration: none; }
+nav.siblings a:hover { color: var(--info); text-decoration: underline; }
+nav.siblings .atual { color: var(--muted); font-style: italic; }
+
+h1 { font-size: 1.8rem; border-bottom: 3px solid var(--ink); padding-bottom: 12px; margin-bottom: 4px; }
+.subtitle { color: var(--muted); font-size: 1rem; margin-bottom: 8px; }
+.atualizado { font-size: 0.78rem; color: var(--muted); margin-bottom: 28px; }
+
+h2 { font-size: 1.3rem; margin-top: 44px; color: var(--accent-text); border-bottom: 2px solid var(--line); padding-bottom: 6px; }
+h3 { font-size: 1.02rem; margin-top: 24px; }
+p { margin: 12px 0; }
+
+table { width: 100%; border-collapse: collapse; margin: 12px 0; font-size: 0.9rem; }
+th, td { border: 1px solid var(--line); padding: 7px 9px; text-align: left; vertical-align: top; }
+th { background: #f4f4f8; }
+
+code { background: #f0f0f4; padding: 1px 6px; border-radius: 4px; font-size: 0.88em; }
+blockquote { border-left: 4px solid var(--line); margin: 16px 0; padding: 6px 16px; color: var(--muted); font-style: italic; }
+ul { padding-left: 22px; }
+li { margin: 4px 0; }
+
+.fonte { font-size: 0.8rem; color: var(--muted); font-style: italic; margin-top: 4px; }
+.meta { font-size: 0.85rem; color: var(--muted); border-top: 1px solid var(--line); margin-top: 56px; padding-top: 16px; }
+
+/* Badges de status */
+.badge {
+  display: inline-block;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  padding: 2px 8px;
+  border-radius: 4px;
+}
+.badge-accent { background: var(--accent-bg); color: var(--accent-text); }
+.badge-info   { background: var(--info-bg); color: var(--info); }
+.badge-warn   { background: var(--warn-bg); color: var(--warn); }
+.badge-danger { background: var(--danger-bg); color: var(--danger); }
+.badge-purple { background: var(--purple-bg); color: var(--purple); }
+
+/* Caixas de destaque */
+.box {
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 16px 20px;
+  margin: 16px 0;
+  background: #fafafa;
+}
+.box-accent { background: var(--accent-bg); border-color: #a7cdb2; }
+.box-info   { background: var(--info-bg); border-color: #a9cbe3; }
+.box-warn   { background: var(--warn-bg); border-color: #e8c98a; }
+.box-danger { background: var(--danger-bg); border-color: #e0a3a3; }
+.box-purple { background: var(--purple-bg); border-color: #d3aee0; }
+
+/* Texto inline de destaque (usado em tabelas dentro/fora de escopo) */
+.txt-accent { color: var(--accent-text); font-weight: 700; }
+.txt-danger { color: var(--danger); font-weight: 700; }
+
+/* Estatística em destaque (usado em visao-produto) */
+.stat-row { display: flex; gap: 12px; flex-wrap: wrap; margin: 16px 0; }
+.stat { background: var(--accent-bg); border-radius: 8px; padding: 12px 16px; flex: 1; min-width: 150px; }
+.stat .n { font-size: 1.6rem; font-weight: 700; color: var(--accent-text); }
+.stat .l { font-size: 0.78rem; color: var(--muted); }
+
+/* Cartão de princípio (usado em principios-ui) e de estado (usado em estados-e-casos-de-borda) */
+.principio, .estado { border: 1px solid var(--line); border-radius: 8px; padding: 18px 20px; margin: 18px 0; }
+.principio .n, .estado .n { font-size: 0.75rem; color: var(--accent-text); font-weight: 700; text-transform: uppercase; letter-spacing: 0.04em; }
+
+/* Amostra de cor (usado em tokens-visuais, se convertido de volta a HTML no futuro) */
+.swatches { display: flex; gap: 10px; flex-wrap: wrap; margin: 14px 0; }
+.sw { width: 110px; }
+.sw .chip { height: 56px; border-radius: 8px; border: 1px solid var(--line); }
+.sw .lbl { font-size: 0.74rem; color: var(--muted); margin-top: 4px; }

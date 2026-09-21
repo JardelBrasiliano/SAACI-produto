@@ -1,0 +1,42 @@
+{
+  "pasta": "design-system",
+  "descricao": "Princípios de UI, escrita de interface, estados obrigatórios e tokens visuais",
+  "atualizado": "2026-09-21",
+  "documentos": [
+    {
+      "arquivo": "principios-ui.html",
+      "titulo": "Princípios de UI",
+      "status": "fechado",
+      "resumo": "4 princípios: orientação embutida (nunca separada), mobile-first sem meia versão, acessível a quem tem dificuldade com tecnologia (RNF23), erro sempre com próximo passo.",
+      "ids": []
+    },
+    {
+      "arquivo": "escrita-de-interface.html",
+      "titulo": "Escrita de Interface",
+      "status": "fechado",
+      "resumo": "Linguagem Simples (padrão gov.br) aplicada ao domínio, sem vício de escrita de IA. Regras práticas + tabela antes/depois. Depende do glossário para vocabulário de domínio; checklist operacional completo em .claude/skills/saaci-copy/references/.",
+      "ids": []
+    },
+    {
+      "arquivo": "estados-e-casos-de-borda.html",
+      "titulo": "Estados e Casos de Borda",
+      "status": "fechado",
+      "resumo": "4 estados obrigatórios (vazio, erro de conexão, texto longo, campo obrigatório) + 6 casos de borda específicos do domínio SAACI.",
+      "ids": []
+    },
+    {
+      "arquivo": "tokens-visuais.md",
+      "titulo": "Tokens Visuais",
+      "status": "rascunho",
+      "resumo": "Verde (#2f9e41) e vermelho (#cd191e) institucionais têm fonte oficial (Manual da Marca dos Institutos Federais, Portaria SETEC 31/2015). Azul/âmbar/roxo e tipografia/espaçamento são proposta própria, não validada.",
+      "ids": []
+    },
+    {
+      "arquivo": "referencias-visuais.md",
+      "titulo": "Referências Visuais",
+      "status": "rascunho",
+      "resumo": "Vazio por decisão consciente. Nenhuma referência visual real veio do drive/. Aguardando o usuário trazer print/link real.",
+      "ids": []
+    }
+  ]
+}

@@ -1,0 +1,5 @@
+# Temporário — nem chega a ser versionado, mas por segurança
+drive/
+
+# roadmap.html tem CSS/JS embutido pensado para diff legível linha a linha;
+# reavaliar aqui se o Prettier ficar reformatando de um jeito que piora a leitura.

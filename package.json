@@ -1,0 +1,21 @@
+{
+  "name": "saaci-produto",
+  "version": "0.0.0",
+  "private": true,
+  "description": "Fundação de produto, design e processo do SAACI — Sistema de Apoio Acadêmico Colaborativo do IFCE.",
+  "scripts": {
+    "prepare": "husky",
+    "format": "prettier --write .",
+    "format:check": "prettier --check ."
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^19.5.0",
+    "@commitlint/config-conventional": "^19.5.0",
+    "husky": "^9.1.6",
+    "lint-staged": "^15.2.10",
+    "prettier": "^3.3.3"
+  },
+  "lint-staged": {
+    "*.{html,md,json,js}": "prettier --write"
+  }
+}

@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SAACI — Pesquisa com Alunos</title>
+<link rel="stylesheet" href="../../shared/base.css">
+<style>
+  /* Específico deste dashboard de dados. Reaproveita tokens de shared/base.css. */
+  .chart { margin: 14px 0 26px; }
+  .chart .row { display: flex; align-items: center; gap: 10px; margin: 7px 0; }
+  .chart .row .lbl { flex: 0 0 230px; font-size: 0.84rem; color: var(--ink); text-align: right; }
+  .chart .row .track { flex: 1; background: #f0f0f4; border-radius: 4px; height: 22px; overflow: hidden; }
+  .chart .row .fill { height: 100%; background: var(--info); border-radius: 0 4px 4px 0; }
+  .chart .row .val { flex: 0 0 auto; min-width: 78px; font-size: 0.8rem; font-weight: 700; color: var(--ink); }
+  @media (max-width: 560px) {
+    .chart .row .lbl { flex-basis: 128px; font-size: 0.76rem; }
+    .chart .row .val { min-width: 60px; font-size: 0.76rem; }
+  }
+
+  .stat-row .stat.neutral { background: #f4f4f8; }
+  .stat-row .stat.neutral .n { color: var(--ink); }
+  .stat-row .stat.info-tile { background: var(--info-bg); }
+  .stat-row .stat.info-tile .n { color: var(--info); }
+
+  .hero { text-align: center; margin: 22px 0; padding: 28px 20px; background: var(--accent-bg); border-radius: 10px; }
+  .hero .n { font-size: 3rem; font-weight: 700; color: var(--accent-text); line-height: 1; }
+  .hero .l { font-size: 0.9rem; color: var(--muted); margin-top: 6px; }
+
+  .cross { display: flex; gap: 14px; flex-wrap: wrap; margin: 14px 0; }
+  .cross .card { flex: 1; min-width: 220px; border: 1px solid var(--line); border-radius: 8px; padding: 14px 16px; }
+  .cross .card .tit { font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.03em; color: var(--muted); margin-bottom: 6px; }
+  .cross .card .n { font-size: 1.5rem; font-weight: 700; color: var(--ink); }
+
+  .quote-grid { display: grid; gap: 14px; margin: 16px 0; }
+</style>
+</head>
+<body>
+
+<nav class="crumbs"><a href="../../index.html">SAACI</a> › <a href="../README.md">Documentação</a> › Produto</nav>
+<h1>SAACI — Pesquisa com Alunos</h1>
+<div class="subtitle">Dashboard das 39 respostas do questionário que originou o SAACI</div>
+<div class="atualizado">Última atualização: 21/09/2026</div>
+<nav class="siblings">
+  <a href="visao-produto.html">Visão de Produto</a>
+  <a href="escopo-mvp.html">Escopo do MVP</a>
+  <a href="requisitos.html">Requisitos</a>
+  <a href="backlog-roadmap.html">Backlog</a>
+  <span class="atual">Pesquisa com Alunos</span>
+</nav>
+
+<div class="box">
+<strong>O que é este documento:</strong> a versão visual e navegável do questionário "Aluno IF"
+(Google Forms, outubro de 2025, 39 respostas). Todo número citado em
+<a href="visao-produto.html">Visão de Produto</a> vem daqui — este é o lugar para conferir o
+dado completo, não uma amostra. Metodologia: amostragem por conveniência entre alunos do
+IFCE (não probabilística), sem corte por curso ou campus definido a priori.
+</div>
+
+<div class="box box-warn">
+<strong>Nota de proveniência:</strong> a planilha original (<code>SAACI - repostas
+questionario.xlsx</code>) não é versionada neste repositório — fica no Google Drive do
+mantenedor, fora do GitHub. As perguntas anteriores deste texto, sobre a planilha bruta,
+citavam ela como "já descartada"; não estava, e a redação foi ajustada aqui e em
+<code>visao-produto.html</code> para refletir a política real: consultada durante a análise,
+não commitada.
+</div>
+
+<h2>1. Perfil dos respondentes</h2>
+
+<div class="stat-row">
+  <div class="stat"><div class="n">36/39</div><div class="l">estão na graduação</div></div>
+  <div class="stat neutral"><div class="n">2/39</div><div class="l">técnico subsequente</div></div>
+  <div class="stat neutral"><div class="n">1/39</div><div class="l">técnico integrado</div></div>
+</div>
+
+<h3>Curso</h3>
+<div class="chart">
+  <div class="row"><div class="lbl">Licenciatura em Teatro</div><div class="track"><div class="fill" style="width:46%" title="18 de 39 respostas (46%)"></div></div><div class="val">18 · 46%</div></div>
+  <div class="row"><div class="lbl">Análise e Desenv. de Sistemas</div><div class="track"><div class="fill" style="width:23%" title="9 de 39 respostas (23%)"></div></div><div class="val">9 · 23%</div></div>
+  <div class="row"><div class="lbl">Engenharia de Computação</div><div class="track"><div class="fill" style="width:13%" title="5 de 39 respostas (13%)"></div></div><div class="val">5 · 13%</div></div>
+  <div class="row"><div class="lbl">Lic. Artes Visuais</div><div class="track"><div class="fill" style="width:5%" title="2 de 39 respostas (5%)"></div></div><div class="val">2 · 5%</div></div>
+  <div class="row"><div class="lbl">Eng. Telecomunicações</div><div class="track"><div class="fill" style="width:3%" title="1 de 39 respostas (3%)"></div></div><div class="val">1 · 3%</div></div>
+  <div class="row"><div class="lbl">Eng. Mecatrônica</div><div class="track"><div class="fill" style="width:3%" title="1 de 39 respostas (3%)"></div></div><div class="val">1 · 3%</div></div>
+  <div class="row"><div class="lbl">Lic. Física</div><div class="track"><div class="fill" style="width:3%" title="1 de 39 respostas (3%)"></div></div><div class="val">1 · 3%</div></div>
+  <div class="row"><div class="lbl">Téc. Manutenção Automotiva</div><div class="track"><div class="fill" style="width:3%" title="1 de 39 respostas (3%)"></div></div><div class="val">1 · 3%</div></div>
+  <div class="row"><div class="lbl">Outro (não identificado)</div><div class="track"><div class="fill" style="width:3%" title="1 de 39 respostas (3%)"></div></div><div class="val">1 · 3%</div></div>
+</div>
+<p class="fonte">Teatro é o maior grupo (18/39) e o segundo curso-piloto das regras de cálculo, ver <a href="visao-produto.html">Visão de Produto</a>, seção 2.</p>
+
+<h3>Campus</h3>
+<div class="chart">
+  <div class="row"><div class="lbl">Fortaleza</div><div class="track"><div class="fill" style="width:74%" title="29 de 39 respostas (74%)"></div></div><div class="val">29 · 74%</div></div>
+  <div class="row"><div class="lbl">Boa Viagem</div><div class="track"><div class="fill" style="width:23%" title="9 de 39 respostas (23%)"></div></div><div class="val">9 · 23%</div></div>
+  <div class="row"><div class="lbl">Não identificado</div><div class="track"><div class="fill" style="width:3%" title="1 de 39 respostas (3%)"></div></div><div class="val">1 · 3%</div></div>
+</div>
+<p class="fonte">Normalizado a partir de texto livre (variações de grafia como "Fortaleza", "fortaleza ceará", "Campus Fortaleza" agrupadas).</p>
+
+<h3>Semestre, módulo ou etapa</h3>
+<div class="chart">
+  <div class="row"><div class="lbl">7º ou mais</div><div class="track"><div class="fill" style="width:36%" title="14 de 39 (36%)"></div></div><div class="val">14 · 36%</div></div>
+  <div class="row"><div class="lbl">Já finalizou disciplinas</div><div class="track"><div class="fill" style="width:18%" title="7 de 39 (18%)"></div></div><div class="val">7 · 18%</div></div>
+  <div class="row"><div class="lbl">5º ao 6º</div><div class="track"><div class="fill" style="width:15%" title="6 de 39 (15%)"></div></div><div class="val">6 · 15%</div></div>
+  <div class="row"><div class="lbl">3º ao 4º</div><div class="track"><div class="fill" style="width:15%" title="6 de 39 (15%)"></div></div><div class="val">6 · 15%</div></div>
+  <div class="row"><div class="lbl">1º ao 2º</div><div class="track"><div class="fill" style="width:15%" title="6 de 39 (15%)"></div></div><div class="val">6 · 15%</div></div>
+</div>
+<p class="fonte">Agrupamento usado no resto deste documento: <strong>iniciante</strong> = 1º ao 2º + 3º ao 4º (12 respostas); <strong>veterano</strong> = 7º ou mais + já finalizou (21 respostas).</p>
+
+<h2>2. Conhecimento da regra</h2>
+
+<div class="stat-row">
+  <div class="stat"><div class="n">26/39</div><div class="l">sabem quantas horas precisam cumprir</div></div>
+  <div class="stat neutral"><div class="n">8/39</div><div class="l">não sabem</div></div>
+  <div class="stat neutral"><div class="n">5/39</div><div class="l">talvez saibam</div></div>
+</div>
+
+<h3>Recorte por experiência</h3>
+<div class="cross">
+  <div class="card"><div class="tit">Iniciante sabe quantas horas</div><div class="n">4 de 12</div></div>
+  <div class="card"><div class="tit">Veterano sabe quantas horas</div><div class="n">20 de 21</div></div>
+</div>
+<p class="fonte">O único eixo que varia de fato com o semestre é conhecer a meta total de horas — não o que conta como atividade (ver seção 4). Ver <a href="visao-produto.html">Visão de Produto</a>, seção 2.</p>
+
+<h2>3. Comportamento atual</h2>
+
+<div class="stat-row">
+  <div class="stat neutral"><div class="n">20/39</div><div class="l">já começaram a registrar</div></div>
+  <div class="stat neutral"><div class="n">18/39</div><div class="l">ainda não começaram</div></div>
+  <div class="stat neutral"><div class="n">1/39</div><div class="l">talvez</div></div>
+</div>
+
+<h3>Como organiza hoje</h3>
+<div class="chart">
+  <div class="row"><div class="lbl">Não organiza ainda</div><div class="track"><div class="fill" style="width:51%" title="20 de 39 (51%)"></div></div><div class="val">20 · 51%</div></div>
+  <div class="row"><div class="lbl">Nuvem (Drive/Google Drive)</div><div class="track"><div class="fill" style="width:18%" title="7 de 39 (18%)"></div></div><div class="val">7 · 18%</div></div>
+  <div class="row"><div class="lbl">Notas no celular</div><div class="track"><div class="fill" style="width:15%" title="6 de 39 (15%)"></div></div><div class="val">6 · 15%</div></div>
+  <div class="row"><div class="lbl">Caderno/planilha física</div><div class="track"><div class="fill" style="width:8%" title="3 de 39 (8%)"></div></div><div class="val">3 · 8%</div></div>
+  <div class="row"><div class="lbl">Pasta física/pendrive</div><div class="track"><div class="fill" style="width:8%" title="3 de 39 (8%)"></div></div><div class="val">3 · 8%</div></div>
+</div>
+<p class="fonte">Normalizado a partir de texto livre — respostas equivalentes (ex.: "Drive", "pasta no Drive", "Google Drive") agrupadas em "Nuvem".</p>
+
+<h2>4. Dificuldades</h2>
+
+<div class="stat-row">
+  <div class="stat info-tile"><div class="n">25/39</div><div class="l">ainda não tentaram validar nenhuma atividade</div></div>
+  <div class="stat neutral"><div class="n">10/39</div><div class="l">já tiveram dificuldade</div></div>
+  <div class="stat neutral"><div class="n">4/39</div><div class="l">nunca tiveram dificuldade</div></div>
+</div>
+
+<h3>O que mais atrapalha (até 3 marcações por pessoa)</h3>
+<div class="chart">
+  <div class="row"><div class="lbl">Não sei quais atividades contam</div><div class="track"><div class="fill" style="width:69%" title="27 de 39 (69%)"></div></div><div class="val">27 · 69%</div></div>
+  <div class="row"><div class="lbl">Falta de plataforma clara</div><div class="track"><div class="fill" style="width:69%" title="27 de 39 (69%)"></div></div><div class="val">27 · 69%</div></div>
+  <div class="row"><div class="lbl">Não sei como comprovar</div><div class="track"><div class="fill" style="width:46%" title="18 de 39 (46%)"></div></div><div class="val">18 · 46%</div></div>
+  <div class="row"><div class="lbl">Dificuldade de contato com a coordenação</div><div class="track"><div class="fill" style="width:41%" title="16 de 39 (41%)"></div></div><div class="val">16 · 41%</div></div>
+  <div class="row"><div class="lbl">Esqueço de guardar comprovantes</div><div class="track"><div class="fill" style="width:41%" title="16 de 39 (41%)"></div></div><div class="val">16 · 41%</div></div>
+  <div class="row"><div class="lbl">Falta de tempo</div><div class="track"><div class="fill" style="width:41%" title="16 de 39 (41%)"></div></div><div class="val">16 · 41%</div></div>
+</div>
+
+<h3>Recorte por experiência — "não sei quais atividades contam"</h3>
+<div class="cross">
+  <div class="card"><div class="tit">Iniciante marcou esta opção</div><div class="n">9 de 12</div></div>
+  <div class="card"><div class="tit">Veterano marcou esta opção</div><div class="n">12 de 21</div></div>
+</div>
+<p class="fonte">O desconhecimento da regra é transversal, quase a mesma proporção entre veterano e iniciante — não é sintoma de calouro. Ver <a href="visao-produto.html">Visão de Produto</a>, seção 2.</p>
+
+<h2>5. Validação de demanda</h2>
+
+<div class="hero">
+  <div class="n">39/39</div>
+  <div class="l">usariam uma plataforma digital para registrar e acompanhar atividades complementares</div>
+</div>
+
+<div class="stat-row">
+  <div class="stat"><div class="n">38/39</div><div class="l">se sentiriam mais motivados com um sistema automatizado e centralizado</div></div>
+  <div class="stat neutral"><div class="n">1/39</div><div class="l">talvez</div></div>
+</div>
+
+<h2>6. Funcionalidades desejadas (até 3 marcações por pessoa)</h2>
+<div class="chart">
+  <div class="row"><div class="lbl">Ver quantidade de horas cumpridas</div><div class="track"><div class="fill" style="width:92%" title="36 de 39 (92%)"></div></div><div class="val">36 · 92%</div></div>
+  <div class="row"><div class="lbl">Registro com anexo de comprovante</div><div class="track"><div class="fill" style="width:85%" title="33 de 39 (85%)"></div></div><div class="val">33 · 85%</div></div>
+  <div class="row"><div class="lbl">Sugestões de eventos e atividades</div><div class="track"><div class="fill" style="width:74%" title="29 de 39 (74%)"></div></div><div class="val">29 · 74%</div></div>
+  <div class="row"><div class="lbl">Histórico de atividades enviadas/validadas</div><div class="track"><div class="fill" style="width:56%" title="22 de 39 (56%)"></div></div><div class="val">22 · 56%</div></div>
+  <div class="row"><div class="lbl">Barra de progresso por categoria</div><div class="track"><div class="fill" style="width:51%" title="20 de 39 (51%)"></div></div><div class="val">20 · 51%</div></div>
+  <div class="row"><div class="lbl">Notificações de pendências</div><div class="track"><div class="fill" style="width:38%" title="15 de 39 (38%)"></div></div><div class="val">15 · 38%</div></div>
+</div>
+<p class="fonte">"Sugestões de eventos e atividades" (29/39) é a 3ª mais pedida sem ter RF hoje — é o Marco 2 do roadmap. Ver <code>../roadmap/README.md</code>.</p>
+
+<h2>7. Na voz do aluno</h2>
+<div class="quote-grid">
+<blockquote>
+"Gostaria que fosse simples e direto. Entra, registra as horas e pronto."
+<div class="fonte">— resposta 5 do questionário</div>
+</blockquote>
+<blockquote>
+"[Que] explicasse melhor as coisas que valem como atividades complementares, registrasse as
+200 horas para o aluno saber que já atingiu o que é pedido para o aluno."
+<div class="fonte">— resposta 34 do questionário</div>
+</blockquote>
+<blockquote>
+"Bem simples, fácil de acessar e entender, com acessibilidade para pessoas com deficiência e
+pessoas que têm dificuldade com as tecnologias."
+<div class="fonte">— resposta 35 do questionário</div>
+</blockquote>
+<blockquote>
+"[Um sistema] onde dá pra registrar tudo rapidinho, mandar comprovantes pelo celular, ver o
+que já foi aprovado e quanto ainda falta [...] poderia ter uma área de sugestões de cursos,
+palestras e eventos pra ajudar os alunos a conseguirem mais horas de forma prática."
+<div class="fonte">— resposta 26 do questionário</div>
+</blockquote>
+<blockquote>
+"No IF do campus Boa Viagem, por exemplo, um certificado de uma palestra que durou 5 horas,
+só vale 1 hora — esses pontos acho interessante bem explicado para o aluno, em cada categoria,
+uma vez que muitas vezes a coordenação coloca os arquivos nos grupos achando que lá está
+esclarecido, quando falta, e por vezes lota eles de mensagens."
+<div class="fonte">— resposta 16 do questionário</div>
+</blockquote>
+<blockquote>
+"Já tenho os comprovantes necessários para as 120h do meu curso, porém dá mó preguiça juntar
+tudo, fazer o cálculo, e ainda tenho receio da coordenação não aceitar algumas delas."
+<div class="fonte">— resposta 40 do questionário</div>
+</blockquote>
+</div>
+
+<h2>8. Tabela completa</h2>
+<table>
+<tr><th>Pergunta</th><th>Resposta</th><th>Nº</th><th>%</th></tr>
+<tr><td rowspan="3">Sabe quantas horas precisa cumprir?</td><td>Sim</td><td>26</td><td>67%</td></tr>
+<tr><td>Não</td><td>8</td><td>21%</td></tr>
+<tr><td>Talvez</td><td>5</td><td>13%</td></tr>
+<tr><td rowspan="3">Já começou a registrar atividades?</td><td>Sim</td><td>20</td><td>51%</td></tr>
+<tr><td>Não</td><td>18</td><td>46%</td></tr>
+<tr><td>Talvez</td><td>1</td><td>3%</td></tr>
+<tr><td rowspan="3">Já teve dificuldade para validar com a coordenação?</td><td>Ainda não tentou</td><td>25</td><td>64%</td></tr>
+<tr><td>Sim</td><td>10</td><td>26%</td></tr>
+<tr><td>Não</td><td>4</td><td>10%</td></tr>
+<tr><td rowspan="2">Usaria uma plataforma digital?</td><td>Sim</td><td>39</td><td>100%</td></tr>
+<tr><td>Não/Talvez</td><td>0</td><td>0%</td></tr>
+<tr><td rowspan="2">Se sentiria mais motivado com sistema automatizado?</td><td>Sim</td><td>38</td><td>97%</td></tr>
+<tr><td>Talvez</td><td>1</td><td>3%</td></tr>
+</table>
+<p class="fonte">Perguntas de múltipla marcação (dores e funcionalidades) estão nos gráficos das seções 4 e 6, não repetidas aqui.</p>
+
+<div class="meta">
+Fonte: questionário "Aluno IF" (Google Forms), outubro de 2025, 39 respostas. Arquivo original:
+<code>SAACI - repostas questionario.xlsx</code> — mantido no Google Drive do mantenedor, fora
+deste repositório; peça acesso a quem mantém o projeto se precisar do dado bruto. Documento
+vivo: se a planilha ganhar novas respostas, os números aqui devem ser recalculados junto.
+</div>
+
+</body>
+</html>

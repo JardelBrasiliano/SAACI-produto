@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SAACI — Escrita de Interface</title>
+<link rel="stylesheet" href="../../shared/base.css">
+</head>
+<body>
+
+<nav class="crumbs"><a href="../../index.html">SAACI</a> › <a href="../README.md">Documentação</a> › Design System</nav>
+<h1>SAACI — Escrita de Interface</h1>
+<div class="subtitle">Como o produto fala com o aluno</div>
+<div class="atualizado">Última atualização: 21/09/2026</div>
+<nav class="siblings">
+  <a href="principios-ui.html">Princípios de UI</a>
+  <span class="atual">Escrita de Interface</span>
+  <a href="estados-e-casos-de-borda.html">Estados e Casos de Borda</a>
+  <a href="tokens-visuais.md">Tokens Visuais (rascunho)</a>
+  <a href="referencias-visuais.md">Referências Visuais (rascunho)</a>
+</nav>
+
+<div class="box">
+<strong>Fonte de verdade para:</strong> regras de escrita aplicadas a texto de interface
+(botão, mensagem, rótulo, erro). Tom de voz de marca está em
+<code>../marca/identidade-marca.md</code> (ainda rascunho; a tabela de exemplo abaixo herda
+essa mesma pendência de validação). Vocabulário de domínio está em
+<code>../../.claude/references/glossario.md</code>. A skill <code>saaci-copy</code> aplica
+este documento e nunca edita texto sem aprovação explícita.
+</div>
+
+<h2>1. Técnica: Linguagem Simples</h2>
+<p>
+Padrão gov.br / linguagem cidadã: voz ativa, frases curtas, vocabulário comum, sem jargão
+técnico ou jurídico. Justificativa direta no público: RNF23
+(<code>../produto/requisitos.html</code>) exige interface acessível a quem tem dificuldade com
+tecnologia, e jargão de sistema é a primeira barreira.
+</p>
+
+<h2>2. Regras práticas</h2>
+<ul>
+<li><strong>Voz ativa, sujeito claro.</strong> "Anexe o comprovante" em vez de "O comprovante
+deve ser anexado".</li>
+<li><strong>Frase curta, uma ideia por vez.</strong> Quebrar em duas frases em vez de usar
+"portanto", "visto que", "a fim de".</li>
+<li><strong>Vocabulário do aluno, não do sistema.</strong> "Atividade" e "comprovante", não
+"registro" e "artefato". "Categoria", não "matriz de aproveitamento", mesmo que o termo
+técnico exista no RF15/RNF21: ele fica em <code>requisitos.html</code>, não na tela.</li>
+<li><strong>Erro sempre com próximo passo.</strong> Nunca "operação falhou" sem dizer o que
+fazer. Ver Princípio 4 em <code>principios-ui.html</code>.</li>
+<li><strong>Número antes de rótulo, quando o número é a informação principal.</strong>
+"47h faltam para você fechar" em vez de "Horas faltantes: 47h".</li>
+<li><strong>Sem travessão no texto reescrito.</strong> Separe em duas frases ou use vírgula e
+conectivo ("e", "mas", "então"). Travessão em série é o jeito mais fácil de uma copy soar
+gerada, não escrita para alguém. Vale para a copy do produto e para a documentação deste
+repositório (ver <code>.claude/CLAUDE.md</code>).</li>
+</ul>
+
+<p>Checklist completo de clareza (Linguagem Simples) e de vícios de escrita de IA está em
+<code>.claude/skills/saaci-copy/references/</code>. Este documento fixa a regra de produto;
+aquela pasta é o procedimento operacional que a skill <code>saaci-copy</code> segue.</p>
+
+<h2>3. Exemplos: antes e depois</h2>
+<table>
+<tr><th>Evitar</th><th>Preferir</th><th>Por quê</th></tr>
+<tr><td>"Requisição indeferida por não conformidade com o edital vigente"</td><td>"Essa atividade não entra em Pesquisa, mas cabe em Extensão"</td><td>Nomeia o problema e a saída, no vocabulário do aluno</td></tr>
+<tr><td>"Campo obrigatório não preenchido"</td><td>"Falta anexar o comprovante desta atividade"</td><td>Diz qual campo, não só que "algo" falta</td></tr>
+<tr><td>"Processamento assíncrono em andamento"</td><td>"Calculando sua hora, cerca de 1 minuto"</td><td>Sem jargão técnico, com expectativa de tempo</td></tr>
+<tr><td>"Limite de categoria excedido"</td><td>"Pesquisa já está cheia (40/40h). Essa atividade não vai contar aqui"</td><td>Mostra o número, não só o estado</td></tr>
+</table>
+
+<h2>4. O que a skill <code>saaci-copy</code> faz</h2>
+<p>
+Para cada texto revisado, mostra o trecho atual, o problema identificado e a sugestão, e só
+edita o arquivo depois de aprovação explícita. Nunca aplica mudança silenciosamente, mesmo
+quando a mudança parece óbvia.
+</p>
+
+<div class="meta">Documento vivo. Vocabulário de domínio vem do glossário, nunca inventado aqui.</div>
+
+</body>
+</html>
