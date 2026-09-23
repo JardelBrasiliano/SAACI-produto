@@ -11,7 +11,7 @@
 <nav class="crumbs"><a href="../../index.html">SAACI</a> › <a href="../README.md">Documentação</a> › Produto</nav>
 <h1>SAACI — Visão de Produto</h1>
 <div class="subtitle">Sistema de Apoio Acadêmico Colaborativo do IFCE</div>
-<div class="atualizado">Última atualização: 21/09/2026</div>
+<div class="atualizado">Última atualização: 23/09/2026</div>
 <nav class="siblings">
   <span class="atual">Visão de Produto</span>
   <a href="escopo-mvp.html">Escopo do MVP</a>
@@ -31,9 +31,11 @@ mercado. Escopo do MVP está em <code>escopo-mvp.html</code>; requisitos detalha
 <p>
 Para se formar em cursos superiores no IFCE, o aluno precisa cumprir uma carga horária
 mínima de <strong>atividades complementares</strong>: cursos, palestras, monitorias, eventos.
-O problema não é falta de lugar para guardar certificado. É que <strong>ninguém entende a
-regra</strong>: quais atividades contam, quanto cada uma vale, qual o limite por categoria, e
-como comprovar sem que a coordenação recuse por erro de forma.
+O centro do problema é que <strong>ninguém entende a regra</strong>: quais atividades contam,
+quanto cada uma vale, qual o limite por categoria. Essa falta de clareza se arrasta pelo resto
+da jornada, o aluno não sabe como comprovar a atividade, guarda o certificado onde dá (Drive,
+celular, pendrive) sem vínculo com a regra que valida ele, e só descobre se algo estava errado
+quando a coordenação já recusou.
 </p>
 
 <p>
@@ -85,6 +87,34 @@ O único eixo que varia de fato com o semestre é <strong>conhecer a meta total 
 na tela, não com dois produtos ou dois modos de interface.
 </p>
 
+<h3>Jornada de dificuldades</h3>
+<p>
+Foi essa jornada, não um único ponto de dificuldade, que motivou o SAACI. O aluno passa por até quatro
+fricções entre não entender a regra e conseguir validar a atividade, às vezes mais de uma ao
+mesmo tempo:
+</p>
+<ol>
+<li><strong>Não sabe a regra.</strong> O que conta, quanto vale, qual o limite por categoria.
+27/39 (69%) marcaram como dificuldade.</li>
+<li><strong>Sabe a regra, não sabe comprovar.</strong> 18/39 (46%) marcaram "não sei como
+comprovar" como dificuldade.</li>
+<li><strong>Sabe comprovar, esquece ou perde o comprovante.</strong> 16/39 (41%) marcaram
+"esqueço de guardar comprovantes"; hoje 51% ainda não organiza nada, e quem organiza usa
+nuvem, celular ou pendrive sem vínculo com a atividade que aquele arquivo comprova.</li>
+<li><strong>Tem tudo em mãos, falta juntar.</strong> Resposta 40 do questionário, "já tenho os
+comprovantes necessários [...] mas dá mó preguiça juntar tudo, fazer o cálculo". Nenhum dado
+agregado isola esse estágio, é o relato de quem já passou pelos três anteriores.</li>
+</ol>
+<p class="fonte">Ver <a href="pesquisa-questionario.html">Pesquisa com Alunos</a>, seções 3 e 4,
+para o dado completo de cada dificuldade.</p>
+<p>
+A resposta de produto não é um fluxo por estágio. É <strong>ancorar o comprovante ao registro
+da atividade no momento em que a regra já foi mostrada</strong> (RF31 + RF32, ver
+<code>requisitos.html</code>): o arquivo deixa de estar solto em algum canto porque nasce
+vinculado à atividade que ele comprova. Isso não faz do SAACI um repositório de arquivo, é a
+mesma tese da seção 3, orientar antes do envio, se estendendo até o comprovante.
+</p>
+
 <h3>Consequência de design</h3>
 <p>
 A orientação sobre a regra ("o que conta, quanto vale, qual o limite") é uma <strong>camada
@@ -114,8 +144,9 @@ regras de cálculo são parametrizáveis por curso (ver RF15 em <code>requisitos
 <p>
 O SAACI não se propõe a substituir o sistema acadêmico institucional (matrícula, notas,
 turmas). Ele é a camada centrada no aluno que <strong>orienta antes do envio</strong>: mostra
-a regra, calcula automaticamente e avisa quando um limite é atingido, em vez de ser só um
-repositório de solicitações que a coordenação decifra depois.
+a regra, calcula automaticamente, avisa quando um limite é atingido e organiza os certificados
+por categoria pra levar ao protocolo da coordenação, em vez de ser só um repositório de
+solicitações que a coordenação decifra depois.
 </p>
 
 <h2>4. Leitura de mercado (benchmarking)</h2>
