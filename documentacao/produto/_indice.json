@@ -7,22 +7,22 @@
       "arquivo": "visao-produto.html",
       "titulo": "Visão de Produto",
       "status": "fechado",
-      "resumo": "Problema (39 alunos, 27/39 não sabem quais atividades contam), persona única (aluno que não sabe a regra), tese (orientar antes do envio), benchmarking com 4 concorrentes.",
+      "resumo": "Problema (39 alunos, 27/39 não sabem quais atividades contam), persona única (aluno que não sabe a regra) com jornada de 4 dificuldades (regra, comprovação, organização, consolidação), tese (orientar antes do envio, inclui organizar certificados pro protocolo da coordenação), benchmarking com 4 concorrentes.",
       "ids": []
     },
     {
       "arquivo": "escopo-mvp.html",
       "titulo": "Escopo do MVP",
       "status": "fechado",
-      "resumo": "O que entra até 09/11/2026 (cadastro, login, recuperação de senha, perfil, registro com comprovante, cálculo automático, painel de progresso) e o que vai para o backlog.",
+      "resumo": "O que entra até 09/11/2026 (cadastro, login, recuperação de senha, perfil, registro com comprovante, cálculo automático, painel de progresso, resumo por categoria com download de certificados) e o que vai para o backlog.",
       "ids": []
     },
     {
       "arquivo": "requisitos.html",
       "titulo": "Requisitos Funcionais e Não Funcionais",
       "status": "fechado",
-      "resumo": "RF01–RF34 e RNF01–RNF23, reconciliados com o MVP. RF31–RF34 e RNF23 são novos (upload, regra de conversão visível, exclusão de conta/LGPD, acessibilidade). RF08 reclassificado de Opcional para MVP.",
-      "ids": ["RF01-RF34", "RNF01-RNF23"]
+      "resumo": "RF01–RF36 e RNF01–RNF23, reconciliados com o MVP. RF31–RF36 e RNF23 são novos (upload, regra de conversão visível, resumo por categoria e download de certificados pro protocolo da coordenação, exclusão de conta/LGPD, acessibilidade). RF08 reclassificado de Opcional para MVP.",
+      "ids": ["RF01-RF36", "RNF01-RNF23"]
     },
     {
       "arquivo": "backlog-roadmap.html",

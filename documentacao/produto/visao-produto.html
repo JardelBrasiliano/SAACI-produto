@@ -32,9 +32,11 @@ mercado. Escopo do MVP está em <code>escopo-mvp.html</code>; requisitos detalha
 <p>
 Para se formar em cursos superiores no IFCE, o aluno precisa cumprir uma carga horária
 mínima de <strong>atividades complementares</strong>: cursos, palestras, monitorias, eventos.
-O problema não é falta de lugar para guardar certificado. É que <strong>ninguém entende a
-regra</strong>: quais atividades contam, quanto cada uma vale, qual o limite por categoria, e
-como comprovar sem que a coordenação recuse por erro de forma.
+O centro do problema é que <strong>ninguém entende a regra</strong>: quais atividades contam,
+quanto cada uma vale, qual o limite por categoria. Essa falta de clareza se arrasta pelo resto
+da jornada, o aluno não sabe como comprovar a atividade, guarda o certificado onde dá (Drive,
+celular, pendrive) sem vínculo com a regra que valida ele, e só descobre se algo estava errado
+quando a coordenação já recusou.
 </p>
 
 <p>
@@ -55,7 +57,7 @@ outubro de 2025. O retrato (dado completo, gráfico por gráfico, em
   <div class="stat"><div class="n">38/39</div><div class="l">se sentiriam mais motivados com um sistema automatizado</div></div>
 </div>
 
-<p class="fonte">Fonte: SAACI - repostas questionario.xlsx, out. 2025 — dashboard completo em <a href="pesquisa-questionario.html">Pesquisa com Alunos</a>. Arquivo original mantido no Google Drive do mantenedor, fora deste repositório.</p>
+<p class="fonte">Fonte: SAACI - repostas questionario.xlsx, out. 2025. Dashboard completo em <a href="pesquisa-questionario.html">Pesquisa com Alunos</a>. Arquivo original mantido no Google Drive do mantenedor, fora deste repositório.</p>
 
 <blockquote>
 "No IF do campus Boa Viagem, por exemplo, um certificado de uma palestra que durou 5 horas,
@@ -87,6 +89,34 @@ entre os veteranos, 20 de 21 sabem quantas horas precisam cumprir; entre os inic
 dois modos de interface.
 </p>
 
+<h3>Jornada de dificuldades</h3>
+<p>
+Foi essa jornada, não um único ponto de dificuldade, que motivou o SAACI. O aluno passa por até quatro
+fricções entre não entender a regra e conseguir validar a atividade, às vezes mais de uma ao
+mesmo tempo:
+</p>
+<ol>
+<li><strong>Não sabe a regra.</strong> O que conta, quanto vale, qual o limite por categoria.
+27/39 (69%) marcaram como dificuldade.</li>
+<li><strong>Sabe a regra, não sabe comprovar.</strong> 18/39 (46%) marcaram "não sei como
+comprovar" como dificuldade.</li>
+<li><strong>Sabe comprovar, esquece ou perde o comprovante.</strong> 16/39 (41%) marcaram
+"esqueço de guardar comprovantes"; hoje 51% ainda não organiza nada, e quem organiza usa
+nuvem, celular ou pendrive sem vínculo com a atividade que aquele arquivo comprova.</li>
+<li><strong>Tem tudo em mãos, falta juntar.</strong> Resposta 40 do questionário, "já tenho os
+comprovantes necessários [...] mas dá mó preguiça juntar tudo, fazer o cálculo". Nenhum dado
+agregado isola esse estágio, é o relato de quem já passou pelos três anteriores.</li>
+</ol>
+<p class="fonte">Ver <a href="pesquisa-questionario.html">Pesquisa com Alunos</a>, seções 3 e 4,
+para o dado completo de cada dificuldade.</p>
+<p>
+A resposta de produto não é um fluxo por estágio. É <strong>ancorar o comprovante ao registro
+da atividade no momento em que a regra já foi mostrada</strong> (RF31 + RF32, ver
+<code>requisitos.html</code>): o arquivo deixa de estar solto em algum canto porque nasce
+vinculado à atividade que ele comprova. É a mesma tese da seção 3, orientar antes do envio,
+se estendendo até o comprovante.
+</p>
+
 <h3>Consequência de design</h3>
 <p>
 A orientação sobre a regra ("o que conta, quanto vale, qual o limite") é uma <strong>camada
@@ -96,18 +126,20 @@ um tutorial, nem um "modo iniciante". Ver <code>../design-system/principios-ui.h
 
 <h3>Curso-piloto das regras de cálculo</h3>
 <p>
-<strong>Engenharia de Computação</strong> é o curso-piloto do MVP: o PPC do curso é documento
-público, disponível no site do IFCE, então parametrizar a regra de cálculo depende só do
-trabalho de ler o PPC e converter a regra em parâmetro, não de aprovação de coordenação (ver
-RF15 em <code>requisitos.html</code>). <strong>Licenciatura em Teatro</strong> entra como
-segundo curso: é o maior grupo do questionário (18 de 39 respostas) e prova que a regra de
-cálculo é parametrizável por curso, não fixa.
+<strong>Engenharia de Computação</strong> é o curso-piloto do MVP: o PPC (julho de 2017) e o
+formulário de solicitação de atividades complementares (matriz 6759) já estão em mãos. A regra
+de cálculo do RF15 (ver <code>requisitos.html</code>) vem do formulário, que traz a conversão e
+o limite de cada item — o PPC sozinho só fixa o total de 120 horas.
+<strong>Licenciatura em Teatro</strong> entra como segundo curso, maior grupo do questionário
+(18 de 39 respostas) e prova de que a regra de cálculo é parametrizável por curso, não fixa;
+o PPC e o formulário dele ainda não foram obtidos (ver <code>TODO/pendencias.md</code>).
 </p>
 <p>
 Expandir o piloto para os demais cursos da pesquisa, depois para todo o campus Fortaleza e,
-por fim, para todos os campi do IFCE é meta declarada, mas fica fora do MVP: exige ler e
-parametrizar o PPC de cada curso, um por um, o que não cabe na janela de tempo do MVP.
-Racional completo em <code>backlog-roadmap.html</code>, seção 8.
+por fim, para todos os campi do IFCE é meta declarada, mas fica fora do MVP: exige repetir,
+curso a curso, o mesmo trabalho de obter PPC e formulário e converter a regra em parâmetro —
+não é só ler um documento público, como o caso de Teatro (ainda pendente) já mostra. Racional
+completo em <code>backlog-roadmap.html</code>, seção 8.
 </p>
 
 <table>
@@ -124,8 +156,9 @@ Racional completo em <code>backlog-roadmap.html</code>, seção 8.
 <p>
 O SAACI não se propõe a substituir o sistema acadêmico institucional (matrícula, notas,
 turmas). Ele é a camada centrada no aluno que <strong>orienta antes do envio</strong>: mostra
-a regra, calcula automaticamente e avisa quando um limite é atingido, em vez de ser só um
-repositório de solicitações que a coordenação decifra depois.
+a regra, calcula automaticamente, avisa quando um limite é atingido e organiza os certificados
+por categoria pra levar ao protocolo da coordenação, em vez de ser só um repositório de
+solicitações que a coordenação decifra depois.
 </p>
 
 <h2>4. Leitura de mercado (benchmarking)</h2>
@@ -144,11 +177,16 @@ Metodologia, perfil de cada concorrente e fontes completas em
 <tr><td>Cálculo automático de horas</td><td>Não</td><td>Sim</td><td>Sim</td><td>N/A</td><td>Sim</td></tr>
 <tr><td>Controle de limite por categoria</td><td>Não inf.</td><td>Sim</td><td>Sim</td><td>N/A</td><td>Sim</td></tr>
 <tr><td>Orientação/simulação antes do envio</td><td>Não</td><td>Não</td><td>Parcial</td><td>N/A</td><td><strong>Sim</strong></td></tr>
+<tr><td>Registro/gestão de estágio</td><td>Sim</td><td>Não inf.</td><td>Não</td><td>Não</td><td>Sim</td></tr>
+<tr><td>Grade curricular / estrutura do curso</td><td>Sim</td><td>Sim</td><td>Não</td><td>Não</td><td>Sim</td></tr>
+<tr><td>Feedback de disciplinas por IA</td><td>Não</td><td>Não</td><td>Não</td><td>Não</td><td><strong>Sim</strong></td></tr>
+<tr><td>Serviços de rotina ao aluno (ex.: cardápio do RU)</td><td>Não</td><td>Não</td><td>Não</td><td>Sim</td><td>Sim</td></tr>
 <tr><td>Painel visual de progresso</td><td>Não</td><td>Não</td><td>Não</td><td>Não</td><td><strong>Sim</strong></td></tr>
-<tr><td>Foco na experiência do aluno (UX)</td><td>Baixo</td><td>Baixo</td><td>Baixo</td><td>Alto</td><td><strong>Alto</strong></td></tr>
+<tr><td>Gamificação / acompanhamento de meta</td><td>Não</td><td>Não</td><td>Não</td><td>Não</td><td><strong>Sim</strong></td></tr>
+<tr><td>Foco na experiência do aluno (UX)</td><td>Baixo</td><td>Baixo</td><td>Baixo</td><td>Alto</td><td>Alto</td></tr>
 <tr><td>Situação</td><td>Em produção</td><td>Em produção</td><td>Protótipo (TCC)</td><td>Beta (2025)</td><td>Proposto</td></tr>
 </table>
-<p class="fonte">N/A = fora do escopo da solução. Não inf. = sem informação pública verificável. Dado completo, fonte por concorrente e metodologia em <a href="pesquisa-mercado.html">Pesquisa de Mercado</a>.</p>
+<p class="fonte">N/A = fora do escopo da solução. Não inf. = sem informação pública verificável. Em negrito, na coluna SAACI, os diferenciais exclusivos da proposta. Estágio, grade curricular, feedback por IA, serviços de rotina e gamificação estão fora do MVP (ver <code>escopo-mvp.html</code>). Dado completo, fonte por concorrente e metodologia em <a href="pesquisa-mercado.html">Pesquisa de Mercado</a>.</p>
 
 <h3>Leitura por concorrente</h3>
 <ul>
