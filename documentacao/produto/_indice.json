@@ -1,7 +1,7 @@
 {
   "pasta": "produto",
   "descricao": "Problema, escopo, requisitos e backlog do SAACI. Ler antes de qualquer decisão de produto",
-  "atualizado": "2026-09-21",
+  "atualizado": "2026-09-24",
   "documentos": [
     {
       "arquivo": "visao-produto.html",
@@ -28,7 +28,7 @@
       "arquivo": "backlog-roadmap.html",
       "titulo": "Backlog",
       "status": "fechado",
-      "resumo": "Estágio, cardápio do RU, grade curricular com IA, coordenação (conflito registrado com o cronograma original), fora do MVP. Sugestões de eventos é marco pós-MVP, prioridade alta.",
+      "resumo": "Estágio, cardápio do RU, grade curricular com IA, coordenação (conflito registrado com o cronograma original), expansão do curso-piloto das regras de cálculo (9 cursos da pesquisa → campus Fortaleza → todos os campi), fora do MVP. Sugestões de eventos é marco pós-MVP, prioridade alta.",
       "ids": []
     },
     {

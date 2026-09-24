@@ -11,7 +11,7 @@
 <nav class="crumbs"><a href="../../index.html">SAACI</a> › <a href="../README.md">Documentação</a> › Produto</nav>
 <h1>SAACI — Visão de Produto</h1>
 <div class="subtitle">Sistema de Apoio Acadêmico Colaborativo do IFCE</div>
-<div class="atualizado">Última atualização: 21/09/2026</div>
+<div class="atualizado">Última atualização: 24/09/2026</div>
 <nav class="siblings">
   <span class="atual">Visão de Produto</span>
   <a href="escopo-mvp.html">Escopo do MVP</a>
@@ -80,9 +80,10 @@ desconhecimento da regra é transversal e não um sintoma de calouro.
 </div>
 
 <p>
-O único eixo que varia de fato com o semestre é <strong>conhecer a meta total de horas</strong>
-(veterano sabe: 20/21; iniciante não sabe: 8/12). Isso se resolve com uma informação visível
-na tela, não com dois produtos ou dois modos de interface.
+O único eixo que varia de fato com o semestre é <strong>conhecer a meta total de horas</strong>:
+entre os veteranos, 20 de 21 sabem quantas horas precisam cumprir; entre os iniciantes, só
+4 de 12 sabem. Isso se resolve com uma informação visível na tela, não com dois produtos ou
+dois modos de interface.
 </p>
 
 <h3>Consequência de design</h3>
@@ -94,10 +95,18 @@ um tutorial, nem um "modo iniciante". Ver <code>../design-system/principios-ui.h
 
 <h3>Curso-piloto das regras de cálculo</h3>
 <p>
-<strong>Engenharia de Computação</strong> é o curso-piloto: acesso direto ao PPC e à
-coordenação, sem depender de terceiros no curto prazo. <strong>Licenciatura em Teatro</strong>
-entra como segundo curso. É o maior grupo do questionário (18 de 39 respostas) e prova que as
-regras de cálculo são parametrizáveis por curso (ver RF15 em <code>requisitos.html</code>).
+<strong>Engenharia de Computação</strong> é o curso-piloto do MVP: o PPC do curso é documento
+público, disponível no site do IFCE, então parametrizar a regra de cálculo depende só do
+trabalho de ler o PPC e converter a regra em parâmetro, não de aprovação de coordenação (ver
+RF15 em <code>requisitos.html</code>). <strong>Licenciatura em Teatro</strong> entra como
+segundo curso: é o maior grupo do questionário (18 de 39 respostas) e prova que a regra de
+cálculo é parametrizável por curso, não fixa.
+</p>
+<p>
+Expandir o piloto para os demais cursos da pesquisa, depois para todo o campus Fortaleza e,
+por fim, para todos os campi do IFCE é meta declarada, mas fica fora do MVP: exige ler e
+parametrizar o PPC de cada curso, um por um, o que não cabe na janela de tempo do MVP.
+Racional completo em <code>backlog-roadmap.html</code>, seção 8.
 </p>
 
 <table>
