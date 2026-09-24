@@ -56,7 +56,7 @@ outubro de 2025. O retrato (dado completo, gráfico por gráfico, em
   <div class="stat"><div class="n">38/39</div><div class="l">se sentiriam mais motivados com um sistema automatizado</div></div>
 </div>
 
-<p class="fonte">Fonte: SAACI - repostas questionario.xlsx, out. 2025 — dashboard completo em <a href="pesquisa-questionario.html">Pesquisa com Alunos</a>. Arquivo original mantido no Google Drive do mantenedor, fora deste repositório.</p>
+<p class="fonte">Fonte: SAACI - repostas questionario.xlsx, out. 2025. Dashboard completo em <a href="pesquisa-questionario.html">Pesquisa com Alunos</a>. Arquivo original mantido no Google Drive do mantenedor, fora deste repositório.</p>
 
 <blockquote>
 "No IF do campus Boa Viagem, por exemplo, um certificado de uma palestra que durou 5 horas,
@@ -111,8 +111,8 @@ para o dado completo de cada dificuldade.</p>
 A resposta de produto não é um fluxo por estágio. É <strong>ancorar o comprovante ao registro
 da atividade no momento em que a regra já foi mostrada</strong> (RF31 + RF32, ver
 <code>requisitos.html</code>): o arquivo deixa de estar solto em algum canto porque nasce
-vinculado à atividade que ele comprova. Isso não faz do SAACI um repositório de arquivo, é a
-mesma tese da seção 3, orientar antes do envio, se estendendo até o comprovante.
+vinculado à atividade que ele comprova. É a mesma tese da seção 3, orientar antes do envio,
+se estendendo até o comprovante.
 </p>
 
 <h3>Consequência de design</h3>
@@ -124,10 +124,14 @@ um tutorial, nem um "modo iniciante". Ver <code>../design-system/principios-ui.h
 
 <h3>Curso-piloto das regras de cálculo</h3>
 <p>
-<strong>Engenharia de Computação</strong> é o curso-piloto: acesso direto ao PPC e à
-coordenação, sem depender de terceiros no curto prazo. <strong>Licenciatura em Teatro</strong>
-entra como segundo curso. É o maior grupo do questionário (18 de 39 respostas) e prova que as
-regras de cálculo são parametrizáveis por curso (ver RF15 em <code>requisitos.html</code>).
+<strong>Engenharia de Computação</strong> é o curso-piloto: acesso direto à coordenação, sem
+depender de terceiros no curto prazo. O PPC (julho de 2017) e o formulário de solicitação de
+atividades complementares (matriz 6759) já estão em mãos. A regra de cálculo vem do 
+formulário, que traz a conversão e o limite de cada item. O PPC só fixa o total de 120 horas.
+<strong>Licenciatura em Teatro</strong> entra como segundo curso, e o PPC dele ainda não foi
+obtido (ver <code>TODO/pendencias.md</code>). É o maior grupo do questionário (18 de 39
+respostas) e prova que as regras de cálculo são parametrizáveis por curso (ver RF15 em
+<code>requisitos.html</code>).
 </p>
 
 <table>
@@ -163,11 +167,16 @@ com o SAACI (que, além do MVP, prevê estágio, cardápio do RU e grade curricu
 <tr><td>Cálculo automático de horas</td><td>Não</td><td>Sim</td><td>Sim</td><td>N/A</td><td>Sim</td></tr>
 <tr><td>Controle de limite por categoria</td><td>Não inf.</td><td>Sim</td><td>Sim</td><td>N/A</td><td>Sim</td></tr>
 <tr><td>Orientação/simulação antes do envio</td><td>Não</td><td>Não</td><td>Parcial</td><td>N/A</td><td><strong>Sim</strong></td></tr>
+<tr><td>Registro/gestão de estágio</td><td>Sim</td><td>Não inf.</td><td>Não</td><td>Não</td><td>Sim</td></tr>
+<tr><td>Grade curricular / estrutura do curso</td><td>Sim</td><td>Sim</td><td>Não</td><td>Não</td><td>Sim</td></tr>
+<tr><td>Feedback de disciplinas por IA</td><td>Não</td><td>Não</td><td>Não</td><td>Não</td><td><strong>Sim</strong></td></tr>
+<tr><td>Serviços de rotina ao aluno (ex.: cardápio do RU)</td><td>Não</td><td>Não</td><td>Não</td><td>Sim</td><td>Sim</td></tr>
 <tr><td>Painel visual de progresso</td><td>Não</td><td>Não</td><td>Não</td><td>Não</td><td><strong>Sim</strong></td></tr>
-<tr><td>Foco na experiência do aluno (UX)</td><td>Baixo</td><td>Baixo</td><td>Baixo</td><td>Alto</td><td><strong>Alto</strong></td></tr>
+<tr><td>Gamificação / acompanhamento de meta</td><td>Não</td><td>Não</td><td>Não</td><td>Não</td><td><strong>Sim</strong></td></tr>
+<tr><td>Foco na experiência do aluno (UX)</td><td>Baixo</td><td>Baixo</td><td>Baixo</td><td>Alto</td><td>Alto</td></tr>
 <tr><td>Situação</td><td>Em produção</td><td>Em produção</td><td>Protótipo (TCC)</td><td>Beta (2025)</td><td>Proposto</td></tr>
 </table>
-<p class="fonte">N/A = fora do escopo da solução. Não inf. = sem informação pública verificável. Fonte: SAACI - pesquisa de mercado.docx. Arquivo original mantido no Google Drive do mantenedor, fora deste repositório.</p>
+<p class="fonte">N/A = fora do escopo da solução. Não inf. = sem informação pública verificável. Em negrito, na coluna SAACI, os diferenciais exclusivos da proposta. Estágio, grade curricular, feedback por IA, serviços de rotina e gamificação estão fora do MVP (ver <code>escopo-mvp.html</code>). Fonte: SAACI - pesquisa de mercado.docx. Arquivo original mantido no Google Drive do mantenedor, fora deste repositório.</p>
 
 <h3>Leitura por concorrente</h3>
 <ul>
