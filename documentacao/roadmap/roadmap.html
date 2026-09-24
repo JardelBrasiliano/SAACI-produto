@@ -122,8 +122,9 @@ marco aqui sem adicionar lá é inconsistência a ser pega por <code>/saaci-cons
 <script>
 (function(){
   var STORAGE_KEY = 'saaci-roadmap-marco0';
-  var done = {};
-  try { done = JSON.parse(localStorage.getItem(STORAGE_KEY) || '{}'); } catch (e) { done = {}; }
+  var DONE_ESTATICO = { 0: true, 1: true };
+  var done = Object.assign({}, DONE_ESTATICO);
+  try { done = Object.assign(done, JSON.parse(localStorage.getItem(STORAGE_KEY) || '{}')); } catch (e) {}
   function salvar() { try { localStorage.setItem(STORAGE_KEY, JSON.stringify(done)); } catch (e) {} }
 
   var GOOGLE_DRIVE_NOTA = 'Arquivo mantido no Google Drive do mantenedor, fora deste repositório.';
