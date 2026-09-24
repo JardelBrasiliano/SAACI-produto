@@ -5,10 +5,10 @@ que não existe em nenhum arquivo do repositório.
 
 ## Bloqueantes para o Marco 1 (MVP)
 
-- [ ] **Obter o PPC (Projeto Pedagógico de Curso) de Engenharia de Computação.** O RF15
-  (`documentacao/produto/requisitos.html`) exige regras de cálculo por curso, mas nenhum PPC ou
-  edital de atividades complementares veio no `drive/`. Sem ele, o cálculo automático não tem
-  regra real para implementar, só o placeholder do RF32 (mostrar a regra antes do envio).
+- [x] **Obter o PPC (Projeto Pedagógico de Curso) de Engenharia de Computação.** Obtido, junto
+  com o formulário de solicitação de atividades complementares (matriz 6759). A regra de cálculo
+  do RF15 (`documentacao/produto/requisitos.html`) está no formulário, não no PPC, que só fixa
+  as 120 horas totais.
 - [ ] **O mesmo para Licenciatura em Teatro**, segundo curso escolhido para provar a
   parametrização (RF15).
 - [ ] **Criar o repositório de desenvolvimento** (separado deste, `SAACI-produto`) quando o
