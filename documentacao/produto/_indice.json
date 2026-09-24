@@ -37,6 +37,13 @@
       "status": "fechado",
       "resumo": "Dashboard visual das 39 respostas do questionário Aluno IF (out. 2025): perfil, conhecimento da regra, dificuldades, validação de demanda e funcionalidades desejadas, com recorte iniciante x veterano.",
       "ids": []
+    },
+    {
+      "arquivo": "pesquisa-mercado.html",
+      "titulo": "Pesquisa de Mercado",
+      "status": "fechado",
+      "resumo": "Base completa do benchmarking contra SIGAA, SUAP, PWAC-IFRS e Sou UFPR (resumo em visao-produto.html, seção 4). Perfil técnico e fontes de cada concorrente verificados. Metodologia da coleta original (quem, quando, critério de UX) segue com tags REVISÃO, não bloqueante, ver roadmap.html.",
+      "ids": []
     }
   ]
 }

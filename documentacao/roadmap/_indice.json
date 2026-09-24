@@ -1,20 +1,20 @@
 {
   "pasta": "roadmap",
   "descricao": "Racional de negócio e checklist executável do roadmap do SAACI",
-  "atualizado": "2026-09-21",
+  "atualizado": "2026-09-24",
   "documentos": [
     {
       "arquivo": "README.md",
       "titulo": "Racional do Roadmap",
       "status": "fechado",
-      "resumo": "Roadmap por meta, não por data, sem data fixa em nenhum marco. Horizonte pós-MVP (OSS público). Marco 0 sem critério de 'pronto' definido; Marco 1 (MVP); Marco 2 (sugestões de eventos).",
+      "resumo": "Roadmap por meta, não por data, sem data fixa em nenhum marco. Horizonte pós-MVP (OSS público). Marco 0 (11 atividades de revisão); Marco 1 (MVP); Marco 2 (sugestões de eventos); revisão contínua não bloqueante (pesquisa-mercado.html) fora do critério de destrave.",
       "ids": []
     },
     {
       "arquivo": "roadmap.html",
       "titulo": "Roadmap (checklist)",
       "status": "ferramenta",
-      "resumo": "Checklist interativo com localStorage, um marco por seção. Hoje sem tarefas (aguardando critério de 'pronto' do Marco 0). Não é 'fechado' no sentido de decisão validada. É ferramenta funcional, mantida em HTML por natureza.",
+      "resumo": "Checklist interativo com localStorage, um marco por seção. Marco 0 tem os 11 nós de revisão do bootstrap. Marcos 1 e 2 ainda sem tarefas. Seção extra 'Revisão contínua' lista itens não bloqueantes (hoje: pesquisa-mercado.html). Não é 'fechado' no sentido de decisão validada. É ferramenta funcional, mantida em HTML por natureza.",
       "ids": []
     }
   ]

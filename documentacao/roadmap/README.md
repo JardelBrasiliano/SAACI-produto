@@ -57,6 +57,11 @@ com rascunhos (`.md`) promovidos a fechados (`.html`). Nenhum desses documentos 
 revisão humana até este ponto; a trilha existe para isso. Ver `roadmap.html`, Marco 0, para a
 lista de atividades, dependências e o comando de cada uma.
 
+**Revisão contínua, fora do critério de destrave:** `roadmap.html` também lista itens de
+completude que não bloqueiam o Marco 0 nem nenhum outro marco — hoje só
+`../produto/pesquisa-mercado.html`, fechado com alguns campos da coleta original ainda
+marcados para revisão.
+
 ### Marco 1: MVP
 
 **Objetivo:** MVP funcionando (cadastro, login institucional, recuperação de senha, perfil,

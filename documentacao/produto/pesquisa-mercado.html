@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SAACI — Pesquisa de Mercado</title>
+<link rel="stylesheet" href="../../shared/base.css">
+</head>
+<body>
+
+<nav class="crumbs"><a href="../../index.html">SAACI</a> › <a href="../README.md">Documentação</a> › Produto</nav>
+<h1>SAACI — Pesquisa de Mercado</h1>
+<div class="subtitle">Benchmarking completo contra SIGAA, SUAP, PWAC-IFRS e Sou UFPR</div>
+<div class="atualizado">Última atualização: 24/09/2026</div>
+<nav class="siblings">
+  <a href="visao-produto.html">Visão de Produto</a>
+  <a href="escopo-mvp.html">Escopo do MVP</a>
+  <a href="requisitos.html">Requisitos</a>
+  <a href="backlog-roadmap.html">Backlog</a>
+  <a href="pesquisa-questionario.html">Pesquisa com Alunos</a>
+  <span class="atual">Pesquisa de Mercado</span>
+</nav>
+
+<div class="box">
+<strong>Fonte de verdade para:</strong> o benchmarking completo do SAACI contra outras
+soluções de mercado, com metodologia e fontes declaradas. A versão resumida (tabela +
+conclusão) está em <code>visao-produto.html</code>, seção 4 — este arquivo é a base que
+sustenta aquela seção e a análise de mercado do TCC. Mesma lógica de
+<code>pesquisa-questionario.html</code> para a pesquisa com alunos: lá o dado bruto do
+questionário, aqui o dado bruto do benchmarking.
+</div>
+
+<div class="box box-warn">
+<strong>Pontos em aberto:</strong> este documento fecha com alguns campos ainda marcados
+<span class="badge badge-warn">REVISÃO</span> — detalhes da coleta original (quem conduziu,
+período exato, critério de avaliação de UX) que só quem fez a pesquisa original sabe
+responder. Não bloqueiam nenhum marco do roadmap; item de acompanhamento contínuo em
+<code>../roadmap/roadmap.html</code>.
+</div>
+
+<h2>1. Objetivo da pesquisa</h2>
+<p>
+Responder: já existe, no mercado de sistemas acadêmicos e apps de serviço estudantil usados no
+Brasil, alguma solução que cubra o que o SAACI se propõe a fazer — orientar o aluno
+<strong>antes</strong> do envio de uma atividade complementar, com cálculo automático e painel
+visual de progresso? Se não existe pronta, quais peças já existem espalhadas e em qual
+solução?
+</p>
+
+<h2>2. Metodologia</h2>
+<ul>
+<li><strong>Tipo de pesquisa:</strong> pesquisa documental exploratória, de abordagem
+qualitativa e comparativa, sobre fontes públicas (site oficial, documentação institucional,
+repositório acadêmico) de cada concorrente. <span class="badge badge-warn">REVISÃO</span>
+confirmar se esta é a classificação metodológica usada no capítulo de metodologia do TCC.</li>
+<li><strong>Responsável pela coleta original:</strong> <span class="badge badge-warn">REVISÃO</span>
+nome de quem levantou os dados originais em <code>SAACI - pesquisa de mercado.docx</code>.</li>
+<li><strong>Período de coleta original:</strong> <span class="badge badge-warn">REVISÃO</span>
+data de início e fim; provavelmente próxima de outubro de 2025 (mesmo período do questionário
+com alunos), mas isso não está confirmado no arquivo original.</li>
+<li><strong>Critério de seleção dos concorrentes:</strong> soluções usadas por instituições
+federais de ensino brasileiras (SIGAA na UFC, SUAP nos Institutos Federais), um protótipo
+acadêmico focado especificamente em atividades complementares (PWAC-IFRS, mesmo domínio do
+SAACI) e um app de referência em UX de serviços estudantis (Sou UFPR), para cobrir tanto
+concorrência direta quanto o padrão de experiência a perseguir.</li>
+<li><strong>Fonte de dado por concorrente, verificada nesta revisão (24 set. 2026):</strong>
+ver seção 3 e as referências da seção 9. Esta verificação usou apenas fonte pública — não
+reproduz teste funcional direto de nenhum dos quatro sistemas.</li>
+<li><strong>Arquivo original:</strong> <code>SAACI - pesquisa de mercado.docx</code>, mantido
+no Google Drive do mantenedor, fora deste repositório (peça acesso a quem mantém o projeto
+para o dado bruto e para confirmar os campos em aberto).</li>
+</ul>
+
+<h2>3. Concorrentes analisados</h2>
+
+<h3>SIGAA (UFC)</h3>
+<table>
+<tr><th>Campo</th><th>Valor</th></tr>
+<tr><td>Tipo</td><td>ERP acadêmico institucional</td></tr>
+<tr><td>Tecnologia</td><td>Java, Struts, JSF, EJB, Hibernate</td></tr>
+<tr><td>Instituição mantenedora</td><td>Desenvolvido originalmente pela UFRN (Superintendência
+de Tecnologia da Informação) e adotado por diversas universidades federais, entre elas a
+UFC</td></tr>
+<tr><td>Situação</td><td>Em produção</td></tr>
+<tr><td>Fonte consultada</td><td>Portal SIGAA/UFC e documentação de arquitetura da UFRN, ver
+referências (seção 9). Acesso em 24 set. 2026.</td></tr>
+</table>
+
+<h3>SUAP (Rede Federal)</h3>
+<table>
+<tr><th>Campo</th><th>Valor</th></tr>
+<tr><td>Tipo</td><td>ERP multicampi</td></tr>
+<tr><td>Tecnologia</td><td>Python, Django, PostgreSQL, Nginx, Gunicorn, jQuery</td></tr>
+<tr><td>Instituição mantenedora</td><td>Desenvolvido pelo IFRN desde 2006; usado por cerca de
+70 instituições da Rede Federal via convênio de cessão</td></tr>
+<tr><td>Situação</td><td>Em produção</td></tr>
+<tr><td>Fonte consultada</td><td>Portal do SUAP (IFRN), ver referências (seção 9). Acesso em
+24 set. 2026.</td></tr>
+</table>
+
+<h3>PWAC-IFRS</h3>
+<table>
+<tr><th>Campo</th><th>Valor</th></tr>
+<tr><td>Tipo</td><td>Trabalho de Conclusão de Curso, protótipo focado em atividades
+complementares</td></tr>
+<tr><td>Tecnologia</td><td>Java, JSF, PostgreSQL, modelado em UML</td></tr>
+<tr><td>Autoria</td><td>Airton da Rocha Bernardoni, 2023, IFRS Campus Porto Alegre — voltado
+inicialmente ao curso de Sistemas para Internet</td></tr>
+<tr><td>Situação</td><td>Protótipo (TCC). <span class="badge badge-warn">REVISÃO</span> o
+repositório institucional não afirma explicitamente que o sistema nunca operou fora do
+contexto acadêmico; essa leitura vem da pesquisa original e não foi confirmada de forma
+independente nesta revisão.</td></tr>
+<tr><td>Fonte consultada</td><td>Repositório institucional do IFRS, ver referências (seção 9).
+Acesso em 24 set. 2026.</td></tr>
+</table>
+
+<h3>Sou UFPR</h3>
+<table>
+<tr><th>Campo</th><th>Valor</th></tr>
+<tr><td>Tipo</td><td>App de serviços estudantis, não acadêmico/curricular</td></tr>
+<tr><td>Tecnologia</td><td><span class="badge badge-warn">REVISÃO</span> stack técnico não
+divulgado nas fontes públicas consultadas; desenvolvido internamente pelo C3SL (Centro de
+Computação Científica e Software Livre), Departamento de Informática da UFPR</td></tr>
+<tr><td>Instituição mantenedora</td><td>UFPR, via Agtic (Assessoria de Gestão de Tecnologia da
+Informação e Comunicação) e o grupo de pesquisa C3SL</td></tr>
+<tr><td>Situação</td><td>Beta, lançado em abril de 2025</td></tr>
+<tr><td>Fonte consultada</td><td>Portal Sou UFPR e notícia oficial da UFPR, ver referências
+(seção 9). Acesso em 24 set. 2026.</td></tr>
+</table>
+
+<h2>4. Critérios de comparação (definição)</h2>
+<p>Para a tabela da seção 5 não depender de leitura subjetiva, cada critério fica definido
+aqui:</p>
+<ul>
+<li><strong>Gestão de atividades complementares:</strong> a solução tem módulo dedicado a
+registrar e acompanhar atividades complementares (não só notas/matrícula).</li>
+<li><strong>Cálculo automático de horas:</strong> o sistema converte a atividade registrada em
+horas validadas sem cálculo manual do aluno ou da coordenação.</li>
+<li><strong>Controle de limite por categoria:</strong> o sistema aplica, sozinho, o teto de
+horas por categoria (ex.: máximo de X horas em "eventos"), sem depender de conferência
+manual.</li>
+<li><strong>Orientação/simulação antes do envio:</strong> o aluno consegue saber se uma
+atividade vai contar, e quanto vai valer, antes de enviá-la para validação (não só depois,
+como resultado).</li>
+<li><strong>Painel visual de progresso:</strong> existe alguma visualização (barra, gráfico,
+percentual) do total cumprido frente à meta, não só uma lista ou tabela de registros.</li>
+<li><strong>Foco na experiência do aluno (UX):</strong> <span class="badge badge-warn">REVISÃO</span>
+a pesquisa original classifica cada concorrente em "Baixo/Alto" sem declarar a escala usada.
+Proposta para fechar: heurísticas de Nielsen aplicadas à interface pública de cada sistema, ou
+número de passos até completar a tarefa-chave (registrar uma atividade). Aguardando
+confirmação de qual critério a pesquisa original de fato usou.</li>
+</ul>
+
+<h2>5. Tabela comparativa</h2>
+<table>
+<tr><th>Critério</th><th>SIGAA (UFC)</th><th>SUAP (IFs)</th><th>PWAC-IFRS</th><th>Sou UFPR</th><th>SAACI</th></tr>
+<tr><td>Gestão de atividades complementares</td><td>Sim</td><td>Sim</td><td>Sim</td><td>Não</td><td>Sim</td></tr>
+<tr><td>Cálculo automático de horas</td><td>Não</td><td>Sim</td><td>Sim</td><td>N/A</td><td>Sim</td></tr>
+<tr><td>Controle de limite por categoria</td><td>Não inf.</td><td>Sim</td><td>Sim</td><td>N/A</td><td>Sim</td></tr>
+<tr><td>Orientação/simulação antes do envio</td><td>Não</td><td>Não</td><td>Parcial</td><td>N/A</td><td><strong>Sim</strong></td></tr>
+<tr><td>Painel visual de progresso</td><td>Não</td><td>Não</td><td>Não</td><td>Não</td><td><strong>Sim</strong></td></tr>
+<tr><td>Foco na experiência do aluno (UX)</td><td>Baixo</td><td>Baixo</td><td>Baixo</td><td>Alto</td><td><strong>Alto</strong></td></tr>
+<tr><td>Situação</td><td>Em produção</td><td>Em produção</td><td>Protótipo (TCC)</td><td>Beta (2025)</td><td>Proposto</td></tr>
+</table>
+<p class="fonte">
+N/A = fora do escopo da solução (Sou UFPR não tem módulo de atividades complementares).
+Não inf. = sem informação pública verificável até o momento da coleta.
+<span class="badge badge-warn">REVISÃO</span> as linhas "Sim/Não/Parcial" vêm da pesquisa
+original (<code>SAACI - pesquisa de mercado.docx</code>); esta revisão confirmou que os quatro
+sistemas existem e seu perfil técnico (seção 3), mas não reproduziu o teste funcional
+detalhado por trás de cada célula da tabela.
+</p>
+
+<h2>6. Leitura por concorrente</h2>
+<ul>
+<li><strong>SIGAA (UFC):</strong> ERP completo, mantido por uma rede de universidades federais
+sob o guarda-chuva de sistemas desenvolvidos pela UFRN. Atividades complementares é módulo
+secundário e funciona como repositório de solicitações, com pouca orientação prévia, o que
+gera retrabalho de análise para a coordenação.</li>
+<li><strong>SUAP (Rede Federal):</strong> ERP multicampi com forte parametrização por matriz
+curricular, mas ênfase administrativa — nasceu para gestão de pessoas, patrimônio e processos,
+não como produto centrado no aluno. Cálculo só acontece no processamento final, sem simulação
+prévia para o aluno.</li>
+<li><strong>PWAC-IFRS:</strong> TCC de 2023 focado só em atividades complementares, para o
+curso de Sistemas para Internet do IFRS Campus Porto Alegre. Calcula automaticamente e impede
+ultrapassar limite, mas é um protótipo acadêmico — não cobre perfil do aluno, estágio,
+restaurante universitário ou grade curricular, e não há evidência pública de adoção
+institucional além do trabalho original.</li>
+<li><strong>Sou UFPR:</strong> app de serviços, não acadêmico, lançado em abril de 2025 por um
+grupo de pesquisa e tecnologia da própria UFPR. Forte em UX de serviço cotidiano (cardápio do
+RU, ônibus intercampi, carteirinha digital), mas sem nenhum fluxo de atividades
+complementares. Cardápio institucional, não colaborativo.</li>
+</ul>
+
+<h2>7. Limitações da pesquisa</h2>
+<ul>
+<li>Amostragem por conveniência dos concorrentes: os 4 analisados não são um mapeamento
+exaustivo do mercado nacional de sistemas de gestão de atividades complementares, só as
+soluções já conhecidas pela equipe do SAACI no momento da pesquisa original.
+<span class="badge badge-warn">REVISÃO</span> confirmar se houve algum critério de busca
+adicional além do conhecimento prévio da equipe.</li>
+<li>Dados de SIGAA e SUAP foram obtidos via documentação pública e páginas institucionais, não
+via acesso administrativo ou teste direto ao sistema — nenhum dos dois é aberto a usuário
+externo sem vínculo institucional.</li>
+<li><span class="badge badge-warn">REVISÃO</span> não há registro de entrevista com usuário
+real de nenhum dos quatro concorrentes; a leitura de UX ("Baixo"/"Alto") é observacional, a
+partir de interface pública ou relato de terceiros, não de teste de usabilidade formal.</li>
+</ul>
+
+<h2>8. Conclusão</h2>
+<p>
+Cálculo automático e controle de limite já existem isoladamente (PWAC-IFRS, SUAP); boa UX
+de serviços já existe isoladamente (Sou UFPR). Nenhum desses itens sozinho é diferencial do
+SAACI. O diferencial é reunir, com boa usabilidade, o que hoje está fragmentado: gestão
+orientada de horas, cardápio colaborativo, grade curricular com feedback sintetizado por IA e
+painel visual de progresso — uma combinação ausente em todas as quatro soluções analisadas.
+</p>
+
+<h2>9. Referências</h2>
+<p class="fonte">
+UFC/UFRN. <strong>SIGAA — Sistema Integrado de Gestão de Atividades Acadêmicas.</strong>
+Disponível em: https://si3.ufc.br/sigaa/verTelaLogin.do. Acesso em: 24 set. 2026.<br><br>
+IFRN. <strong>SUAP — Sistema Unificado de Administração Pública.</strong> Disponível em:
+https://portal.suap.ifrn.edu.br/. Acesso em: 24 set. 2026.<br><br>
+BERNARDONI, Airton da Rocha. <strong>Plataforma web para o gerenciamento de Atividades
+Acadêmicas Complementares de Cursos de Graduação.</strong> Trabalho de Conclusão de Curso —
+Instituto Federal de Educação, Ciência e Tecnologia do Rio Grande do Sul, Campus Porto Alegre,
+2023. Disponível em: https://repositorio.ifrs.edu.br/handle/123456789/980. Acesso em: 24 set.
+2026.<br><br>
+UFPR. <strong>Sou UFPR.</strong> Disponível em: https://sou.ufpr.br/. Acesso em: 24 set.
+2026.<br><br>
+SAACI - pesquisa de mercado.docx — documento interno do mantenedor, Google Drive, fora deste
+repositório. <span class="badge badge-warn">REVISÃO</span> data de elaboração do documento
+original.
+</p>
+
+<div class="meta">Documento vivo. Campos com <span class="badge badge-warn">REVISÃO</span>
+seguem em aberto, sem bloquear nenhum marco — acompanhamento em
+<code>../roadmap/roadmap.html</code>. Divergência com outro arquivo do repositório resolve
+pelo mais específico.</div>
+
+</body>
+</html>
