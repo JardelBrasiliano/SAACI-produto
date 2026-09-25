@@ -122,7 +122,7 @@ marco aqui sem adicionar lá é inconsistência a ser pega por <code>/saaci-cons
 <script>
 (function(){
   var STORAGE_KEY = 'saaci-roadmap-marco0';
-  var DONE_ESTATICO = { 0: true, 1: true, 2: true };
+  var DONE_ESTATICO = { 0: true, 1: true, 2: true, 3: true };
   var done = Object.assign({}, DONE_ESTATICO);
   try { done = Object.assign(done, JSON.parse(localStorage.getItem(STORAGE_KEY) || '{}')); } catch (e) {}
   function salvar() { try { localStorage.setItem(STORAGE_KEY, JSON.stringify(done)); } catch (e) {} }
@@ -159,7 +159,7 @@ marco aqui sem adicionar lá é inconsistência a ser pega por <code>/saaci-cons
     {
       id: 4, fase: 'Fase 1 — Fundações', titulo: 'Referências Visuais', arquivo: '../design-system/referencias-visuais.md', rascunho: true, bloqueado: true,
       fonte: null,
-      pergunta: 'Arquivo vazio, aguardando você trazer uma referência visual real (site, app ou print). Sem isso não há o que revisar.',
+      pergunta: 'Arquivo vazio por decisão consciente: nenhum material do bootstrap trouxe referência visual real até agora. Falta um print ou link de tela real (produto, app ou site), com nota do que especificamente inspira, ou um anti-exemplo (produto que mostra o que evitar). Sem isso, não há o que revisar.',
       dependeDe: [], comando: null
     },
     {
@@ -250,7 +250,7 @@ marco aqui sem adicionar lá é inconsistência a ser pega por <code>/saaci-cons
       }
       if (n.comando) linha('Comando', '<code>' + n.comando + '</code>');
       if (n.criterioExtra) linha('Critério de conclusão', n.criterioExtra);
-      if (n.bloqueado) linha('Status', 'Bloqueado até você trazer a referência — não é "a fazer" no sentido de revisão de texto.');
+      if (n.bloqueado) linha('Status', 'Bloqueado até você trazer a referência. Não é tarefa de revisão de texto, é dado que falta.');
     }
 
     var toggle = document.createElement('button');
