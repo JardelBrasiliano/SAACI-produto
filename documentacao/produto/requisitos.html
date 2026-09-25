@@ -11,7 +11,7 @@
 <nav class="crumbs"><a href="../../index.html">SAACI</a> › <a href="../README.md">Documentação</a> › Produto</nav>
 <h1>SAACI — Requisitos Funcionais e Não Funcionais</h1>
 <div class="subtitle">Documento derivado do levantamento original, reconciliado com o escopo do MVP e as lacunas fechadas no bootstrap</div>
-<div class="atualizado">Última atualização: 23/09/2026</div>
+<div class="atualizado">Última atualização: 25/09/2026</div>
 <nav class="siblings">
   <a href="visao-produto.html">Visão de Produto</a>
   <a href="escopo-mvp.html">Escopo do MVP</a>
@@ -71,12 +71,22 @@ permanentemente fora da própria conta, o que não é aceitável nem na primeira
 <tr><td>RF32</td><td>O sistema deve exibir ao aluno, antes do envio, a regra de conversão aplicada ao tipo de atividade escolhido (ex.: "5h de palestra = 1h computada"), evitando que ele descubra a proporção só depois de registrar.</td><td><span class="badge badge-info">MVP</span> <span class="badge badge-purple">Novo</span></td></tr>
 <tr><td>RF35</td><td>O sistema deve exibir, para cada categoria de horas complementares, os certificados que a compõem, quantas horas cada um contribui para aquela categoria, o total por categoria e o total geral de horas contabilizadas. Cada certificado pertence a exatamente uma categoria.</td><td><span class="badge badge-info">MVP</span> <span class="badge badge-purple">Novo</span></td></tr>
 <tr><td>RF36</td><td>O sistema deve permitir selecionar um ou mais certificados já registrados (ou todos) e baixá-los, para o aluno usar no preenchimento do protocolo de solicitação de validação junto à coordenação. O sistema não envia nem transmite nada à coordenação, só orienta o aluno a dividir as horas por categoria e reunir os certificados certos pra esse protocolo externo.</td><td><span class="badge badge-info">MVP</span> <span class="badge badge-purple">Novo</span></td></tr>
+<tr><td>RF37</td><td>O sistema deve permitir que o aluno gere um link privado, somente leitura, com o resumo por categoria e os certificados vinculados, para compartilhar com coordenação, professor/orientador ou responsável, sem exigir login de quem recebe. O link reflete os dados atuais do aluno a cada acesso e pode ser revogado por ele a qualquer momento.</td><td><span class="badge badge-info">MVP</span> <span class="badge badge-purple">Novo</span></td></tr>
 </table>
+<p class="box" style="font-size:.86rem">
+<strong>RF16 reclassificado.</strong> Estava marcado <em>Opcional</em> em
+<code>SAACI - rf e rnf.docx</code> (arquivo mantido no Google Drive do mantenedor, fora deste
+repositório). Decisão do usuário durante o bootstrap: promovido a MVP. É o diferencial que a
+pesquisa de mercado (ver <code>visao-produto.html</code>, seção 4) destaca como exclusivo do
+SAACI frente aos quatro concorrentes analisados; deixá-lo opcional contradiria a tese do
+produto.
+</p>
 <div class="box box-purple">
-<strong>RF31, RF32, RF35 e RF36 são requisitos novos, sem RF original correspondente.</strong>
-RF31 fecha a lacuna entre o levantamento original (que nunca previu upload) e o pedido mais
-comum do questionário (33/39, "registro de atividade com anexo de comprovante") e o próprio
-cronograma original do projeto ("Upload de documentos comprobatórios"). RF32 fecha a lacuna descrita
+<strong>RF31, RF32, RF35, RF36 e RF37 são requisitos novos, sem RF original correspondente.</strong>
+RF31 fecha a lacuna entre o levantamento original (que nunca previu upload) e a 2ª
+funcionalidade mais pedida do questionário (33/39, "registro de atividade com anexo de
+comprovante", atrás só de "ver quantidade de horas cumpridas", 36/39, já coberta por RF16) e o
+próprio cronograma original do projeto ("Upload de documentos comprobatórios"). RF32 fecha a lacuna descrita
 literalmente na resposta 16 do questionário: a regra de proporção (ex.: palestra de 5h só
 valer 1h) é hoje invisível ao aluno até a coordenação recusar o pedido. O SAACI existe para
 evitar exatamente isso. RF35 e RF36 fecham a lacuna entre "o sistema calcula a regra" (RF14,
@@ -84,8 +94,14 @@ RF15, RF32) e "o aluno consegue de fato levar isso pra coordenação": hoje esse
 manual, juntar certificado por certificado e separar por categoria, dor citada literalmente na
 resposta 40 do questionário ("já tenho os comprovantes necessários... mas dá mó preguiça
 juntar tudo, fazer o cálculo") e reforçada pelos 41% que relatam dificuldade de contato com a
-coordenação. O sistema segue sem nenhum papel de coordenação: RF36 entrega arquivo pro aluno
-usar fora do sistema, nunca transmite nada para ninguém.
+coordenação. RF37 é uma alternativa mais leve ao arquivo do RF36: o aluno compartilha um link
+somente leitura em vez de anexar arquivo manualmente, útil quando a validação é com professor
+ou orientador (resposta 13 do questionário) em vez do protocolo formal da coordenação. O
+sistema segue sem nenhum papel de coordenação: quem recebe o link não tem conta nem acesso a
+dado de outro aluno, e quem decide compartilhar é sempre o próprio aluno, dono do dado (RNF04
+não é afetado). Não reabre a decisão de <em>Perfil de coordenação / validação institucional</em>,
+fora do MVP (ver <code>backlog-roadmap.html</code>, seção 5), que trata de dar conta e papel
+formal de validação a alguém além do aluno.
 </div>
 
 <h3>1.4 Conta e Dados Pessoais (LGPD)</h3>
