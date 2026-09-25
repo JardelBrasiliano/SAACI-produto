@@ -1,7 +1,7 @@
 # SAACI — Racional do Roadmap
 
 > [SAACI](../../index.html) › [Documentação](../README.md) › Roadmap
-> Última atualização: 21/09/2026
+> Última atualização: 24/09/2026
 
 Fonte de verdade para **por que** cada marco existe, sua métrica e o que destrava o próximo.
 A lista de tarefas executáveis vive em [`roadmap.html`](./roadmap.html). As duas coisas não
@@ -48,6 +48,7 @@ commitlint). Detalhe completo em `../../CONTRIBUTING.md`.
 ## Marcos
 
 ### Marco 0: Fundação (este bootstrap)
+
 **Objetivo:** ter documentação viva, roadmap e ferramental de processo prontos para começar a
 planejar tarefas de verdade.
 **Critério de destrave:** as 11 atividades da trilha de revisão em `roadmap.html` concluídas —
@@ -56,7 +57,13 @@ com rascunhos (`.md`) promovidos a fechados (`.html`). Nenhum desses documentos 
 revisão humana até este ponto; a trilha existe para isso. Ver `roadmap.html`, Marco 0, para a
 lista de atividades, dependências e o comando de cada uma.
 
+**Revisão contínua, fora do critério de destrave:** `roadmap.html` também lista itens de
+completude que não bloqueiam o Marco 0 nem nenhum outro marco — hoje só
+`../produto/pesquisa-mercado.html`, fechado com alguns campos da coleta original ainda
+marcados para revisão.
+
 ### Marco 1: MVP
+
 **Objetivo:** MVP funcionando (cadastro, login institucional, recuperação de senha, perfil,
 registro de horas com comprovante, cálculo automático parametrizado por curso, painel de
 progresso; ver `../produto/escopo-mvp.html`) pronto para uso real.
@@ -65,15 +72,18 @@ desenvolvimento existir. Não é decisão de produto, é decisão técnica que a
 morar.
 
 ### Marco 2: sugestões de eventos e atividades (pós-MVP, prioridade alta)
+
 **Objetivo:** responder à 3ª funcionalidade mais pedida no questionário original (29/39),
 sem RF hoje. Ver `../produto/backlog-roadmap.html`, seção 1.
 **Critério de destrave:** a refinar com a skill `saaci-funcionalidade` antes de virar tarefa.
 
 ### Marcos futuros (candidatos, não comprometidos)
+
 Estágio, cardápio do RU colaborativo, grade curricular com feedback por IA, perfil de
-coordenação/validação institucional, intenção de adoção institucional pelo IFCE. Todos
-documentados com racional em `../produto/backlog-roadmap.html`. Nenhum tem critério de
-destrave definido; não presumir prioridade entre eles até serem discutidos.
+coordenação/validação institucional, expansão do curso-piloto das regras de cálculo (9 cursos
+da pesquisa → campus Fortaleza → todos os campi do IFCE), intenção de adoção institucional
+pelo IFCE. Todos documentados com racional em `../produto/backlog-roadmap.html`. Nenhum tem
+critério de destrave definido; não presumir prioridade entre eles até serem discutidos.
 
 ## Métricas
 

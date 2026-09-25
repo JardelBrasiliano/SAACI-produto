@@ -11,13 +11,14 @@
 <nav class="crumbs"><a href="../../index.html">SAACI</a> › <a href="../README.md">Documentação</a> › Produto</nav>
 <h1>SAACI — Visão de Produto</h1>
 <div class="subtitle">Sistema de Apoio Acadêmico Colaborativo do IFCE</div>
-<div class="atualizado">Última atualização: 23/09/2026</div>
+<div class="atualizado">Última atualização: 24/09/2026</div>
 <nav class="siblings">
   <span class="atual">Visão de Produto</span>
   <a href="escopo-mvp.html">Escopo do MVP</a>
   <a href="requisitos.html">Requisitos</a>
   <a href="backlog-roadmap.html">Backlog</a>
   <a href="pesquisa-questionario.html">Pesquisa com Alunos</a>
+  <a href="pesquisa-mercado.html">Pesquisa de Mercado</a>
 </nav>
 
 <div class="box">
@@ -82,9 +83,10 @@ desconhecimento da regra é transversal e não um sintoma de calouro.
 </div>
 
 <p>
-O único eixo que varia de fato com o semestre é <strong>conhecer a meta total de horas</strong>
-(veterano sabe: 20/21; iniciante não sabe: 8/12). Isso se resolve com uma informação visível
-na tela, não com dois produtos ou dois modos de interface.
+O único eixo que varia de fato com o semestre é <strong>conhecer a meta total de horas</strong>:
+entre os veteranos, 20 de 21 sabem quantas horas precisam cumprir; entre os iniciantes, só
+4 de 12 sabem. Isso se resolve com uma informação visível na tela, não com dois produtos ou
+dois modos de interface.
 </p>
 
 <h3>Jornada de dificuldades</h3>
@@ -124,14 +126,20 @@ um tutorial, nem um "modo iniciante". Ver <code>../design-system/principios-ui.h
 
 <h3>Curso-piloto das regras de cálculo</h3>
 <p>
-<strong>Engenharia de Computação</strong> é o curso-piloto: acesso direto à coordenação, sem
-depender de terceiros no curto prazo. O PPC (julho de 2017) e o formulário de solicitação de
-atividades complementares (matriz 6759) já estão em mãos. A regra de cálculo vem do 
-formulário, que traz a conversão e o limite de cada item. O PPC só fixa o total de 120 horas.
-<strong>Licenciatura em Teatro</strong> entra como segundo curso, e o PPC dele ainda não foi
-obtido (ver <code>TODO/pendencias.md</code>). É o maior grupo do questionário (18 de 39
-respostas) e prova que as regras de cálculo são parametrizáveis por curso (ver RF15 em
-<code>requisitos.html</code>).
+<strong>Engenharia de Computação</strong> é o curso-piloto do MVP: o PPC (julho de 2017) e o
+formulário de solicitação de atividades complementares (matriz 6759) já estão em mãos. A regra
+de cálculo do RF15 (ver <code>requisitos.html</code>) vem do formulário, que traz a conversão e
+o limite de cada item — o PPC sozinho só fixa o total de 120 horas.
+<strong>Licenciatura em Teatro</strong> entra como segundo curso, maior grupo do questionário
+(18 de 39 respostas) e prova de que a regra de cálculo é parametrizável por curso, não fixa;
+o PPC e o formulário dele ainda não foram obtidos (ver <code>TODO/pendencias.md</code>).
+</p>
+<p>
+Expandir o piloto para os demais cursos da pesquisa, depois para todo o campus Fortaleza e,
+por fim, para todos os campi do IFCE é meta declarada, mas fica fora do MVP: exige repetir,
+curso a curso, o mesmo trabalho de obter PPC e formulário e converter a regra em parâmetro —
+não é só ler um documento público, como o caso de Teatro (ainda pendente) já mostra. Racional
+completo em <code>backlog-roadmap.html</code>, seção 8.
 </p>
 
 <table>
@@ -158,6 +166,8 @@ solicitações que a coordenação decifra depois.
 <p>
 Pesquisa realizada com quatro soluções analisadas em seu escopo pleno, para comparação justa
 com o SAACI (que, além do MVP, prevê estágio, cardápio do RU e grade curricular como backlog).
+Metodologia, perfil de cada concorrente e fontes completas em
+<a href="pesquisa-mercado.html">Pesquisa de Mercado</a>.
 </p>
 
 <table>
@@ -176,7 +186,7 @@ com o SAACI (que, além do MVP, prevê estágio, cardápio do RU e grade curricu
 <tr><td>Foco na experiência do aluno (UX)</td><td>Baixo</td><td>Baixo</td><td>Baixo</td><td>Alto</td><td>Alto</td></tr>
 <tr><td>Situação</td><td>Em produção</td><td>Em produção</td><td>Protótipo (TCC)</td><td>Beta (2025)</td><td>Proposto</td></tr>
 </table>
-<p class="fonte">N/A = fora do escopo da solução. Não inf. = sem informação pública verificável. Em negrito, na coluna SAACI, os diferenciais exclusivos da proposta. Estágio, grade curricular, feedback por IA, serviços de rotina e gamificação estão fora do MVP (ver <code>escopo-mvp.html</code>). Fonte: SAACI - pesquisa de mercado.docx. Arquivo original mantido no Google Drive do mantenedor, fora deste repositório.</p>
+<p class="fonte">N/A = fora do escopo da solução. Não inf. = sem informação pública verificável. Em negrito, na coluna SAACI, os diferenciais exclusivos da proposta. Estágio, grade curricular, feedback por IA, serviços de rotina e gamificação estão fora do MVP (ver <code>escopo-mvp.html</code>). Dado completo, fonte por concorrente e metodologia em <a href="pesquisa-mercado.html">Pesquisa de Mercado</a>.</p>
 
 <h3>Leitura por concorrente</h3>
 <ul>

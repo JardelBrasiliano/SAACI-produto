@@ -55,7 +55,7 @@
 <nav class="crumbs"><a href="../../index.html">SAACI</a> › <a href="../README.md">Documentação</a> › Roadmap</nav>
 <h1>SAACI — Roadmap</h1>
 <div class="subtitle">Trilha executável, por marco. Progresso salvo neste navegador.</div>
-<div class="atualizado">Última atualização: 21/09/2026</div>
+<div class="atualizado">Última atualização: 24/09/2026</div>
 <nav class="siblings">
   <a href="README.md">Racional (README)</a>
   <span class="atual">roadmap.html (trilha)</span>
@@ -91,6 +91,20 @@ fechados (.html). Enquanto isso não acontece, o Marco 1 não destrava.</div>
 <div class="vazio">Sem tarefas até passar por <code>saaci-funcionalidade</code>.</div>
 </div>
 
+<div class="marco" id="revisao-continua">
+<h2>Revisão contínua (não bloqueante)</h2>
+<div class="obj">Itens de completude que não travam nenhum marco. Ficam aqui até alguém trazer
+o dado que falta.</div>
+<ul>
+<li><strong>Pesquisa de Mercado</strong> —
+<a href="../produto/pesquisa-mercado.html">../produto/pesquisa-mercado.html</a>: documento
+fechado, mas com campos <span class="badge badge-warn">REVISÃO</span> sobre a coleta original
+(quem conduziu, período exato, critério de avaliação de UX usado). Confirmar contra
+<code>SAACI - pesquisa de mercado.docx</code> quando possível. Comando:
+<code>/saaci-revisar documentacao/produto/pesquisa-mercado.html</code>.</li>
+</ul>
+</div>
+
 <div class="meta">Progresso salvo em <code>localStorage</code> deste navegador. Não sincroniza
 entre dispositivos nem pessoas. Estrutura de marcos espelha <code>README.md</code>; adicionar
 marco aqui sem adicionar lá é inconsistência a ser pega por <code>/saaci-consistencia</code>.</div>
@@ -108,8 +122,9 @@ marco aqui sem adicionar lá é inconsistência a ser pega por <code>/saaci-cons
 <script>
 (function(){
   var STORAGE_KEY = 'saaci-roadmap-marco0';
-  var done = {};
-  try { done = JSON.parse(localStorage.getItem(STORAGE_KEY) || '{}'); } catch (e) { done = {}; }
+  var DONE_ESTATICO = { 0: true, 1: true };
+  var done = Object.assign({}, DONE_ESTATICO);
+  try { done = Object.assign(done, JSON.parse(localStorage.getItem(STORAGE_KEY) || '{}')); } catch (e) {}
   function salvar() { try { localStorage.setItem(STORAGE_KEY, JSON.stringify(done)); } catch (e) {} }
 
   var GOOGLE_DRIVE_NOTA = 'Arquivo mantido no Google Drive do mantenedor, fora deste repositório.';
@@ -125,8 +140,8 @@ marco aqui sem adicionar lá é inconsistência a ser pega por <code>/saaci-cons
     },
     {
       id: 1, fase: 'Fase 1 — Fundações', titulo: 'Visão de Produto', arquivo: '../produto/visao-produto.html',
-      fonte: ['SAACI - pesquisa de mercado.docx (benchmarking, ainda não conferido)', 'SAACI - repostas questionario.xlsx (já processada em pesquisa-questionario.html)'],
-      pergunta: 'Conferir se a seção 4 (leitura de mercado / benchmarking) bate com a fonte de pesquisa de mercado. Os números do questionário já foram conferidos e viraram documentacao/produto/pesquisa-questionario.html.',
+      fonte: ['SAACI - pesquisa de mercado.docx (benchmarking, já conferido e expandido em documentacao/produto/pesquisa-mercado.html)', 'SAACI - repostas questionario.xlsx (já processada em pesquisa-questionario.html)'],
+      pergunta: 'Seção 4 (leitura de mercado / benchmarking) já foi conferida contra fonte pública e virou documentacao/produto/pesquisa-mercado.html. Os números do questionário já foram conferidos e viraram documentacao/produto/pesquisa-questionario.html.',
       dependeDe: [], comando: '/saaci-revisar documentacao/produto/visao-produto.html'
     },
     {
