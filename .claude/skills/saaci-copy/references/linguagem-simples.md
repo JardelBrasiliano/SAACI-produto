@@ -15,7 +15,7 @@ destes critérios.
   quando o termo técnico é o vocabulário de domínio correto (ver
   `.claude/references/glossario.md`, que distingue termo de sistema de termo de negócio).
 - **Endereçamento direto ao aluno** ("você"), no tom definido em
-  `documentacao/marca/identidade-marca.md`.
+  `documentacao/marca/identidade-marca.html`.
 - **Sem duplas negativas.** "Não é possível enviar sem comprovante" em vez de "não é impossível
   que a atividade não seja aceita sem comprovante".
 - **Siglas explicadas** na primeira ocorrência, ou substituídas por termo comum. RF, RNF, PPC

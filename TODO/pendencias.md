@@ -27,8 +27,6 @@ que não existe em nenhum arquivo do repositório.
 
 ## Validação pendente (documentos ainda em `.md`, rascunho)
 
-- [ ] `documentacao/marca/identidade-marca.md`, seção 2 (tom de voz): proposta minha, não
-  validada.
 - [ ] `documentacao/design-system/tokens-visuais.md`: verde/vermelho institucionais já têm
   fonte oficial (Manual da Marca dos Institutos Federais). O restante (azul, âmbar, roxo,
   tipografia, espaçamento) é proposta minha, não validada.
@@ -47,8 +45,8 @@ que não existe em nenhum arquivo do repositório.
 - [ ] **Ativar o GitHub Pages nas configurações do repositório** (Settings → Pages → Source:
   branch `main`, pasta raiz `/`) depois que o repositório existir no GitHub. Isso não pode ser
   feito por aqui, é ação de configuração no próprio GitHub.
-- [ ] **Limitação conhecida, não resolvida:** os documentos em `.md` (`identidade-marca.md`,
-  `tokens-visuais.md`, `referencias-visuais.md`, `roadmap/README.md`) aparecem como texto puro
+- [ ] **Limitação conhecida, não resolvida:** os documentos em `.md` (`tokens-visuais.md`,
+  `referencias-visuais.md`, `roadmap/README.md`) aparecem como texto puro
   quando abertos direto pelo GitHub Pages. O Jekyll (motor padrão do Pages) só converte `.md`
   em página estilizada quando o arquivo tem front matter YAML, o que estes arquivos não têm de
   propósito, para não misturar preocupação de publicação com conteúdo. Isso é aceitável por

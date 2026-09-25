@@ -18,7 +18,7 @@ para uma única tela ou fluxo por vez.
    prompt gerado) e `documentacao/design-system/principios-ui.html`.
 3. Se `documentacao/prompts/DESIGN.md` ainda não existir, crie-o nesta primeira execução: é o
    prompt-base reutilizado por toda tela, com nome do produto, tom de voz
-   (`documentacao/marca/identidade-marca.md`), tokens visuais e princípios de UI. Cada prompt de
+   (`documentacao/marca/identidade-marca.html`), tokens visuais e princípios de UI. Cada prompt de
    tela referencia o `DESIGN.md`, não repete o conteúdo dele.
 
 ## Regras fixas do prompt gerado

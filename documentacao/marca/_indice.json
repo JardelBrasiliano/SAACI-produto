@@ -1,13 +1,13 @@
 {
   "pasta": "marca",
   "descricao": "Nome, tom de voz e promessa do SAACI",
-  "atualizado": "2026-09-21",
+  "atualizado": "2026-09-25",
   "documentos": [
     {
-      "arquivo": "identidade-marca.md",
+      "arquivo": "identidade-marca.html",
       "titulo": "Identidade da Marca",
-      "status": "rascunho",
-      "resumo": "Nome fechado (SAACI, Sistema de Apoio Acadêmico Colaborativo do IFCE). Tom de voz (seção 2) é proposta minha, ainda não validada pelo usuário.",
+      "status": "fechado",
+      "resumo": "Nome (SAACI, Sistema de Apoio Acadêmico Colaborativo do IFCE), tom de voz e promessa, todos fechados.",
       "ids": []
     }
   ]
