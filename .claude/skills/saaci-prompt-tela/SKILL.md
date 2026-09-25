@@ -13,9 +13,10 @@ para uma única tela ou fluxo por vez.
 1. A tela precisa existir em algum `documentacao/fluxos/<modulo>.html`. Se não existir, pare e
    sugira rodar `saaci-fluxo` primeiro. Não inventar uma tela que não foi alinhada em texto
    antes.
-2. Leia `documentacao/design-system/tokens-visuais.md` (cor, tipografia, espaçamento, hoje
-   marcados como proposta, não validados, exceto verde/vermelho institucionais; avisar isso no
-   prompt gerado) e `documentacao/design-system/principios-ui.html`.
+2. Leia `documentacao/design-system/tokens-visuais.html` (cor, tipografia, espaçamento — verde
+   e vermelho institucionais têm fonte oficial fixa; azul, âmbar, roxo, tipografia e espaçamento
+   são proposta própria, já validada mas sujeita a evoluir com uso real do produto) e
+   `documentacao/design-system/principios-ui.html`.
 3. Se `documentacao/prompts/DESIGN.md` ainda não existir, crie-o nesta primeira execução: é o
    prompt-base reutilizado por toda tela, com nome do produto, tom de voz
    (`documentacao/marca/identidade-marca.html`), tokens visuais e princípios de UI. Cada prompt de

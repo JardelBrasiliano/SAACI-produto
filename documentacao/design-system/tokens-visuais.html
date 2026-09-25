@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SAACI — Tokens Visuais</title>
+<link rel="stylesheet" href="../../shared/base.css">
+</head>
+<body>
+
+<nav class="crumbs"><a href="../../index.html">SAACI</a> › <a href="../README.md">Documentação</a> › Design System</nav>
+<h1>SAACI — Tokens Visuais</h1>
+<div class="subtitle">Cor, tipografia e espaçamento</div>
+<div class="atualizado">Última atualização: 25/09/2026</div>
+<nav class="siblings">
+  <a href="principios-ui.html">Princípios de UI</a>
+  <a href="escrita-de-interface.html">Escrita de Interface</a>
+  <a href="estados-e-casos-de-borda.html">Estados e Casos de Borda</a>
+  <span class="atual">Tokens Visuais</span>
+  <a href="referencias-visuais.md">Referências Visuais (rascunho)</a>
+</nav>
+
+<div class="box">
+<strong>Fonte de verdade para:</strong> paleta e escala visual do produto. Princípio de uso
+(quando usar cada cor) está em <a href="principios-ui.html">Princípios de UI</a>. Aplicado em
+<code>shared/base.css</code>, a folha de estilo compartilhada por todo documento fechado deste
+repositório.
+</div>
+
+<h2>1. Cor</h2>
+
+<div class="swatches">
+  <div class="sw"><div class="chip" style="background:#2f9e41"></div><div class="lbl">Verde institucional — #2f9e41</div></div>
+  <div class="sw"><div class="chip" style="background:#217530"></div><div class="lbl">Verde, texto — #217530</div></div>
+  <div class="sw"><div class="chip" style="background:#cd191e"></div><div class="lbl">Vermelho institucional — #cd191e</div></div>
+  <div class="sw"><div class="chip" style="background:#1a1a2e"></div><div class="lbl">Texto padrão — #1a1a2e</div></div>
+  <div class="sw"><div class="chip" style="background:#1f5c8a"></div><div class="lbl">Azul — #1f5c8a</div></div>
+  <div class="sw"><div class="chip" style="background:#8a5a00"></div><div class="lbl">Âmbar — #8a5a00</div></div>
+  <div class="sw"><div class="chip" style="background:#7a2d8a"></div><div class="lbl">Roxo — #7a2d8a</div></div>
+</div>
+
+<table>
+<tr><th>Cor</th><th>Hex</th><th>Uso</th></tr>
+<tr><td>Verde institucional</td><td>#2f9e41</td><td>Preenchimento e borda: progresso, sucesso, dentro do escopo. Cor oficial da Rede Federal.</td></tr>
+<tr><td>Verde, texto</td><td>#217530</td><td>Texto sobre fundo claro, variante mais escura para atingir o contraste mínimo da WCAG AA.</td></tr>
+<tr><td>Vermelho institucional</td><td>#cd191e</td><td>Erro, conflito, fora do escopo. Cor oficial da Rede Federal.</td></tr>
+<tr><td>Texto padrão</td><td>#1a1a2e</td><td>Corpo de texto do produto, mais suave que preto puro para leitura longa.</td></tr>
+<tr><td>Azul</td><td>#1f5c8a</td><td>MVP, ação primária, prioridade alta.</td></tr>
+<tr><td>Âmbar</td><td>#8a5a00</td><td>Opcional, pendente, atenção.</td></tr>
+<tr><td>Roxo</td><td>#7a2d8a</td><td>Requisito ou decisão nova.</td></tr>
+</table>
+
+<h2>2. Tipografia</h2>
+<p>
+Fonte de sistema (-apple-system, "Segoe UI", Roboto, sans-serif), sem fonte customizada
+carregada por rede, para garantir carregamento rápido e compatibilidade entre navegadores.
+</p>
+
+<table>
+<tr><th>Uso</th><th>Tamanho</th><th>Peso</th></tr>
+<tr><td>Título de tela</td><td>1.5–1.9rem</td><td>700</td></tr>
+<tr><td>Corpo</td><td>1rem</td><td>400</td></tr>
+<tr><td>Texto de apoio / legenda</td><td>0.85rem</td><td>400</td></tr>
+<tr><td>Número em destaque (ex.: horas cumpridas)</td><td>1.6–2rem</td><td>700</td></tr>
+</table>
+
+<h2>3. Espaçamento</h2>
+<p>
+Escala de 4px (4, 8, 12, 16, 24, 32, 48), suficiente para telas de formulário e painel sem
+exigir grid complexo. Densidade é ajustada por tela em <code>saaci-prompt-tela</code>.
+</p>
+
+<h2>4. Raio e elevação</h2>
+<p>
+Raio de 8px em cartões e campos, 4px em badges e tags. Sombra leve só em elementos sobrepostos,
+como modal e dropdown. Painel de progresso e formulário usam borda, não sombra, para manter
+leitura limpa em mobile.
+</p>
+
+<div class="meta">Documento vivo. Tipografia, espaçamento, raio e cores semânticas podem evoluir
+com o uso real do produto.</div>
+
+</body>
+</html>
