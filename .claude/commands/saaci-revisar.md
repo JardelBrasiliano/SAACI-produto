@@ -24,3 +24,15 @@ Regras:
   com `shared/base.css`, breadcrumb e data de atualização, seguindo o padrão dos demais
   documentos fechados. A promoção também depende da aprovação do usuário, como qualquer outra
   correção.
+- Documento fechado não narra o próprio processo de decisão: nada de "alternativa descartada"
+  como debate interno, "ainda a validar", "escolha minha", nota sobre versão anterior do
+  arquivo ou sobre o próprio processo de revisão. O texto final afirma o fato já definido, sem
+  mostrar o bastidor de como se chegou até ele — o documento pode ir para banca, professor ou
+  qualquer leitor externo. Isso é achado de redação (Sugestão por padrão, Importante se o
+  documento tem propósito de apresentação a público externo); a correção segue o checklist de
+  `.claude/skills/saaci-copy/references/vicios-de-ia.md`.
+- Ao aplicar as correções aprovadas, se alguma tiver mais de um caminho válido (ex.: como
+  reescrever um trecho, o que cortar, se promover para `.html` agora ou só depois de outra
+  validação), não decidir sozinho nem perguntar em texto livre: usar `AskUserQuestion`, no
+  máximo 4 perguntas por rodada, sempre com a opção recomendada em primeiro lugar e marcada
+  "(Recomendada)", antes de aplicar essa correção específica.

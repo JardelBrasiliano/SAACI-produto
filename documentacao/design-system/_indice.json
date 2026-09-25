@@ -1,7 +1,7 @@
 {
   "pasta": "design-system",
   "descricao": "Princípios de UI, escrita de interface, estados obrigatórios e tokens visuais",
-  "atualizado": "2026-09-21",
+  "atualizado": "2026-09-25",
   "documentos": [
     {
       "arquivo": "principios-ui.html",
@@ -25,10 +25,10 @@
       "ids": []
     },
     {
-      "arquivo": "tokens-visuais.md",
+      "arquivo": "tokens-visuais.html",
       "titulo": "Tokens Visuais",
-      "status": "rascunho",
-      "resumo": "Verde (#2f9e41) e vermelho (#cd191e) institucionais têm fonte oficial (Manual da Marca dos Institutos Federais, Portaria SETEC 31/2015). Azul/âmbar/roxo e tipografia/espaçamento são proposta própria, não validada.",
+      "status": "fechado",
+      "resumo": "Verde (#2f9e41) e vermelho (#cd191e) institucionais têm fonte oficial (Manual da Marca dos Institutos Federais, Portaria SETEC 31/2015). Cor de texto padrão (#1a1a2e) diverge do preto do manual por legibilidade. Azul/âmbar/roxo, tipografia, espaçamento e raio são proposta própria, validada e fechada.",
       "ids": []
     },
     {
