@@ -122,7 +122,7 @@ marco aqui sem adicionar lá é inconsistência a ser pega por <code>/saaci-cons
 <script>
 (function(){
   var STORAGE_KEY = 'saaci-roadmap-marco0';
-  var DONE_ESTATICO = { 0: true, 1: true };
+  var DONE_ESTATICO = { 0: true, 1: true, 2: true };
   var done = Object.assign({}, DONE_ESTATICO);
   try { done = Object.assign(done, JSON.parse(localStorage.getItem(STORAGE_KEY) || '{}')); } catch (e) {}
   function salvar() { try { localStorage.setItem(STORAGE_KEY, JSON.stringify(done)); } catch (e) {} }
@@ -145,11 +145,10 @@ marco aqui sem adicionar lá é inconsistência a ser pega por <code>/saaci-cons
       dependeDe: [], comando: '/saaci-revisar documentacao/produto/visao-produto.html'
     },
     {
-      id: 2, fase: 'Fase 1 — Fundações', titulo: 'Identidade da Marca', arquivo: '../marca/identidade-marca.md', rascunho: true,
+      id: 2, fase: 'Fase 1 — Fundações', titulo: 'Identidade da Marca', arquivo: '../marca/identidade-marca.html',
       fonte: null,
-      pergunta: 'Seção 2 (tom de voz) é proposta minha, ainda não validada (ver TODO/pendencias.md).',
-      dependeDe: [], comando: '/saaci-revisar documentacao/marca/identidade-marca.md',
-      criterioExtra: 'Fechar este nó inclui promover o arquivo de .md para .html.'
+      pergunta: 'Seção 2 (tom de voz) era proposta minha. Revisada e fechada via /saaci-revisar: a justificativa passou a se apoiar só em elementos internos do produto (persona e RNF23), sem citar a pesquisa de mercado.',
+      dependeDe: [], comando: '/saaci-revisar documentacao/marca/identidade-marca.html'
     },
     {
       id: 3, fase: 'Fase 1 — Fundações', titulo: 'Tokens Visuais', arquivo: '../design-system/tokens-visuais.md', rascunho: true,
