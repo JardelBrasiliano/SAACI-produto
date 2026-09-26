@@ -1,7 +1,7 @@
 {
   "pasta": "produto",
   "descricao": "Problema, escopo, requisitos e backlog do SAACI. Ler antes de qualquer decisão de produto",
-  "atualizado": "2026-09-24",
+  "atualizado": "2026-09-25",
   "documentos": [
     {
       "arquivo": "visao-produto.html",
@@ -14,21 +14,21 @@
       "arquivo": "escopo-mvp.html",
       "titulo": "Escopo do MVP",
       "status": "fechado",
-      "resumo": "O que entra até 09/11/2026 (cadastro, login, recuperação de senha, perfil, registro com comprovante, cálculo automático, painel de progresso, resumo por categoria com download de certificados) e o que vai para o backlog.",
+      "resumo": "O que entra no MVP (cadastro, login, recuperação de senha, perfil, registro com comprovante e regra de conversão visível, cálculo automático, painel de progresso, resumo por categoria com download de certificados ou link de validação somente leitura, exclusão de conta) e o que vai para o backlog.",
       "ids": []
     },
     {
       "arquivo": "requisitos.html",
       "titulo": "Requisitos Funcionais e Não Funcionais",
       "status": "fechado",
-      "resumo": "RF01–RF36 e RNF01–RNF23, reconciliados com o MVP. RF31–RF36 e RNF23 são novos (upload, regra de conversão visível, resumo por categoria e download de certificados pro protocolo da coordenação, exclusão de conta/LGPD, acessibilidade). RF08 reclassificado de Opcional para MVP.",
-      "ids": ["RF01-RF36", "RNF01-RNF23"]
+      "resumo": "RF01–RF37 e RNF01–RNF23, reconciliados com o MVP. RF31–RF37 e RNF23 são novos (upload, regra de conversão visível, resumo por categoria e download de certificados pro protocolo da coordenação, link de validação somente leitura, exclusão de conta/LGPD, acessibilidade). RF08 e RF16 reclassificados de Opcional para MVP.",
+      "ids": ["RF01-RF37", "RNF01-RNF23"]
     },
     {
       "arquivo": "backlog-roadmap.html",
       "titulo": "Backlog",
       "status": "fechado",
-      "resumo": "Estágio, cardápio do RU, grade curricular com IA, coordenação (conflito registrado com o cronograma original), expansão do curso-piloto das regras de cálculo (9 cursos da pesquisa → campus Fortaleza → todos os campi), fora do MVP. Sugestões de eventos é marco pós-MVP, prioridade alta.",
+      "resumo": "Estágio, cardápio do RU, grade curricular com IA, coordenação com conta/login (conflito registrado com o cronograma original; link somente leitura RF37 não faz parte disso, está no MVP), expansão do curso-piloto das regras de cálculo (9 cursos da pesquisa → campus Fortaleza → todos os campi), fora do MVP. Sugestões de eventos é marco pós-MVP, prioridade alta.",
       "ids": []
     },
     {

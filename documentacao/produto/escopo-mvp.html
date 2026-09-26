@@ -11,7 +11,7 @@
 <nav class="crumbs"><a href="../../index.html">SAACI</a> › <a href="../README.md">Documentação</a> › Produto</nav>
 <h1>SAACI — Escopo do MVP</h1>
 <div class="subtitle">O que precisa estar funcionando para o lançamento do MVP</div>
-<div class="atualizado">Última atualização: 24/09/2026</div>
+<div class="atualizado">Última atualização: 25/09/2026</div>
 <nav class="siblings">
   <a href="visao-produto.html">Visão de Produto</a>
   <span class="atual">Escopo do MVP</span>
@@ -30,8 +30,9 @@ Tudo fora do MVP com racional próprio está em <code>backlog-roadmap.html</code
 <h2>1. Critério de corte</h2>
 <p>
 O planejamento original do projeto reserva uma janela de tempo limitada para todo o produto,
-com uma fase final dedicada a "dashboard e ajustes finais". O MVP é o que precisa estar
-funcionando e testável para o lançamento, não o que seria desejável ter.
+com uma fase final dedicada a "dashboard e ajustes finais" (citação completa do cronograma em
+<code>backlog-roadmap.html</code>, seção 5). O MVP é o que precisa estar funcionando e testável
+para o lançamento, não o que seria desejável ter.
 </p>
 
 <h2>2. Dentro do MVP</h2>
@@ -46,7 +47,7 @@ funcionando e testável para o lançamento, não o que seria desejável ter.
 <tr>
   <td><span class="txt-accent">Recuperação de senha</span></td>
   <td>Redefinição de senha via e-mail institucional.</td>
-  <td><strong>Promovido de Opcional para MVP:</strong> decisão do usuário durante o bootstrap. O levantamento original (RF08) marcava como opcional. Sem recuperação de senha, o produto tranca o aluno fora da própria conta, o que é inaceitável mesmo em MVP.</td>
+  <td><strong>Promovido de Opcional para MVP</strong> (RF08). Racional completo em <code>requisitos.html</code>.</td>
 </tr>
 <tr>
   <td><span class="txt-accent">Perfil com informações do curso</span></td>
@@ -59,19 +60,34 @@ funcionando e testável para o lançamento, não o que seria desejável ter.
   <td>Levantamento de requisitos original (RF13–RF15).</td>
 </tr>
 <tr>
+  <td><span class="txt-accent">Regra de conversão visível antes do envio</span></td>
+  <td>Mostra ao aluno, antes de enviar o registro, a conversão aplicada ao tipo de atividade escolhido (ex.: "5h de palestra = 1h computada").</td>
+  <td><strong>Novo, sem RF original correspondente (RF32):</strong> decisão do usuário durante o bootstrap. Fecha a lacuna descrita na resposta 16 do questionário, a regra de proporção hoje só é descoberta quando a coordenação recusa o pedido. Racional completo em <code>requisitos.html</code>.</td>
+</tr>
+<tr>
   <td><span class="txt-accent">Upload de comprovante</span></td>
   <td>Anexar o certificado/comprovante ao registrar a atividade.</td>
-  <td><strong>Promovido de ausente para MVP:</strong> funcionalidade mais pedida no questionário (33/39) e prevista no cronograma ("Upload de documentos comprobatórios"), mas nunca teve RF no levantamento original. Lacuna fechada em <code>requisitos.html</code>.</td>
+  <td><strong>Promovido de ausente para MVP</strong> (RF31), sem RF no levantamento original. Racional completo em <code>requisitos.html</code>.</td>
 </tr>
 <tr>
   <td><span class="txt-accent">Painel de progresso</span></td>
   <td>Total acumulado e progresso por categoria, visível na tela inicial.</td>
-  <td><strong>Promovido de Opcional (RF16) para MVP:</strong> decisão do usuário durante o bootstrap. É o diferencial que a própria pesquisa de mercado (ver <code>visao-produto.html</code>, seção 4) destaca em negrito como exclusivo do SAACI frente aos quatro concorrentes analisados. Deixá-lo opcional contradiria a tese do produto.</td>
+  <td><strong>Promovido de Opcional para MVP</strong> (RF16). Racional completo em <code>requisitos.html</code>.</td>
 </tr>
 <tr>
   <td><span class="txt-accent">Resumo por categoria e download de certificados</span></td>
   <td>Certificados agrupados por categoria com horas de cada um, total por categoria e total geral. Seleção e download dos certificados pra levar ao protocolo de validação na coordenação.</td>
   <td><strong>Novo, sem RF original correspondente (RF35, RF36):</strong> decisão do usuário durante o bootstrap. O sistema não ganha nenhum papel de coordenação, só automatiza o trabalho manual de separar certificado por categoria que hoje o aluno faz sozinho. Ver <code>requisitos.html</code>.</td>
+</tr>
+<tr>
+  <td><span class="txt-accent">Exclusão de conta</span></td>
+  <td>Aluno pode excluir a própria conta a qualquer momento.</td>
+  <td><strong>Novo, sem RF original correspondente (RF33):</strong> exigência de LGPD (RNF05/RNF06), pedida na resposta 16 do questionário. Racional completo em <code>requisitos.html</code>.</td>
+</tr>
+<tr>
+  <td><span class="txt-accent">Link de validação somente leitura</span></td>
+  <td>Aluno gera um link privado, sem exigir login de quem recebe, com o resumo por categoria e os certificados vinculados, pra compartilhar com coordenação, professor/orientador ou responsável. Mostra sempre o dado atual do aluno e pode ser revogado por ele a qualquer momento.</td>
+  <td><strong>Novo, sem RF original correspondente (RF37):</strong> decisão do usuário durante o bootstrap. Alternativa mais leve ao download de RF36, sem dar conta nem papel de validação a ninguém além do aluno. Não reabre a decisão de <em>Perfil de coordenação</em>, fora do MVP (ver seção 3 abaixo e <code>backlog-roadmap.html</code>, seção 5). Racional completo em <code>requisitos.html</code>.</td>
 </tr>
 </table>
 
