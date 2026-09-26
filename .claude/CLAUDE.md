@@ -79,6 +79,7 @@ dedução.
 | Gerar prompt para o Claude Design de uma tela específica | `/saaci-prompt-tela <tela>` (skill `saaci-prompt-tela`) |
 | Revisar texto voltado ao usuário final | skill `saaci-copy` |
 | Sugerir mensagem de commit | skill `saaci-commit` |
+| Gerar descrição de Pull Request no template deste repositório | `/saaci-mr [branch-alvo]` (skill `saaci-mr`) |
 | Verificar se o mesmo tema foi decidido de dois jeitos em arquivos diferentes | `/saaci-consistencia` |
 | Revisão crítica profunda de um documento antes de fechá-lo | `/saaci-revisar <arquivo>` |
 
