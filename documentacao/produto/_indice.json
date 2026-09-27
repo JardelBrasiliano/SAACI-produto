@@ -32,6 +32,13 @@
       "ids": []
     },
     {
+      "arquivo": "regras-engenharia-computacao.md",
+      "titulo": "Regras de Cálculo: Engenharia de Computação",
+      "status": "rascunho",
+      "resumo": "Transcrição do formulário de solicitação (matriz 6759): 24 itens com conversão e limite, tabela de fatores Qualis, regras gerais (120 HA, só após o ingresso) e o que isso exige do produto. PPC só fixa o total. Unidade: hora-aula. Não validado.",
+      "ids": ["RF14", "RF15", "RF32"]
+    },
+    {
       "arquivo": "pesquisa-questionario.html",
       "titulo": "Pesquisa com Alunos",
       "status": "fechado",

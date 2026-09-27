@@ -29,6 +29,9 @@ que não existe em nenhum arquivo do repositório.
 
 - [ ] `documentacao/design-system/referencias-visuais.md`: vazio, aguardando você trazer
   referência real.
+- [ ] `documentacao/produto/regras-engenharia-computacao.md`: transcrição do formulário de
+  solicitação, não validada. Três pontos a confirmar com a coordenação: arredondamento das
+  horas, se o máximo do item vale para a soma dos certificados, e a versão do formulário.
 
 ## Governança do repositório (fora do Claude)
 
