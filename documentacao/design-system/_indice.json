@@ -21,7 +21,7 @@
       "arquivo": "estados-e-casos-de-borda.html",
       "titulo": "Estados e Casos de Borda",
       "status": "fechado",
-      "resumo": "4 estados obrigatórios (vazio, erro de conexão, texto longo, campo obrigatório) + 6 casos de borda específicos do domínio SAACI.",
+      "resumo": "4 estados obrigatórios (vazio, erro de conexão, texto longo, campo obrigatório) + 7 casos de borda específicos do domínio SAACI.",
       "ids": []
     },
     {
