@@ -19,8 +19,9 @@ que não existe em nenhum arquivo do repositório.
 - [ ] **O que acontece com horas já registradas quando o aluno troca de curso?** Levantado em
   `documentacao/design-system/estados-e-casos-de-borda.html`, sem resposta ainda. Não presumir
   ao desenhar o fluxo de perfil.
-- [ ] **Formato e tamanho máximo do arquivo de comprovante (RF31).** Sem definição. Vira
-  pendência técnica quando o repositório de desenvolvimento existir.
+- [ ] **Tamanho máximo do arquivo de comprovante (RF31).** Formatos (PDF, JPG, PNG) e critério
+  do limite já fechados no RNF25. Falta o valor exato, definido no repositório de
+  desenvolvimento.
 - [ ] **Escopo de "Sugestões de eventos" (Marco 2).** Quem publica os eventos, curadoria,
   relação com as categorias do RF14: nada disso está decidido. Rodar `/saaci-funcionalidade`
   quando for a vez deste marco.
@@ -31,7 +32,8 @@ que não existe em nenhum arquivo do repositório.
   referência real.
 - [ ] `documentacao/produto/regras-engenharia-computacao.md`: transcrição do formulário de
   solicitação, não validada. Três pontos a confirmar com a coordenação: arredondamento das
-  horas, se o máximo do item vale para a soma dos certificados, e a versão do formulário.
+  horas (o SAACI já adota uma regra provisória, ver RF14), se o máximo do item vale para a soma
+  dos certificados, e a versão do formulário.
 
 ## Governança do repositório (fora do Claude)
 
