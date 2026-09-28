@@ -3,7 +3,7 @@
 > [SAACI](../../index.html) › [Documentação](../README.md) › Produto
 > **Rascunho: transcrição das regras do formulário, ainda não validada por você via
 > `/saaci-revisar`. Vira `.html` quando for validada.**
-> Última atualização: 23/09/2026
+> Última atualização: 27/09/2026
 
 Regras de conversão e limite das atividades complementares do curso-piloto. Base do RF14, do
 RF15 e do RF32 em `requisitos.html`.
@@ -26,10 +26,13 @@ como a mesma unidade (decisão do usuário).
 - O aluno cumpre **120 HA** de atividades complementares, comprovadas por certificados e
   declarações.
 - Só contam atividades feitas **depois do ingresso** no curso (o RF11 registra o semestre de
-  início).
+  início, e o RF38 avisa quando o certificado é anterior a ele).
 - Cada item tem um limite máximo (coluna "Máx."). O que passar do limite do item não é
   aproveitado.
 - O que passar do total de 120 HA não é aproveitado.
+- **Arredondamento:** as horas de cada atividade não são arredondadas (curso de 10h no item 7
+  conta 2,5h). Só o total geral é arredondado, sempre para baixo (119,5h viram 119h). Regra
+  definida pelo projeto (RF14), pendente de confirmação da coordenação.
 - Em cada certificado ou declaração, o aluno identifica o **número do item** da tabela a que
   ele se refere.
 
@@ -106,9 +109,33 @@ for confirmado, ele é a fonte das regras.
 
 ## 6. Pontos que a fonte não define
 
-- **Arredondamento.** Curso de 10h no item 7 dá 2,5h. O formulário não diz se arredonda.
+- **Arredondamento.** O formulário não diz se arredonda. O SAACI adota a regra da seção 2
+  (sem arredondar por atividade, total para baixo) até a coordenação confirmar.
 - **Alcance do limite.** Este rascunho lê "CH máxima" como o teto da soma de todos os
   certificados daquele item (por exemplo, dois programas de iniciação científica somam no
   máximo 80h). O formulário não diz isso de forma explícita.
 - **Versão do formulário.** Sem data, não dá para saber se vale para todos os alunos da matriz
-  6759 nem para outras matrizes do curso.
+  6759 nem para outras matrizes do curso. Guardar a versão da regra em cada registro, para
+  explicar ao aluno uma mudança no total quando a regra mudar, ficou fora do MVP: no MVP, uma
+  mudança de regra recalcula tudo com a regra nova.
+
+## 7. Entrega do pedido à coordenação
+
+Base do passo a passo do RF37. Fonte: relato de aluno do curso, set. 2026. Não está escrito no
+formulário nem no PPC.
+
+O aluno preenche a coluna "CH Solicitada" do formulário e entrega por um destes caminhos:
+
+1. **Processo no SUAP**, anexando o formulário preenchido e os certificados.
+2. **Protocolo na recepção.** O aluno abre um protocolo presencialmente e, com o número dele,
+   envia o formulário e os certificados por e-mail à coordenação.
+
+Pontos a confirmar antes de escrever o passo a passo na tela:
+
+- Qual tipo de processo o aluno escolhe no SUAP.
+- Qual e-mail da coordenação recebe o envio do caminho 2, e se o número do protocolo vai no
+  assunto ou no corpo.
+- Se o formulário precisa de assinatura.
+- **Identificação do item no certificado.** O formulário pede que o aluno identifique o número
+  do item "em cada certificado e/ou declaração". O RF36 põe o número no nome do arquivo. Falta
+  saber se a coordenação aceita isso ou se o número precisa estar escrito no próprio documento.
