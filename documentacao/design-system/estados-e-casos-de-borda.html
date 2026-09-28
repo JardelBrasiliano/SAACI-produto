@@ -11,7 +11,7 @@
 <nav class="crumbs"><a href="../../index.html">SAACI</a> › <a href="../README.md">Documentação</a> › Design System</nav>
 <h1>SAACI — Estados e Casos de Borda</h1>
 <div class="subtitle">O que toda tela precisa prever, além do caminho feliz</div>
-<div class="atualizado">Última atualização: 21/09/2026</div>
+<div class="atualizado">Última atualização: 27/09/2026</div>
 <nav class="siblings">
   <a href="principios-ui.html">Princípios de UI</a>
   <a href="escrita-de-interface.html">Escrita de Interface</a>
@@ -44,7 +44,7 @@ curso e convidar ao primeiro registro, não só um espaço em branco com "nenhum
 <h3>Erro de conexão</h3>
 <p>Falha ao carregar ou ao enviar (ex.: upload de comprovante cai no meio). Mensagem diz o que
 falhou e se o que já foi digitado ou anexado ficou perdido ou está salvo. Nunca deixar o aluno
-sem saber se precisa repetir o formulário inteiro.</p>
+sem saber se precisa repetir o formulário inteiro (RNF24).</p>
 </div>
 
 <div class="estado">
@@ -83,8 +83,17 @@ Nenhum fluxo é considerado fechado sem passar por eles.</p>
 </tr>
 <tr>
   <td>Atividade sem categoria clara para o aluno</td>
-  <td>Nunca travar o formulário sem saída. Oferecer "não sei qual categoria" como opção
-  válida que segue para revisão, em vez de forçar uma escolha errada.</td>
+  <td>O aluno escolhe, entre os itens do formulário do curso, o que ele acha que mais se
+  encaixa. Ao escolher, a tela mostra a regra daquele item (RF32) para ajudar na decisão.
+  Não existe opção "não sei": no MVP ninguém revisa registros, e a atividade ficaria parada
+  sem contar horas. Se o aluno escolher errado, a coordenação corrige na validação. É um erro
+  aceito.</td>
+</tr>
+<tr>
+  <td>E-mail de confirmação não chega (spam, lixeira, link vencido ou e-mail digitado errado)</td>
+  <td>O login leva a uma tela de verificação (RF05, RF06) com reenvio do link (RF39) e
+  correção do e-mail (RF40). A dica mostra o e-mail de destino, porque é ali que o aluno percebe
+  um erro de digitação. Só o link mais recente vale (RNF03).</td>
 </tr>
 <tr>
   <td>Aluno troca de curso (Eng. Computação → outro)</td>
@@ -100,8 +109,9 @@ Nenhum fluxo é considerado fechado sem passar por eles.</p>
 </tr>
 <tr>
   <td>Arquivo de comprovante grande ou em formato não esperado</td>
-  <td>Ainda não há RF de formato ou tamanho máximo de upload. Pendência a fechar quando RF31
-  for detalhado tecnicamente no repositório de desenvolvimento.</td>
+  <td>Formatos aceitos e regra do limite de tamanho no RNF25. Mostrar o limite antes do envio
+  e, se o arquivo não passar, dizer o motivo e o que fazer (ex.: tirar a foto de novo com
+  resolução menor). O valor exato do limite é definido no repositório de desenvolvimento.</td>
 </tr>
 </table>
 

@@ -11,7 +11,7 @@
 <nav class="crumbs"><a href="../../index.html">SAACI</a> › <a href="../README.md">Documentação</a> › Produto</nav>
 <h1>SAACI — Escopo do MVP</h1>
 <div class="subtitle">O que precisa estar funcionando para o lançamento do MVP</div>
-<div class="atualizado">Última atualização: 25/09/2026</div>
+<div class="atualizado">Última atualização: 27/09/2026</div>
 <nav class="siblings">
   <a href="visao-produto.html">Visão de Produto</a>
   <span class="atual">Escopo do MVP</span>
@@ -24,12 +24,13 @@
 <div class="box">
 <strong>Fonte de verdade para:</strong> o que entra e o que fica fora do MVP, e por quê.
 Requisito funcional/não funcional detalhado de cada item está em <code>requisitos.html</code>.
+As respostas do questionário citadas abaixo estão em <code>pesquisa-questionario.html</code>.
 Tudo fora do MVP com racional próprio está em <code>backlog-roadmap.html</code>.
 </div>
 
 <h2>1. Critério de corte</h2>
 <p>
-O planejamento original do projeto reserva uma janela de tempo limitada para todo o produto,
+O planejamento do projeto reserva uma janela de tempo limitada para todo o produto,
 com uma fase final dedicada a "dashboard e ajustes finais" (citação completa do cronograma em
 <code>backlog-roadmap.html</code>, seção 5). O MVP é o que precisa estar funcionando e testável
 para o lançamento, não o que seria desejável ter.
@@ -38,56 +39,56 @@ para o lançamento, não o que seria desejável ter.
 <h2>2. Dentro do MVP</h2>
 
 <table>
-<tr><th>Módulo</th><th>Escopo</th><th>Origem da decisão</th></tr>
+<tr><th>Módulo</th><th>Escopo</th><th>Por que entra</th></tr>
 <tr>
   <td><span class="txt-accent">Cadastro e login institucional</span></td>
   <td>Cadastro exclusivo com e-mail institucional, verificação por link, login, logout.</td>
-  <td>Levantamento de requisitos original (RF01–RF07).</td>
+  <td>Base do produto: sem conta verificada com e-mail institucional, não há como garantir que o usuário é aluno do IF nem guardar o histórico dele. Inclui reenviar o link e corrigir o e-mail digitado errado: sem isso, o aluno cujo e-mail de confirmação caiu no spam ou foi para um endereço com erro de digitação fica sem acesso já no primeiro dia (RF01–RF07, RF39, RF40).</td>
 </tr>
 <tr>
   <td><span class="txt-accent">Recuperação de senha</span></td>
   <td>Redefinição de senha via e-mail institucional.</td>
-  <td><strong>Promovido de Opcional para MVP</strong> (RF08). Racional completo em <code>requisitos.html</code>.</td>
+  <td>Sem recuperação de senha, um aluno que esquece a senha fica permanentemente fora da própria conta, o que não é aceitável nem na primeira versão (RF08).</td>
 </tr>
 <tr>
   <td><span class="txt-accent">Perfil com informações do curso</span></td>
   <td>Departamento, curso, semestre e semestre de início.</td>
-  <td>Levantamento de requisitos original (RF09, RF11).</td>
+  <td>O curso e o semestre de início definem qual regra de cálculo vale para o aluno (RF09, RF11).</td>
 </tr>
 <tr>
   <td><span class="txt-accent">Registro de horas complementares</span></td>
   <td>Registrar atividade, cálculo automático pela regra do curso.</td>
-  <td>Levantamento de requisitos original (RF13–RF15).</td>
+  <td>Núcleo do produto: registrar a atividade e calcular as horas pela regra do curso, sem o aluno precisar interpretar a regra sozinho. Inclui avisar quando o certificado é anterior ao ingresso, que não conta, antes que a coordenação recuse (RF13–RF15, RF38).</td>
 </tr>
 <tr>
   <td><span class="txt-accent">Regra de conversão visível antes do envio</span></td>
   <td>Mostra ao aluno, antes de enviar o registro, a conversão aplicada ao tipo de atividade escolhido (ex.: "5h de palestra = 1h computada").</td>
-  <td><strong>Novo, sem RF original correspondente (RF32):</strong> decisão do usuário durante o bootstrap. Fecha a lacuna descrita na resposta 16 do questionário, a regra de proporção hoje só é descoberta quando a coordenação recusa o pedido. Racional completo em <code>requisitos.html</code>.</td>
+  <td>Hoje a regra de proporção (ex.: palestra de 5h valer só 1h) fica invisível até a coordenação recusar o pedido, como descreve a resposta 16 do questionário. Mostrar a regra antes do envio é a razão de o SAACI existir (RF32).</td>
 </tr>
 <tr>
   <td><span class="txt-accent">Upload de comprovante</span></td>
   <td>Anexar o certificado/comprovante ao registrar a atividade.</td>
-  <td><strong>Promovido de ausente para MVP</strong> (RF31), sem RF no levantamento original. Racional completo em <code>requisitos.html</code>.</td>
+  <td>2ª funcionalidade mais pedida no questionário (33/39), atrás só de ver as horas cumpridas (36/39, coberta pelo painel de progresso). Sem o comprovante guardado junto do registro, o aluno continua tendo que procurar certificado por certificado na hora de validar (RF31).</td>
 </tr>
 <tr>
   <td><span class="txt-accent">Painel de progresso</span></td>
   <td>Total acumulado e progresso por categoria, visível na tela inicial.</td>
-  <td><strong>Promovido de Opcional para MVP</strong> (RF16). Racional completo em <code>requisitos.html</code>.</td>
+  <td>Funcionalidade mais pedida no questionário (36/39) e diferencial que nenhum dos quatro concorrentes analisados oferece (ver <code>visao-produto.html</code>, seção 4). Deixá-la opcional contradiria a tese do produto (RF16).</td>
 </tr>
 <tr>
   <td><span class="txt-accent">Resumo por categoria e download de certificados</span></td>
   <td>Certificados agrupados por categoria com horas de cada um, total por categoria e total geral. Seleção e download dos certificados pra levar ao protocolo de validação na coordenação.</td>
-  <td><strong>Novo, sem RF original correspondente (RF35, RF36):</strong> decisão do usuário durante o bootstrap. O sistema não ganha nenhum papel de coordenação, só automatiza o trabalho manual de separar certificado por categoria que hoje o aluno faz sozinho. Ver <code>requisitos.html</code>.</td>
+  <td>Hoje o aluno junta certificado por certificado e separa por categoria na mão para montar o protocolo da coordenação. A resposta 40 do questionário descreve isso ("já tenho os comprovantes necessários... mas dá mó preguiça juntar tudo, fazer o cálculo"), e 41% dos alunos relatam dificuldade de contato com a coordenação. O sistema só automatiza essa separação, sem ganhar nenhum papel de coordenação (RF35, RF36).</td>
 </tr>
 <tr>
   <td><span class="txt-accent">Exclusão de conta</span></td>
   <td>Aluno pode excluir a própria conta a qualquer momento.</td>
-  <td><strong>Novo, sem RF original correspondente (RF33):</strong> exigência de LGPD (RNF05/RNF06), pedida na resposta 16 do questionário. Racional completo em <code>requisitos.html</code>.</td>
+  <td>Sem exclusão de conta, o sistema coleta dado pessoal sem via de saída, o que fere a minimização e o direito de exclusão da LGPD (RNF05, RNF06). Também foi pedida na resposta 16 do questionário (RF33).</td>
 </tr>
 <tr>
-  <td><span class="txt-accent">Link de validação somente leitura</span></td>
-  <td>Aluno gera um link privado, sem exigir login de quem recebe, com o resumo por categoria e os certificados vinculados, pra compartilhar com coordenação, professor/orientador ou responsável. Mostra sempre o dado atual do aluno e pode ser revogado por ele a qualquer momento.</td>
-  <td><strong>Novo, sem RF original correspondente (RF37):</strong> decisão do usuário durante o bootstrap. Alternativa mais leve ao download de RF36, sem dar conta nem papel de validação a ninguém além do aluno. Não reabre a decisão de <em>Perfil de coordenação</em>, fora do MVP (ver seção 3 abaixo e <code>backlog-roadmap.html</code>, seção 5). Racional completo em <code>requisitos.html</code>.</td>
+  <td><span class="txt-accent">Guia de preenchimento e entrega do formulário</span></td>
+  <td>Tela no formato do formulário oficial do curso, com a carga horária solicitada de cada item já calculada, aviso quando o total passa do exigido e passo a passo de como preencher e entregar o pedido à coordenação.</td>
+  <td>Completa o RF36: com os certificados separados por item, falta o aluno saber o que escrever no formulário e por onde entregar, e hoje ele descobre isso sozinho (41% relatam dificuldade de contato com a coordenação). A tela guia o preenchimento do formulário oficial em vez de gerar um PDF pronto: o formulário não tem data de versão, e um PDF gerado pelo sistema ficaria desatualizado sem aviso se a coordenação trocasse o modelo (RF37).</td>
 </tr>
 </table>
 
@@ -97,32 +98,32 @@ para o lançamento, não o que seria desejável ter.
 <tr><th>Módulo</th><th>Motivo do corte</th></tr>
 <tr>
   <td><span class="txt-danger">Registro de documentos de estágio</span></td>
-  <td>Opcional desde o levantamento original; domínio distinto (regras de estágio, não de AC) que dobraria o escopo de cálculo sem validação de demanda equivalente à de horas complementares.</td>
+  <td>Domínio distinto (regras de estágio, não de AC) que dobraria o escopo de cálculo sem validação de demanda equivalente à de horas complementares.</td>
 </tr>
 <tr>
   <td><span class="txt-danger">Cardápio do RU colaborativo</span></td>
-  <td>Opcional desde o levantamento original; não tem relação com o problema central (gestão de horas) e depende de adoção coletiva para ter dado útil desde o dia 1.</td>
+  <td>Não tem relação com o problema central (gestão de horas) e depende de adoção coletiva para ter dado útil desde o dia 1.</td>
 </tr>
 <tr>
   <td><span class="txt-danger">Grade curricular com feedback sintetizado por IA</span></td>
-  <td>Opcional desde o levantamento original; exige volume de feedback acumulado por disciplina para a síntese fazer sentido, o que não existe no dia 1 de um produto novo.</td>
+  <td>Exige volume de feedback acumulado por disciplina para a síntese fazer sentido, o que não existe no dia 1 de um produto novo.</td>
 </tr>
 <tr>
   <td><span class="txt-danger">Perfil de coordenação / validação institucional</span></td>
-  <td>Decisão do usuário durante o bootstrap: MVP é só do aluno. O cronograma promete "validação pela coordenação" e "painel aluno e coordenação", mas isso exige acordo real com uma coordenação de curso, o que não se resolve no curto prazo. Ver conflito registrado em <code>backlog-roadmap.html</code>.</td>
+  <td>O MVP é só do aluno. O cronograma do projeto promete "validação pela coordenação" e "painel aluno e coordenação", mas isso exige acordo real com uma coordenação de curso, o que não se resolve no curto prazo. Ver conflito registrado em <code>backlog-roadmap.html</code>.</td>
 </tr>
 <tr>
   <td><span class="txt-danger">Sugestões de eventos e atividades</span></td>
-  <td>3ª funcionalidade mais pedida no questionário (29/39), sem RF no levantamento original. Decisão do usuário: <strong>não é MVP, mas é marco pós-MVP</strong>, com prioridade alta declarada em <code>backlog-roadmap.html</code> e <code>../roadmap/README.md</code>. Não é backlog indiferenciado.</td>
+  <td>3ª funcionalidade mais pedida no questionário (29/39), ainda sem RF. <strong>Não é MVP, mas é marco pós-MVP</strong>, com prioridade alta declarada em <code>backlog-roadmap.html</code> e <code>../roadmap/README.md</code>. Não é backlog indiferenciado.</td>
 </tr>
 <tr>
   <td><span class="txt-danger">Pontuação de contribuição (gamificação)</span></td>
-  <td>Opcional desde o levantamento original (RF12); depende de o sistema já ter uso ativo para fazer sentido pontuar.</td>
+  <td>Os pontos vêm do cardápio do RU e do feedback de disciplinas, os dois fora do MVP. Sem eles, não há contribuição para pontuar (RF12).</td>
 </tr>
 </table>
 
 <div class="box box-info">
-<strong>Regra geral:</strong> qualquer funcionalidade citada no cronograma original do projeto ou no
+<strong>Regra geral:</strong> qualquer funcionalidade citada no cronograma do projeto ou no
 questionário que não tiver RF/RNF correspondente em <code>requisitos.html</code> não existe
 até ser explicitamente adicionada, nunca por suposição.
 </div>
