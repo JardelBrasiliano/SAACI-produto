@@ -11,7 +11,7 @@
 <nav class="crumbs"><a href="../../index.html">SAACI</a> › <a href="../README.md">Documentação</a> › Produto</nav>
 <h1>SAACI — Backlog</h1>
 <div class="subtitle">Funcionalidades fora do MVP, com racional preservado</div>
-<div class="atualizado">Última atualização: 25/09/2026</div>
+<div class="atualizado">Última atualização: 27/09/2026</div>
 <nav class="siblings">
   <a href="visao-produto.html">Visão de Produto</a>
   <a href="escopo-mvp.html">Escopo do MVP</a>
@@ -79,12 +79,6 @@ regras com uma coordenação de curso real, o que não se resolve no curto prazo
 Candidato natural a marco de continuidade pós-lançamento, junto com a intenção de adoção
 institucional (ver <code>../roadmap/README.md</code>).
 </p>
-<p>
-Isso não inclui o link de validação somente leitura (RF37, ver <code>requisitos.html</code>):
-o link é gerado e compartilhado pelo próprio aluno, sem criar conta nem papel de validação para
-ninguém além dele, e por isso entrou no MVP (ver <code>escopo-mvp.html</code>) sem reabrir esta
-decisão.
-</p>
 
 <h2>6. Expansão do curso-piloto das regras de cálculo</h2>
 <p>
@@ -106,8 +100,27 @@ parametrização, que não cabe na janela do MVP.
 </p>
 
 <h2>7. Pontuação de contribuição (gamificação)</h2>
-<p>Opcional desde o levantamento original (RF12). Depende de uso ativo do sistema para fazer
-sentido pontuar: não há o que gamificar em produto recém-lançado sem base de usuários.</p>
+<p>Opcional desde o levantamento original (RF12). A pontuação é calculada a partir das
+contribuições ao cardápio do RU (item 3) e dos feedbacks de disciplina que alimentam a síntese
+por IA (item 4), e aparece no perfil do aluno. Por isso não tem como entrar antes desses dois
+módulos: sem eles, não há contribuição para pontuar.</p>
+<div class="box box-warn">
+<strong>Em aberto, a decidir quando o módulo for retomado:</strong>
+<ul>
+<li><strong>O que conta ponto:</strong> todo envio ou só o que passou pela validação (RF25) e
+pela moderação (RNF09)? Se todo envio contar, a pontuação premia feedback raso ou ofensivo, e
+é justamente esse conteúdo que piora a síntese da IA.</li>
+<li><strong>Limite por disciplina:</strong> um feedback por aluno por disciplina, ou vale
+editar e reenviar? Sem limite, o mesmo aluno ganha pontos repetindo feedback e pesa mais que os
+outros na síntese.</li>
+<li><strong>Autoria e anonimato:</strong> para pontuar, o sistema precisa saber quem escreveu
+cada feedback, mas RF29 e RNF07 proíbem mostrar isso. Proposta: guardar a autoria só para
+calcular a pontuação, sem nunca exibi-la a outros alunos.</li>
+<li><strong>Exclusão de conta (RF33):</strong> quando o aluno apaga a conta, o feedback dele
+sai da síntese ou continua, anonimizado? Pela LGPD a resposta padrão é sair, o que obriga a
+gerar a síntese de novo.</li>
+</ul>
+</div>
 
 <h2>8. Descartado antes mesmo do bootstrap (registro histórico)</h2>
 <p>
