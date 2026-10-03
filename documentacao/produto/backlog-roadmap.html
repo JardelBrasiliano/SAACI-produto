@@ -11,7 +11,7 @@
 <nav class="crumbs"><a href="../../index.html">SAACI</a> › <a href="../README.md">Documentação</a> › Produto</nav>
 <h1>SAACI — Backlog</h1>
 <div class="subtitle">Funcionalidades fora do MVP, com racional preservado</div>
-<div class="atualizado">Última atualização: 27/09/2026</div>
+<div class="atualizado">Última atualização: 03/10/2026</div>
 <nav class="siblings">
   <a href="visao-produto.html">Visão de Produto</a>
   <a href="escopo-mvp.html">Escopo do MVP</a>
@@ -30,22 +30,89 @@ futuro, sujeito a nova priorização quando o Marco 1 estiver fechado.
 <h2>1. Sugestões de eventos e atividades (marco pós-MVP)</h2>
 <p><span class="badge badge-info">Prioridade alta</span></p>
 <p>
-3ª funcionalidade mais pedida do questionário (29 de 39 respostas), sem nenhum RF no
-levantamento original nem no cronograma original do projeto. Decisão do usuário durante o
-bootstrap: não entra no MVP, mas também não fica misturado ao backlog indiferenciado. É o
-próximo marco depois do Marco 1, com prioridade declarada.
-</p>
+Uma das formas de contabilizar as Horas Complementares dos alunos é a participação em
+eventos, tanto na área de seu curso quanto em áreas correlatas. Estes eventos são bastante
+versáteis para compor a carga horária complementar do aluno, pois no geral contam com uma
+quantidade signficativa de horas, e com uma programaçao composta por atrações que possuem
+certificados adicionais, nas áreas de palestras, formações, workshops, etc.
+Além disso, o fato de este item ter sido a 3ª funcionalidade mais pedida do questionário (29 de 39 respostas) ajudou a ser decidido adiciona-la ao Backlog.</p>
+<h3>Contexto</h3>
 <p>
-Escopo a refinar quando a skill <code>saaci-funcionalidade</code> for rodada sobre este item:
-lista de eventos do campus, curadoria (quem publica?), relação com as categorias de RF14 (o
-evento já vem com a conversão de horas prevista?). Nenhuma dessas perguntas está respondida
-ainda. Não presumir.
+Dentre estes eventos, destacam-se eventos promovidos tanto pelo proprio IFCE, quanto organizados
+pelos Centros Academicos (CA's) dos cursos técnicos e de graduação. Nestes casos a divulgação
+destes hoje acontece por meio de e-mail institucional, redes sociais dos CAs dos cursos que o
+organizam e no boca a boca entre turmas. Porém existem eventos fora da jurisdição do IFCE e dos 
+CA's, promovidos por instituiçoes externas, mas que são relevantes para os estudantes da área
+do evento, onde a divulgação é feita somente somente por parte dos proprios organizadores do 
+evento, por meio de professores via e-mail institucional da coordenação, e em outros casos não 
+chegam ao conhecimento dos alunos, pois não houve comunicação entres os organizadores e 
+professores da instituição.
 </p>
 
+<h3>Proposta</h3>
+<p>
+O SAACI passa a ser mais um canal de divulgação desses eventos, internos e externos ao
+IFCE, sem substituir os canais que já existem. A divulgação é silenciosa: não há alerta nem notificação de evento novo. Os eventos
+aparecem numa seção da tela inicial, com prioridade para os da área do curso do aluno, e numa
+página própria de eventos, com o filtro "Eventos relacionados ao meu curso".
+</p>
+<p>
+Além das informações básicas (quando, onde, como se inscrever), cada evento mostra o que
+interessa para as horas complementares: se emite certificado, quanto conta para o curso de
+quem está vendo e o que é preciso fazer para receber o certificado (inscrição prévia,
+confirmação de presença ou as duas).
+</p>
+
+<h3>Cadastro e exibição das informaçoes do evento</h3>
+<p>
+Visando maior praticidade, apenas quatro informações são obrigatórias: título,
+material de divulgação (texto, imagem ou arquivo, pelo menos um), local e data/hora. Todo o
+resto é opcional: as áreas do evento (ex.: Engenharia de Computação e Telecomunicações), o
+tipo de cada atividade (participação em evento, palestra, minicurso ou workshop), a carga
+horária, o número de dias e o que é exigido para o certificado. Quando um aluno abre o evento,
+o sistema compara essas áreas com o curso dele e aplica a regra do curso (RF14), do mesmo
+jeito que faz ao identificar a área de um certificado no registro de horas.
+</p>
+<p>
+Como quem cadastra ainda não está definido, os campos opcionais devem ficar vazios em boa
+parte dos casos. Quando isso acontecer, um agente de IA lê o material de divulgação e
+preenche o que encontrar lá, como carga horária, datas, exigências para o certificado e área
+do evento. Esse preenchimento segue duas regras:
+</p>
+<ul>
+  <li><strong>Não supor informações.</strong> Carga horária, número de dias e exigências
+  para o certificado só são preenchidos se estiverem escritos no material. Se não estiverem,
+  o evento mostra "não informado" e o sistema não calcula horas para ele. A área é diferente:
+  pode ser deduzida pelo assunto do evento mesmo sem estar escrita, porque é um julgamento
+  sobre o tema, não um número.</li>
+  <li><strong>O aluno sabe o que veio da IA.</strong> Toda informação preenchida pelo agente
+  aparece marcada como lida automaticamente da divulgação, na mesma linha de transparência de
+  RNF08–RNF10. O que quem cadastrou digitou vale mais do que o que o agente extraiu.</li>
+</ul>
+<h3>Ainda em aberto</h3>
+<p>Nenhum destes pontos está decidido. Não presumir.</p>
+<ul>
+  <li><strong>Curadoria:</strong> quem cadastra o evento (organizador, CA, coordenação,
+  qualquer aluno com moderação)? E quem responde se a informação estiver errada?</li>
+  <li><strong>Horas declaradas x horas aceitas:</strong> o que o sistema mostra é uma
+  previsão pela regra do curso, não uma garantia de deferimento. A tela precisa deixar isso
+  claro para não virar promessa que a coordenação não cumpre.</li>
+  <li><strong>Workshop dentro de evento:</strong> o item 13 exclui palestras que fazem parte
+  de eventos, mas a tabela de Engenharia de Computação não diz se um workshop ou formação
+  dentro da Semana conta como curso (item 7) além do certificado geral do evento.</li>
+</ul>
+
 <h2>2. Registro de documentos de estágio</h2>
-<p>Opcional desde o levantamento original (RF18–RF21). Regras de estágio (4h ou 6h diárias,
-cálculo por data de início) são um domínio distinto do cálculo de horas complementares e
-exigem modelagem própria, sem overlap direto com o motor de cálculo do MVP.</p>
+<p>Opcional desde o levantamento original (RF18–RF21). Regras de estágio são um domínio 
+distinto do cálculo de horas complementares e exigem modelagem própria, sem overlap direto com 
+o motor de cálculo do MVP.</p>
+<h3>Idéia geral</h3>
+<p>O aluno ter onde centralizar os documentos de todas as etapas do andamento do estágio, desde 
+arquivos da entrada e finalização do protocolo, até relatórios periódicos do estágio. Além de
+contar com um assitente no andamento de horas completadas, com base na carga horaria semanal do 
+estágio, levando em conta tambem regras da propria intituição para esta contabilidade, por
+exemplo limite de horas diárias e duração máxima do periodo protocolo do estágio (ex.: máximo 
+de 30 hr semanais e finalizar o processo de estágio na coordenação em até 6 meses).</p>
 
 <h2>3. Cardápio do RU colaborativo</h2>
 <p>Opcional desde o levantamento original (RF22–RF25). Depende de adoção coletiva para gerar
@@ -59,32 +126,25 @@ enganosa com poucos dados. RNF08–RNF10 (moderação, transparência de que é 
 registrados em <code>requisitos.html</code> para quando este módulo for retomado.</p>
 
 <h2>5. Perfil de coordenação / validação institucional</h2>
-<div class="box box-danger">
-<strong>Conflito registrado, não resolvido por suposição.</strong> O
-<code>Cronograma de Desenvolvimento - SAACI.pdf</code> (arquivo mantido no Google Drive do
-mantenedor, fora deste repositório) promete, para a
-fase "Desenvolvimento - Módulos complementares" (17 a 30/10/2026): <em>"Upload de documentos
-comprobatórios, cálculo automático de horas, Validação pela coordenação"</em>; e para
-"Dashboard e ajustes finais": <em>"Painel de acompanhamento (aluno e coordenação)"</em>. Nenhum
-dos 30 RFs do levantamento original cobre coordenador como usuário, e RNF04 diz o oposto
-("cada usuário só pode acessar/alterar seus próprios dados"). Duas respostas do questionário
-pediram isso espontaneamente (resposta 39: dashboard por turma para coordenador; resposta 13:
-perfil para professores/orientadores lançarem certificações de extensão).
-</div>
 <p>
-Decisão do usuário durante o bootstrap: <strong>fora do MVP.</strong> O SAACI, no MVP, é a
-camada que orienta o aluno antes do envio. O deferimento continua acontecendo onde já
-acontece hoje, fora do sistema. Entrar com validação institucional exige negociar acesso e
-regras com uma coordenação de curso real, o que não se resolve no curto prazo.
-Candidato natural a marco de continuidade pós-lançamento, junto com a intenção de adoção
-institucional (ver <code>../roadmap/README.md</code>).
+Fora do MVP por dois motivos:
+<ul>
+<li>
+  O SAACI, no MVP, é a camada que orienta o aluno antes do envio, e só o aluno é usuário.
+</li>
+<li>
+  Validar pedidos dentro do sistema exige negociar acesso e regras com uma coordenação de curso 
+  real, o que não se resolve no curto prazo.
+</li>
+</ul>
+Candidato natural a marco de continuidade pós-lançamento (ver <code>../roadmap/README.md</code>).
 </p>
 
 <h2>6. Expansão do curso-piloto das regras de cálculo</h2>
 <p>
-O MVP nasce com regra de cálculo parametrizada para 2 cursos (Engenharia de Computação e
-Licenciatura em Teatro, ver <code>visao-produto.html</code>, seção 2, e RF15 em
-<code>requisitos.html</code>). Expansão declarada, em fases, para depois do Marco 1:
+O MVP nasce com regra de cálculo parametrizada para o curso de Engenharia de Computação, ver 
+<code>visao-produto.html</code>, seção 2, e RF15 em <code>requisitos.html</code>. Expansão 
+declarada, em fases, para depois do Marco 1:
 </p>
 <ol>
 <li>Os 9 cursos que responderam ao questionário (ver <code>pesquisa-questionario.html</code>).</li>
@@ -104,39 +164,6 @@ parametrização, que não cabe na janela do MVP.
 contribuições ao cardápio do RU (item 3) e dos feedbacks de disciplina que alimentam a síntese
 por IA (item 4), e aparece no perfil do aluno. Por isso não tem como entrar antes desses dois
 módulos: sem eles, não há contribuição para pontuar.</p>
-<div class="box box-warn">
-<strong>Em aberto, a decidir quando o módulo for retomado:</strong>
-<ul>
-<li><strong>O que conta ponto:</strong> todo envio ou só o que passou pela validação (RF25) e
-pela moderação (RNF09)? Se todo envio contar, a pontuação premia feedback raso ou ofensivo, e
-é justamente esse conteúdo que piora a síntese da IA.</li>
-<li><strong>Limite por disciplina:</strong> um feedback por aluno por disciplina, ou vale
-editar e reenviar? Sem limite, o mesmo aluno ganha pontos repetindo feedback e pesa mais que os
-outros na síntese.</li>
-<li><strong>Autoria e anonimato:</strong> para pontuar, o sistema precisa saber quem escreveu
-cada feedback, mas RF29 e RNF07 proíbem mostrar isso. Proposta: guardar a autoria só para
-calcular a pontuação, sem nunca exibi-la a outros alunos.</li>
-<li><strong>Exclusão de conta (RF33):</strong> quando o aluno apaga a conta, o feedback dele
-sai da síntese ou continua, anonimizado? Pela LGPD a resposta padrão é sair, o que obriga a
-gerar a síntese de novo.</li>
-</ul>
-</div>
-
-<h2>8. Descartado antes mesmo do bootstrap (registro histórico)</h2>
-<p>
-O levantamento de requisitos original já continha uma seção "Descartados", de uma versão
-anterior do próprio levantamento, preservada aqui por rastreabilidade, não reaberta:
-</p>
-<ul>
-<li><strong>Postagem de provas antigas e trabalhos</strong>, com posts anônimos, curtidas,
-comentários, compartilhamento e tags por disciplina.</li>
-<li>Registro de postagens do usuário associado ao perfil (visualizar/gerenciar).</li>
-</ul>
-<p>
-Já havia sido removido do escopo pelos autores originais antes do bootstrap, sem motivo
-registrado no documento fonte. Não é candidato ativo a nenhum marco; entra aqui só para que a
-decisão anterior não se perca com o descarte do <code>drive/</code>.
-</p>
 
 <div class="meta">Documento vivo. Item promovido daqui para o roadmap ativo precisa de marco com objetivo de negócio e critério de destrave. Ver <code>../roadmap/README.md</code>.</div>
 
