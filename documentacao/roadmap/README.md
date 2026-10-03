@@ -20,10 +20,6 @@ de fases descrita em `../produto/escopo-mvp.html` e `../produto/requisitos.html`
 calendário e de quem executa cada fase não é registrado aqui. O roadmap deste repositório é
 por meta, não por data ou por pessoa.
 
-> "Validação pela coordenação", presente no planejamento original de uma das fases, é o item
-> que conflita com o escopo fechado do MVP (só aluno). Conflito já registrado em
-> `../produto/backlog-roadmap.html`, seção 5.
-
 ## Horizonte
 
 O lançamento do MVP é o **Marco 1**, não o fim do produto. Decisão registrada durante o
