@@ -9,8 +9,9 @@ que não existe em nenhum arquivo do repositório.
   com o formulário de solicitação de atividades complementares (matriz 6759). A regra de cálculo
   do RF15 (`documentacao/produto/requisitos.html`) está no formulário, não no PPC, que só fixa
   as 120 horas totais.
-- [ ] **O mesmo para Licenciatura em Teatro**, segundo curso escolhido para provar a
-  parametrização (RF15).
+- [ ] **O mesmo para Engenharia de Telecomunicações**, segundo curso escolhido para provar a
+  parametrização (RF15). Substitui Licenciatura em Teatro. O orientador faz parte da
+  coordenação do curso e é o caminho para obter o formulário de solicitação.
 - [ ] **Criar o repositório de desenvolvimento** (separado deste, `SAACI-produto`) quando o
   planejamento técnico começar. Decisão registrada em `documentacao/roadmap/README.md`.
 

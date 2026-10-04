@@ -32,7 +32,7 @@ a coordenação recusar por erro de forma.
 
 Cadastro, login institucional, recuperação de senha, perfil (curso e semestre), registro de
 horas **com upload de comprovante**, cálculo automático (curso-piloto: Engenharia de
-Computação, depois Teatro) e painel de progresso por categoria. Só o aluno é usuário. Sem
+Computação, depois Engenharia de Telecomunicações) e painel de progresso por categoria. Só o aluno é usuário. Sem
 perfil de coordenação no MVP.
 
 ## Fora do MVP (ver `documentacao/produto/backlog-roadmap.html`)

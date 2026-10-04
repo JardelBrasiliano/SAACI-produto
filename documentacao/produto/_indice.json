@@ -1,7 +1,7 @@
 {
   "pasta": "produto",
   "descricao": "Problema, escopo, requisitos e backlog do SAACI. Ler antes de qualquer decisão de produto",
-  "atualizado": "2026-10-03",
+  "atualizado": "2026-10-04",
   "documentos": [
     {
       "arquivo": "visao-produto.html",
