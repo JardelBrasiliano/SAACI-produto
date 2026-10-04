@@ -23,9 +23,7 @@ que não existe em nenhum arquivo do repositório.
 - [ ] **Tamanho máximo do arquivo de comprovante (RF31).** Formatos (PDF, JPG, PNG) e critério
   do limite já fechados no RNF25. Falta o valor exato, definido no repositório de
   desenvolvimento.
-- [ ] **Escopo de "Sugestões de eventos" (Marco 2).** Quem publica os eventos, curadoria,
-  relação com as categorias do RF14: nada disso está decidido. Rodar `/saaci-funcionalidade`
-  quando for a vez deste marco.
+- [ ] **Escopo de "Sugestões de eventos" (Marco 2).** Quem publica os eventos e curadoria não estão decididos. Rodar `/saaci-funcionalidade` quando for a vez deste marco.
 
 ## Validação pendente (documentos ainda em `.md`, rascunho)
 
