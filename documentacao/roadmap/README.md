@@ -1,7 +1,7 @@
 # SAACI — Racional do Roadmap
 
 > [SAACI](../../index.html) › [Documentação](../README.md) › Roadmap
-> Última atualização: 24/09/2026
+> Última atualização: 04/10/2026
 
 Fonte de verdade para **por que** cada marco existe, sua métrica e o que destrava o próximo.
 A lista de tarefas executáveis vive em [`roadmap.html`](./roadmap.html). As duas coisas não
@@ -76,8 +76,7 @@ sem RF hoje. Ver `../produto/backlog-roadmap.html`, seção 1.
 ### Marcos futuros (candidatos, não comprometidos)
 
 Estágio, cardápio do RU colaborativo, grade curricular com feedback por IA, perfil de
-coordenação/validação institucional, expansão do curso-piloto das regras de cálculo (9 cursos
-da pesquisa → campus Fortaleza → todos os campi do IFCE), intenção de adoção institucional
+coordenação/validação institucional, expansão do curso-piloto das regras de cálculo, intenção de adoção institucional
 pelo IFCE. Todos documentados com racional em `../produto/backlog-roadmap.html`. Nenhum tem
 critério de destrave definido; não presumir prioridade entre eles até serem discutidos.
 
