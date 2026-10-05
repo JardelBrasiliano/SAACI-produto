@@ -28,14 +28,14 @@
       "arquivo": "backlog-roadmap.html",
       "titulo": "Backlog",
       "status": "fechado",
-      "resumo": "Itens fora do MVP, com o motivo de cada um. Sugestões de eventos (internos e externos ao IFCE) é marco pós-MVP, prioridade alta: divulgação silenciosa (seção na tela inicial e página com filtro por curso, sem notificação), cadastro com 4 campos obrigatórios (título, material de divulgação, local, data/hora), agente de IA extrai do material o que faltar sem inventar números, sistema calcula pela regra do curso (RF14); curadoria e diferença entre horas previstas e aceitas seguem em aberto. Estágio (centralizar documentos e acompanhar horas pelo limite da Lei do Estágio), cardápio do RU, grade curricular com IA, perfil de coordenação/validação institucional (MVP é só do aluno e validar exige acordo com coordenação real), expansão das regras de cálculo para além dos 2 cursos-piloto (Eng. de Computação e Eng. de Telecomunicações; depende do formulário de cada coordenação; fonte única das fases da expansão) e pontuação de contribuição (RF12, depende do cardápio do RU e do feedback de disciplinas).",
+      "resumo": "Itens fora do MVP, com o motivo de cada um. Sugestões de eventos (internos e externos ao IFCE) é marco pós-MVP, prioridade alta: divulgação silenciosa (seção na tela inicial e página com filtro por curso, sem notificação), cadastro com 4 campos obrigatórios (título, material de divulgação, local, data/hora), agente de IA extrai do material o que faltar sem inventar números, sistema calcula pela regra do curso (RF14); curadoria e diferença entre horas previstas e aceitas seguem em aberto. Estágio (centralizar documentos e acompanhar horas pelo limite da Lei do Estágio), cardápio do RU, grade curricular com IA, perfil de coordenação/validação institucional (MVP é só do aluno e validar exige acordo com coordenação real), expansão das regras de cálculo para além dos 2 cursos-piloto (Eng. de Computação e Eng. de Telecomunicações; depende do formulário de cada coordenação; fonte única das fases da expansão) pontuação de contribuição (RF12, depende do cardápio do RU e do feedback de disciplinas) e versão da regra em cada registro (no MVP, mudança de regra recalcula tudo).",
       "ids": []
     },
     {
-      "arquivo": "regras-engenharia-computacao.md",
-      "titulo": "Regras de Cálculo: Engenharia de Computação",
-      "status": "rascunho",
-      "resumo": "Transcrição do formulário de solicitação (matriz 6759): 24 itens com conversão e limite, tabela de fatores Qualis, regras gerais (120 HA, só após o ingresso), o que isso exige do produto e como o aluno entrega o pedido (SUAP ou protocolo + e-mail, base do RF37). PPC só fixa o total. Unidade: hora-aula. Não validado.",
+      "arquivo": "regras-engenharia-computacao.html",
+      "titulo": "Regras de Atividades Complementares: Engenharia de Computação",
+      "status": "fechado",
+      "resumo": "Formulário de solicitação (matriz 6759) como fonte das regras e PPC como fonte do total (120 HA; horas do formulário = HA). 24 itens com conversão e limite (limite vale para a soma do item), tabela Qualis, o que a tabela exige do produto (4 tipos de regra, item 4 x item 1, palestra em evento), versão única do formulário com recálculo e entrega do pedido (SEI ou protocolo + e-mail, sem assinatura, base do RF37). Arredondamento fica no RF14.",
       "ids": ["RF14", "RF15", "RF32", "RF37"]
     },
     {
