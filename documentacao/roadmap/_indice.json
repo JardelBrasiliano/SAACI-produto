@@ -1,7 +1,7 @@
 {
   "pasta": "roadmap",
   "descricao": "Racional de negócio e checklist executável do roadmap do SAACI",
-  "atualizado": "2026-09-24",
+  "atualizado": "2026-10-05",
   "documentos": [
     {
       "arquivo": "README.md",
@@ -14,7 +14,7 @@
       "arquivo": "roadmap.html",
       "titulo": "Roadmap (checklist)",
       "status": "ferramenta",
-      "resumo": "Checklist interativo com localStorage, um marco por seção. Marco 0 tem os 11 nós de revisão do bootstrap. O nó 8 (Requisitos) também cobre a revisão de regras-engenharia-computacao.md. Marcos 1 e 2 ainda sem tarefas. Seção extra 'Revisão contínua' lista itens não bloqueantes (hoje: pesquisa-mercado.html). Não é 'fechado' no sentido de decisão validada. É ferramenta funcional, mantida em HTML por natureza.",
+      "resumo": "Checklist interativo com localStorage, um marco por seção. Marco 0 tem os 11 nós de revisão do bootstrap. O nó 8 (Requisitos) também cobre a revisão de regras-engenharia-computacao.html. Marcos 1 e 2 ainda sem tarefas. Seção extra 'Revisão contínua' lista itens não bloqueantes (hoje: pesquisa-mercado.html). Não é 'fechado' no sentido de decisão validada. É ferramenta funcional, mantida em HTML por natureza.",
       "ids": []
     }
   ]

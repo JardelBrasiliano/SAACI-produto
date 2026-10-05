@@ -17,6 +17,7 @@
   <a href="escopo-mvp.html">Escopo do MVP</a>
   <a href="requisitos.html">Requisitos</a>
   <span class="atual">Backlog</span>
+  <a href="regras-engenharia-computacao.html">Regras: Eng. de Computação</a>
   <a href="pesquisa-questionario.html">Pesquisa com Alunos</a>
   <a href="pesquisa-mercado.html">Pesquisa de Mercado</a>
 </nav>
@@ -147,8 +148,8 @@ Engenharia de Telecomunicações), ver <code>visao-produto.html</code>, seção 
 </ol>
 <p>
 Cada coordenação define as regras de conversão e o limite de cada atividade no formulário de
-solicitação do próprio curso. O PPC nem sempre é suficiente: em Engenharia de Computação, ele 
-apenas fixa o total de horas. Por isso a expansão depende de obter o formulário de cada curso 
+solicitação do próprio curso, e o PPC nem sempre basta (ver <code>regras-engenharia-computacao.html</code>,
+seção 1). Por isso a expansão depende de obter o formulário de cada curso 
 junto à coordenação e converter as regras em parâmetro de RF15, curso a curso, o que não cabe
 na janela do MVP. Não é o mesmo bloqueio do item 5 (validação institucional): ali é preciso 
 negociar um papel novo para a coordenação dentro do sistema; aqui é obter um documento que a 
@@ -160,6 +161,14 @@ coordenação já usa.
 contribuições ao cardápio do RU (item 3) e dos feedbacks de disciplina que alimentam a síntese
 por IA (item 4), e aparece no perfil do aluno. Por isso não tem como entrar antes desses dois
 módulos: sem eles, não há contribuição para pontuar.</p>
+
+<h2>8. Versão da regra em cada registro</h2>
+<p>Guardar, em cada registro, a versão da regra de cálculo usada. Assim, quando a coordenação
+mudar o formulário, o SAACI consegue explicar ao aluno por que o total mudou e quais registros
+foram afetados. No MVP existe uma única versão das regras por curso, e uma mudança recalcula
+todos os registros com a regra nova (ver <code>regras-engenharia-computacao.html</code>, seção 6).
+Fica fora do MVP porque o formulário de Engenharia de Computação não tem data nem versão: ainda
+não há uma segunda versão para comparar, e o recálculo atende ao curso-piloto.</p>
 
 <div class="meta">Documento vivo. Item promovido daqui para o roadmap ativo precisa de marco com objetivo de negócio e critério de destrave. Ver <code>../roadmap/README.md</code>.</div>
 
