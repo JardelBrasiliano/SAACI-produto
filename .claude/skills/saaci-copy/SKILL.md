@@ -17,9 +17,9 @@ adaptada da skill pessoal `j-linguagem-simples`.
 1. Identifique o arquivo ou trecho a revisar. Se o usuário não indicar, pergunte qual.
 2. Leia o arquivo inteiro antes de extrair qualquer texto, para entender o contexto ao redor.
 3. Leia `documentacao/design-system/escrita-de-interface.html`, a regra de produto para texto
-   de interface, e `.claude/references/glossario.md` para o vocabulário de domínio. Se algo
-   em `references/` divergir desse documento, vale o documento; aponte a divergência ao
-   usuário em vez de escolher sozinho.
+   de interface (regras práticas e exemplos por situação), e `.claude/references/glossario.md`
+   para o vocabulário de domínio. Se algo em `references/` divergir desse documento, vale o
+   documento; aponte a divergência ao usuário em vez de escolher sozinho.
 4. Se o texto envolve uma regra de negócio (categoria, limite, conversão de horas), confira o
    RF/RNF correspondente em `documentacao/produto/requisitos.html` antes de reescrever. Copy
    não pode simplificar a ponto de mudar o que a regra realmente diz.
@@ -35,19 +35,17 @@ string sem exposição ao usuário.
 
 ## Passo 3: critérios
 
-As regras práticas e a tabela antes/depois de `escrita-de-interface.html` são o critério
-principal. Os dois arquivos de `references/` detalham essas regras para revisão linha a linha:
+Dois eixos:
 
-- [`references/linguagem-simples.md`](references/linguagem-simples.md): clareza para o
-  público real (voz ativa, frase curta, vocabulário do dia a dia, sem sigla, sem dupla
-  negativa).
-- [`references/vicios-de-ia.md`](references/vicios-de-ia.md): o texto soa gerado (travessão
-  em série, contraste formulaico, adjetivo vazio, hedge de IA).
+- **Clareza para o público real:** as regras práticas da seção 2 de
+  `escrita-de-interface.html`. Os exemplos da seção 3 calibram o tom em situações já mapeadas
+  (cadastro, registro de horas, comprovante, conta, estado vazio).
+  [`references/linguagem-simples.md`](references/linguagem-simples.md) traz o procedimento
+  para aplicar essas regras.
+- **Vício de escrita de IA:** [`references/vicios-de-ia.md`](references/vicios-de-ia.md)
+  (travessão em série, contraste formulaico, adjetivo vazio, hedge de IA).
 
-Um texto entra no relatório se violar pelo menos um critério de qualquer um dos dois arquivos.
-Consulte [`references/exemplos-saaci.md`](references/exemplos-saaci.md) para calibrar o tom
-esperado em situações já mapeadas do domínio (cadastro, registro de horas, upload, exclusão
-de conta, estado vazio).
+Um texto entra no relatório se violar pelo menos uma regra de qualquer um dos dois eixos.
 
 **Regra de ouro:** nunca altere fato, número, prazo, valor, nome próprio ou regra de negócio.
 A simplificação é de forma, não de conteúdo.
@@ -62,7 +60,7 @@ Para cada texto com problema:
 **Atual:**
 > "texto original"
 
-**Problema:** [critério violado, em uma frase, citando linguagem-simples.md ou vicios-de-ia.md]
+**Problema:** [critério violado, em uma frase, citando a regra de escrita-de-interface.html ou o item de vicios-de-ia.md]
 
 **Sugestão:**
 > "texto reescrito"
@@ -79,8 +77,9 @@ sugestões no arquivo?"
 1. Aplique apenas as sugestões aprovadas. Aprovação parcial edita só os itens confirmados.
 2. Edite somente o arquivo-alvo. Não toque em lógica, estilo ou estrutura, só o conteúdo
    textual.
-3. Nunca crie arquivo novo, exceto quando o próprio usuário pedir uma linha nova em
-   `references/exemplos-saaci.md` para registrar um caso novo aprovado.
+3. Nunca crie arquivo novo. Se o usuário quiser registrar um caso novo aprovado como
+   exemplo, a linha entra na seção 3 de `escrita-de-interface.html`, com a fonte (RF, RNF,
+   princípio ou estado).
 4. Ao terminar, liste um resumo compacto: `[arquivo:linha] "texto antigo" → "texto novo"`.
 
 Se o usuário recusar ou pedir ajuste de escopo, respeite a decisão e não edite o arquivo.

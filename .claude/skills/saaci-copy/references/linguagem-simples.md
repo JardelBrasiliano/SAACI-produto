@@ -1,26 +1,17 @@
-# Linguagem Simples: critérios
+# Linguagem Simples: procedimento
 
-Adaptado da skill pessoal `j-linguagem-simples` (padrão gov.br / linguagem cidadã) para o
-domínio do SAACI. Um texto entra no relatório da skill `saaci-copy` se violar pelo menos um
-destes critérios.
+As regras de clareza do texto de interface (você, voz ativa, frase curta, verbo em vez de
+substantivo, vocabulário do aluno, sem sigla, sem dupla negativa, erro com próximo passo,
+começar pelo que importa, sem travessão) estão na seção 2 de
+`documentacao/design-system/escrita-de-interface.html`. Este arquivo não repete as regras, só
+diz como a skill `saaci-copy` as aplica.
 
-## Critérios
+## Como aplicar
 
-- **Voz ativa** em vez de passiva. "Você precisa anexar o comprovante" em vez de "O
-  comprovante deve ser anexado".
-- **Frases curtas**, uma ideia por frase. Evite orações longas com múltiplas subordinadas.
-- **Verbos em vez de nominalizações.** "Confirmar" em vez de "a confirmação de". "Registrar"
-  em vez de "o registro de".
-- **Vocabulário do dia a dia** em vez de jargão técnico, jurídico ou administrativo, salvo
-  quando o termo técnico é o vocabulário de domínio correto (ver
-  `.claude/references/glossario.md`, que distingue termo de sistema de termo de negócio).
-- **Endereçamento direto ao aluno** ("você"), no tom definido em
-  `documentacao/marca/identidade-marca.html`.
-- **Sem duplas negativas.** "Não é possível enviar sem comprovante" em vez de "não é impossível
-  que a atividade não seja aceita sem comprovante".
-- **Siglas explicadas** na primeira ocorrência, ou substituídas por termo comum. RF, RNF, PPC
-  nunca aparecem em tela; ver glossário para o termo que a tela usa no lugar.
-- **Sem travessão no texto reescrito.** Ver `vicios-de-ia.md`, critério 1.
+- Confira cada texto contra as regras da seção 2 e compare com o exemplo mais próximo da
+  seção 3 do mesmo documento.
+- Termo de domínio correto não é jargão. Na dúvida entre termo de sistema e termo de negócio,
+  vale `.claude/references/glossario.md`.
 
 ## Regra de ouro
 
