@@ -1,7 +1,7 @@
 {
   "pasta": "design-system",
   "descricao": "Princípios de UI, escrita de interface, estados obrigatórios e tokens visuais",
-  "atualizado": "2026-09-25",
+  "atualizado": "2026-10-04",
   "documentos": [
     {
       "arquivo": "principios-ui.html",
@@ -21,7 +21,7 @@
       "arquivo": "estados-e-casos-de-borda.html",
       "titulo": "Estados e Casos de Borda",
       "status": "fechado",
-      "resumo": "4 estados obrigatórios (vazio, erro de conexão, texto longo, campo obrigatório) + 7 casos de borda específicos do domínio SAACI.",
+      "resumo": "4 estados obrigatórios (vazio, erro de conexão, texto longo, campo obrigatório) + 10 casos de borda específicos do domínio SAACI (inclui regra cruzada item 4/item 1, palestra dentro de evento e recálculo quando a regra do curso muda).",
       "ids": []
     },
     {

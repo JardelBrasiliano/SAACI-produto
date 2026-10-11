@@ -14,7 +14,7 @@ Problema, escopo do MVP, requisitos rastreáveis (RF/RNF) e backlog.
 - [Escopo do MVP](produto/escopo-mvp.html)
 - [Requisitos](produto/requisitos.html)
 - [Backlog](produto/backlog-roadmap.html)
-- [Regras de Cálculo: Engenharia de Computação](produto/regras-engenharia-computacao.md) *(rascunho, não validado)*
+- [Regras de Atividades Complementares: Engenharia de Computação](produto/regras-engenharia-computacao.html)
 
 ## [`marca/`](marca/identidade-marca.html)
 
