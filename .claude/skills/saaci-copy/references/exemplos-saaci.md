@@ -18,7 +18,7 @@ de exemplo num prompt. Nenhum destes textos está implementado, são modelo de t
 |---|---|---|
 | Regra de conversão (RF32, Princípio 1) | "Fator de conversão aplicável: 0,2" | "Essa palestra de 5h vale 1h na sua contagem" |
 | Categoria no limite (RF14/RF16) | "Limite de categoria atingido" | "Pesquisa já está cheia (40 de 40h). Essa atividade não vai contar aqui, mas cabe em Extensão" |
-| Sucesso ao registrar | "Registro efetuado com sucesso" | "Atividade registrada. Faltam 47h para você fechar" |
+| Sucesso ao registrar | "Registro efetuado com sucesso" | "Atividade registrada. Faltam 47h para completar suas horas" |
 
 ## Upload de comprovante (RF31)
 

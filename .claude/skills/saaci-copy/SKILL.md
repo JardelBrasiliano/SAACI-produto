@@ -16,7 +16,11 @@ adaptada da skill pessoal `j-linguagem-simples`.
 
 1. Identifique o arquivo ou trecho a revisar. Se o usuário não indicar, pergunte qual.
 2. Leia o arquivo inteiro antes de extrair qualquer texto, para entender o contexto ao redor.
-3. Se o texto envolve uma regra de negócio (categoria, limite, conversão de horas), confira o
+3. Leia `documentacao/design-system/escrita-de-interface.html`, a regra de produto para texto
+   de interface, e `.claude/references/glossario.md` para o vocabulário de domínio. Se algo
+   em `references/` divergir desse documento, vale o documento; aponte a divergência ao
+   usuário em vez de escolher sozinho.
+4. Se o texto envolve uma regra de negócio (categoria, limite, conversão de horas), confira o
    RF/RNF correspondente em `documentacao/produto/requisitos.html` antes de reescrever. Copy
    não pode simplificar a ponto de mudar o que a regra realmente diz.
 
@@ -31,7 +35,8 @@ string sem exposição ao usuário.
 
 ## Passo 3: critérios
 
-Dois conjuntos de critérios, ambos em `references/`:
+As regras práticas e a tabela antes/depois de `escrita-de-interface.html` são o critério
+principal. Os dois arquivos de `references/` detalham essas regras para revisão linha a linha:
 
 - [`references/linguagem-simples.md`](references/linguagem-simples.md): clareza para o
   público real (voz ativa, frase curta, vocabulário do dia a dia, sem sigla, sem dupla
