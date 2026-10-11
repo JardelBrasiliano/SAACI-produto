@@ -1,7 +1,7 @@
 {
   "pasta": "design-system",
   "descricao": "Princípios de UI, escrita de interface, estados obrigatórios e tokens visuais",
-  "atualizado": "2026-10-04",
+  "atualizado": "2026-10-11",
   "documentos": [
     {
       "arquivo": "principios-ui.html",
@@ -14,7 +14,7 @@
       "arquivo": "escrita-de-interface.html",
       "titulo": "Escrita de Interface",
       "status": "fechado",
-      "resumo": "Linguagem Simples (padrão gov.br) aplicada ao domínio, sem vício de escrita de IA. Regras práticas + tabela antes/depois. Depende do glossário para vocabulário de domínio; checklist operacional completo em .claude/skills/saaci-copy/references/.",
+      "resumo": "Linguagem Simples (padrão gov.br) aplicada ao domínio, sem vício de escrita de IA. Regras práticas + exemplos antes/depois por situação (cadastro, registro de horas, comprovante, conta, estado vazio), fonte única dos exemplos de copy. Depende do glossário para vocabulário de domínio.",
       "ids": []
     },
     {

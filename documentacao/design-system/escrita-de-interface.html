@@ -11,7 +11,7 @@
 <nav class="crumbs"><a href="../../index.html">SAACI</a> › <a href="../README.md">Documentação</a> › Design System</nav>
 <h1>SAACI — Escrita de Interface</h1>
 <div class="subtitle">Como o produto fala com o aluno</div>
-<div class="atualizado">Última atualização: 21/09/2026</div>
+<div class="atualizado">Última atualização: 11/10/2026</div>
 <nav class="siblings">
   <a href="principios-ui.html">Princípios de UI</a>
   <span class="atual">Escrita de Interface</span>
@@ -24,8 +24,7 @@
 <strong>Fonte de verdade para:</strong> regras de escrita aplicadas a texto de interface
 (botão, mensagem, rótulo, erro). Tom de voz de marca está em
 <code>../marca/identidade-marca.html</code>. Vocabulário de domínio está em
-<code>../../.claude/references/glossario.md</code>. A skill <code>saaci-copy</code> aplica
-este documento e nunca edita texto sem aprovação explícita.
+<code>../../.claude/references/glossario.md</code>.
 </div>
 
 <h2>1. Técnica: Linguagem Simples</h2>
@@ -38,42 +37,82 @@ tecnologia, e jargão de sistema é a primeira barreira.
 
 <h2>2. Regras práticas</h2>
 <ul>
+<li><strong>Fale com o aluno por "você".</strong> "Você precisa anexar o comprovante", no tom
+definido em <code>../marca/identidade-marca.html</code>.</li>
 <li><strong>Voz ativa, sujeito claro.</strong> "Anexe o comprovante" em vez de "O comprovante
 deve ser anexado".</li>
 <li><strong>Frase curta, uma ideia por vez.</strong> Quebrar em duas frases em vez de usar
 "portanto", "visto que", "a fim de".</li>
+<li><strong>Verbo em vez de substantivo.</strong> "Confirmar" em vez de "a confirmação de",
+"registrar" em vez de "o registro de".</li>
 <li><strong>Vocabulário do aluno, não do sistema.</strong> "Atividade" e "comprovante", não
-"registro" e "artefato". "Categoria", não "matriz de aproveitamento", mesmo que o termo
-técnico exista no RF15/RNF21: ele fica em <code>requisitos.html</code>, não na tela.</li>
+"registro" e "anexo". O termo de sistema fica em <code>requisitos.html</code>, não na tela.</li>
+<li><strong>Sem sigla na tela.</strong> RF, RNF e PPC nunca aparecem para o aluno. Outra sigla
+só entra explicada na primeira vez, ou trocada por um termo comum.</li>
+<li><strong>Sem dupla negativa.</strong> "Não é possível enviar sem comprovante" em vez de
+"não é impossível que a atividade não seja aceita sem comprovante".</li>
 <li><strong>Erro sempre com próximo passo.</strong> Nunca "operação falhou" sem dizer o que
 fazer. Ver Princípio 4 em <code>principios-ui.html</code>.</li>
-<li><strong>Número antes de rótulo, quando o número é a informação principal.</strong>
-"47h faltam para você fechar" em vez de "Horas faltantes: 47h".</li>
+<li><strong>Comece pelo que a pessoa precisa saber ou fazer.</strong> A informação principal
+vem no início da frase, escrita com verbo, não no formato "Rótulo: valor". "Faltam 47h para
+completar suas horas" em vez de "Horas faltantes: 47h". A informação principal nem sempre é o
+número: se a categoria está cheia, o que importa é onde o aluno ainda pode somar horas, e isso
+vem primeiro. Destacar um número em card ou painel é decisão visual, não de texto (ver "Número
+em destaque" em <code>tokens-visuais.html</code>).</li>
 <li><strong>Sem travessão no texto reescrito.</strong> Separe em duas frases ou use vírgula e
 conectivo ("e", "mas", "então"). Travessão em série é o jeito mais fácil de uma copy soar
 gerada, não escrita para alguém. Vale para a copy do produto e para a documentação deste
 repositório (ver <code>.claude/CLAUDE.md</code>).</li>
 </ul>
 
-<p>Checklist completo de clareza (Linguagem Simples) e de vícios de escrita de IA está em
-<code>.claude/skills/saaci-copy/references/</code>. Este documento fixa a regra de produto;
-aquela pasta é o procedimento operacional que a skill <code>saaci-copy</code> segue.</p>
+<p>Checklist de vícios de escrita de IA, para revisão linha a linha:
+<code>.claude/skills/saaci-copy/references/vicios-de-ia.md</code>.</p>
 
 <h2>3. Exemplos: antes e depois</h2>
+<p>
+Cada exemplo cita o requisito, princípio ou estado que justifica a regra de negócio por trás
+dele. São modelo de tom, não texto final de tela. Exemplo novo entra aqui depois de aprovado,
+mantendo o vínculo com a fonte.
+</p>
+
+<h3>Cadastro e login (RF01-RF08)</h3>
 <table>
-<tr><th>Evitar</th><th>Preferir</th><th>Por quê</th></tr>
-<tr><td>"Requisição indeferida por não conformidade com o edital vigente"</td><td>"Essa atividade não entra em Pesquisa, mas cabe em Extensão"</td><td>Nomeia o problema e a saída, no vocabulário do aluno</td></tr>
-<tr><td>"Campo obrigatório não preenchido"</td><td>"Falta anexar o comprovante desta atividade"</td><td>Diz qual campo, não só que "algo" falta</td></tr>
-<tr><td>"Processamento assíncrono em andamento"</td><td>"Calculando sua hora, cerca de 1 minuto"</td><td>Sem jargão técnico, com expectativa de tempo</td></tr>
-<tr><td>"Limite de categoria excedido"</td><td>"Pesquisa já está cheia (40/40h). Essa atividade não vai contar aqui"</td><td>Mostra o número, não só o estado</td></tr>
+<tr><th>Situação</th><th>Evitar</th><th>Preferir</th></tr>
+<tr><td>E-mail fora do domínio institucional</td><td>"E-mail inválido: domínio não reconhecido pelo sistema"</td><td>"Use o seu e-mail do IFCE para se cadastrar"</td></tr>
+<tr><td>Link de confirmação vencido (RNF03)</td><td>"Token expirado ou já utilizado"</td><td>"Esse link já venceu. Peça um novo na tela de login"</td></tr>
+<tr><td>Recuperação de senha (RF08)</td><td>"Solicitação de redefinição enviada com sucesso"</td><td>"Enviamos um link para trocar sua senha. Confira seu e-mail"</td></tr>
 </table>
 
-<h2>4. O que a skill <code>saaci-copy</code> faz</h2>
-<p>
-Para cada texto revisado, mostra o trecho atual, o problema identificado e a sugestão, e só
-edita o arquivo depois de aprovação explícita. Nunca aplica mudança silenciosamente, mesmo
-quando a mudança parece óbvia.
-</p>
+<h3>Registro de horas (RF13-RF16, RF32, RF38)</h3>
+<table>
+<tr><th>Situação</th><th>Evitar</th><th>Preferir</th></tr>
+<tr><td>Atividade de antes do ingresso no curso (RF38), aviso antes do envio</td><td>"Requisição indeferida por não conformidade com o edital vigente"</td><td>"Esse certificado é de antes do seu ingresso no curso, por isso não conta como hora complementar"</td></tr>
+<tr><td>Regra de conversão (RF32, Princípio 1)</td><td>"Fator de conversão: valor fixo por unidade"</td><td>"Cada palestra conta 2h, não importa quantas horas ela durou"</td></tr>
+<tr><td>Categoria no limite (RF14/RF16), alerta ao escolher a categoria</td><td>"Limite de categoria excedido"</td><td>"Palestras como ouvinte já chegaram ao limite de 30h. Novas palestras não somam mais horas. Veja no painel onde você ainda pode somar"</td></tr>
+<tr><td>Cálculo em andamento</td><td>"Processamento assíncrono em andamento"</td><td>"Calculando sua hora, cerca de 1 minuto"</td></tr>
+<tr><td>Sucesso ao registrar</td><td>"Registro efetuado com sucesso"</td><td>"Atividade registrada. Faltam 47h para completar suas horas"</td></tr>
+</table>
+
+<h3>Comprovante (RF31)</h3>
+<table>
+<tr><th>Situação</th><th>Evitar</th><th>Preferir</th></tr>
+<tr><td>Campo obrigatório (Estado 4)</td><td>"Campo obrigatório não preenchido"</td><td>"Falta anexar o comprovante desta atividade"</td></tr>
+<tr><td>Conexão cai no meio do envio (Estado 2)</td><td>"Falha na transferência do arquivo"</td><td>"O envio caiu no meio. O que você já preencheu ficou salvo, só falta reenviar o arquivo"</td></tr>
+<tr><td>Formato não aceito</td><td>"Formato de arquivo não suportado"</td><td>"Esse tipo de arquivo não funciona aqui. Envie em PDF, JPG ou PNG"</td></tr>
+</table>
+
+<h3>Conta e dados pessoais (RF33, RF34, LGPD)</h3>
+<table>
+<tr><th>Situação</th><th>Evitar</th><th>Preferir</th></tr>
+<tr><td>Confirmação de exclusão de conta</td><td>"Confirma a exclusão permanente da conta?"</td><td>"Isso apaga sua conta e os dados de vez. Quer baixar um resumo antes de continuar?"</td></tr>
+<tr><td>Conta excluída</td><td>"Conta removida do sistema"</td><td>"Sua conta foi apagada. Obrigado por ter usado o SAACI"</td></tr>
+</table>
+
+<h3>Estado vazio (Estado 1, Princípio 1)</h3>
+<table>
+<tr><th>Situação</th><th>Evitar</th><th>Preferir</th></tr>
+<tr><td>Aluno sem nenhuma atividade registrada</td><td>"Nenhum item encontrado"</td><td>"Você precisa de 120h para se formar. Registre a primeira atividade quando quiser"</td></tr>
+</table>
 
 <div class="meta">Documento vivo. Vocabulário de domínio vem do glossário, nunca inventado aqui.</div>
 
