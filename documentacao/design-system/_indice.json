@@ -1,7 +1,7 @@
 {
   "pasta": "design-system",
   "descricao": "Princípios de UI, escrita de interface, estados obrigatórios e tokens visuais",
-  "atualizado": "2026-10-04",
+  "atualizado": "2026-10-11",
   "documentos": [
     {
       "arquivo": "principios-ui.html",
