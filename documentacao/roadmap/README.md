@@ -54,9 +54,8 @@ revisão humana até este ponto; a trilha existe para isso. Ver `roadmap.html`, 
 lista de atividades, dependências e o comando de cada uma.
 
 **Revisão contínua, fora do critério de destrave:** `roadmap.html` também lista itens de
-completude que não bloqueiam o Marco 0 nem nenhum outro marco — hoje só
-`../produto/pesquisa-mercado.html`, fechado com alguns campos da coleta original ainda
-marcados para revisão.
+completude que não bloqueiam o Marco 0 nem nenhum outro marco. Hoje não há item em aberto:
+`../produto/pesquisa-mercado.html` foi fechada e revisada em 10/10/2026.
 
 ### Marco 1: MVP
 
