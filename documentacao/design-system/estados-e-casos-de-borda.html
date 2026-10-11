@@ -11,7 +11,7 @@
 <nav class="crumbs"><a href="../../index.html">SAACI</a> › <a href="../README.md">Documentação</a> › Design System</nav>
 <h1>SAACI — Estados e Casos de Borda</h1>
 <div class="subtitle">O que toda tela precisa prever, além do caminho feliz</div>
-<div class="atualizado">Última atualização: 27/09/2026</div>
+<div class="atualizado">Última atualização: 05/10/2026</div>
 <nav class="siblings">
   <a href="principios-ui.html">Princípios de UI</a>
   <a href="escrita-de-interface.html">Escrita de Interface</a>
@@ -77,9 +77,27 @@ Nenhum fluxo é considerado fechado sem passar por eles.</p>
   aplicável.</td>
 </tr>
 <tr>
-  <td>Certificado com carga horária desproporcional (ex.: palestra de 5h que só vale 1h)</td>
-  <td>Mostrar a regra de conversão antes do envio (RF32). É o caso citado literalmente na
-  resposta 16 do questionário original.</td>
+  <td>Certificado com carga horária desproporcional (ex.: em Engenharia de Computação, palestra como ouvinte conta 2h por palestra, independente da carga horária dela)</td>
+  <td>Mostrar a regra de conversão antes do envio (RF32). O problema é descrito na resposta 16
+  do questionário original.</td>
+</tr>
+<tr>
+  <td>Projeto do item 4 é o mesmo da iniciação científica do item 1 (Engenharia de Computação)</td>
+  <td>Ao registrar no item 4, avisar que o projeto não pode ser o mesmo da iniciação científica
+  ou tecnológica. O aluno decide se continua, sabendo que a coordenação pode invalidar a
+  atividade. Regra em <code>../produto/regras-engenharia-computacao.html</code>.</td>
+</tr>
+<tr>
+  <td>Palestra que faz parte de um evento (Engenharia de Computação)</td>
+  <td>Ao escolher o item 13 (palestra como ouvinte), mostrar que palestra dentro de evento conta
+  pelo item 12, por dia de evento.</td>
+</tr>
+<tr>
+  <td>Regra do curso mudou e o total do aluno mudou (RF15)</td>
+  <td>Todos os registros são recalculados com a regra nova. Avisar o aluno que as regras do curso
+  foram atualizadas e que o total foi recalculado, para a mudança não parecer erro. Guardar a
+  versão da regra por registro está no backlog (<code>../produto/backlog-roadmap.html</code>,
+  seção 8).</td>
 </tr>
 <tr>
   <td>Atividade sem categoria clara para o aluno</td>

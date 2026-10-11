@@ -6,9 +6,8 @@ que não existe em nenhum arquivo do repositório.
 ## Bloqueantes para o Marco 1 (MVP)
 
 - [x] **Obter o PPC (Projeto Pedagógico de Curso) de Engenharia de Computação.** Obtido, junto
-  com o formulário de solicitação de atividades complementares (matriz 6759). A regra de cálculo
-  do RF15 (`documentacao/produto/requisitos.html`) está no formulário, não no PPC, que só fixa
-  as 120 horas totais.
+  com o formulário de solicitação de atividades complementares (matriz 6759). Regras em
+  `documentacao/produto/regras-engenharia-computacao.html`.
 - [ ] **O mesmo para Engenharia de Telecomunicações**, segundo curso escolhido para provar a
   parametrização (RF15). Substitui Licenciatura em Teatro. O orientador faz parte da
   coordenação do curso e é o caminho para obter o formulário de solicitação.
@@ -23,16 +22,32 @@ que não existe em nenhum arquivo do repositório.
 - [ ] **Tamanho máximo do arquivo de comprovante (RF31).** Formatos (PDF, JPG, PNG) e critério
   do limite já fechados no RNF25. Falta o valor exato, definido no repositório de
   desenvolvimento.
+- [ ] **Agente de IA no registro de atividade.** Ideia: o agente lê o comprovante no momento do
+  registro e avisa o aluno (ex.: projeto do item 4 que é o mesmo da iniciação científica do
+  item 1). Não está em nenhum documento de produto. Rodar `/saaci-funcionalidade` para decidir
+  o que ele lê, se entra no MVP e o tratamento de LGPD (o certificado tem dados pessoais). O
+  cálculo continua pelas regras parametrizadas (RF14, RNF21). Hoje o aviso do item 4 está
+  registrado sem citar o mecanismo.
+- [ ] **Matrícula do aluno no perfil.** O formulário de solicitação pede Aluno e Matrícula, e a
+  tela do RF37 deveria mostrar os dois prontos. O RF09 não coleta matrícula. Decidir se entra
+  como campo do perfil (é dado pessoal novo, ver RNF05 sobre minimização).
 - [ ] **Escopo de "Sugestões de eventos" (Marco 2).** Quem publica os eventos e curadoria não estão decididos. Rodar `/saaci-funcionalidade` quando for a vez deste marco.
 
 ## Validação pendente (documentos ainda em `.md`, rascunho)
 
 - [ ] `documentacao/design-system/referencias-visuais.md`: vazio, aguardando você trazer
   referência real.
-- [ ] `documentacao/produto/regras-engenharia-computacao.md`: transcrição do formulário de
-  solicitação, não validada. Três pontos a confirmar com a coordenação: arredondamento das
-  horas (o SAACI já adota uma regra provisória, ver RF14), se o máximo do item vale para a soma
-  dos certificados, e a versão do formulário.
+
+## Confirmar com a coordenação de Engenharia de Computação
+
+Não bloqueiam `documentacao/produto/regras-engenharia-computacao.html`, que já adota os dois
+primeiros pontos. Se a resposta divergir, atualizar o documento. O terceiro completa o passo a
+passo do RF37.
+
+- [ ] O máximo de cada item vale para a soma dos certificados daquele item.
+- [ ] O número do item no nome do arquivo (RF36) basta, ou precisa estar escrito no próprio
+  certificado.
+- [ ] Qual tipo de processo o aluno escolhe no SEI para pedir o aproveitamento.
 
 ## Governança do repositório (fora do Claude)
 
