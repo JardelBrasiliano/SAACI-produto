@@ -1,7 +1,7 @@
 {
   "pasta": "produto",
   "descricao": "Problema, escopo, requisitos e backlog do SAACI. Ler antes de qualquer decisão de produto",
-  "atualizado": "2026-10-04",
+  "atualizado": "2026-10-10",
   "documentos": [
     {
       "arquivo": "visao-produto.html",
@@ -49,7 +49,7 @@
       "arquivo": "pesquisa-mercado.html",
       "titulo": "Pesquisa de Mercado",
       "status": "fechado",
-      "resumo": "Base completa do benchmarking contra SIGAA, SUAP, PWAC-IFRS e Sou UFPR (resumo em visao-produto.html, seção 4). Perfil técnico e fontes de cada concorrente verificados. Metodologia da coleta original (quem, quando, critério de UX) segue com tags REVISÃO, não bloqueante, ver roadmap.html.",
+      "resumo": "Base completa do benchmarking contra SIGAA, SUAP, PWAC-IFRS e Sou UFPR (resumo em visao-produto.html, seção 4), conferida contra a versão final do PDF da pesquisa. Coleta de ago. a out. 2026 (Jardel Pimentel Brasiliano e Francisco Jorge Monteiro Junior), só por fonte pública. Tabela com 14 critérios definidos (grade curricular de SIGAA/SUAP vem do conhecimento da equipe, sem fonte documental); SUAP é o mais completo para o aluno, Sou UFPR a referência de UX. Critério de UX é a aparência da interface (moderna x sistema legado), julgada pela equipe sem teste de usabilidade. Sem pontos em aberto.",
       "ids": []
     }
   ]
