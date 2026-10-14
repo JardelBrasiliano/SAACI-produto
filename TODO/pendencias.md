@@ -36,7 +36,7 @@ que não existe em nenhum arquivo do repositório.
 ## Validação pendente (documentos ainda em `.md`, rascunho)
 
 - [ ] `documentacao/design-system/referencias-visuais.md`: vazio, aguardando você trazer
-  referência real.
+  referência real. Não bloqueia o Marco 0.
 
 ## Confirmar com a coordenação de Engenharia de Computação
 
