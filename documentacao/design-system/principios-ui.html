@@ -11,7 +11,7 @@
 <nav class="crumbs"><a href="../../index.html">SAACI</a> › <a href="../README.md">Documentação</a> › Design System</nav>
 <h1>SAACI — Princípios de UI</h1>
 <div class="subtitle">Regras que toda tela precisa respeitar, independente do fluxo</div>
-<div class="atualizado">Última atualização: 11/10/2026</div>
+<div class="atualizado">Última atualização: 13/10/2026</div>
 <nav class="siblings">
   <span class="atual">Princípios de UI</span>
   <a href="escrita-de-interface.html">Escrita de Interface</a>
@@ -32,27 +32,23 @@ Estado obrigatório de tela (vazio, erro, etc.) está em
 <h2>A orientação é embutida, nunca separada</h2>
 <p>
 A persona do SAACI é uma só: o aluno que não sabe a regra, inclusive o veterano prestes a se
-formar (ver <code>../produto/visao-produto.html</code>). "O que conta, quanto vale, qual o
-limite" aparece <strong>no momento em que o aluno registra a atividade</strong>, não em uma
-tela de onboarding, tutorial ou "modo iniciante" à parte.
+formar. "O que conta, quanto vale, qual o limite" aparece <strong>no momento em que o aluno
+registra a atividade</strong>, não em uma tela de onboarding, tutorial ou "modo iniciante" à
+parte.
 </p>
-<p><strong>Na prática:</strong> ao escolher o tipo de atividade no formulário de registro
-(RF14), a regra de conversão (RF32) e o quanto ainda cabe na categoria aparecem ali, antes do
-envio. Não depois, como resposta da coordenação.</p>
-<p><strong>Alternativa descartada:</strong> tela de ajuda/FAQ separada explicando as regras.
-Resolveria a dúvida em teoria, mas o questionário mostra que o aluno não procura ajuda antes de
-errar. Ele descobre a regra quando a coordenação recusa. Separar a orientação do formulário
-repete o erro que o SAACI existe para corrigir.</p>
+<p><strong>Na prática:</strong> ao escolher o tipo de atividade no formulário de registro, a
+regra de conversão e o quanto ainda cabe na categoria aparecem ali, antes do envio. Não depois,
+como resposta da coordenação.</p>
 </div>
 
 <div class="principio">
 <div class="n">Princípio 2</div>
 <h2>Mobile-first sem meia versão</h2>
 <p>
-Todo fluxo nasce desenhado para mobile primeiro (RNF17). A versão desktop é reflow de layout:
-mesmo dado visível, mesma permissão, mesmo texto, mesma regra de negócio. Nunca existe
-funcionalidade exclusiva de uma das duas versões. Aplicado por <code>saaci-prompt-tela</code>
-em todo prompt gerado.
+Todo fluxo nasce desenhado para mobile primeiro. A versão desktop é reflow de layout: mesmo
+dado visível, mesma permissão, mesmo texto, mesma regra de negócio. Nunca existe funcionalidade
+exclusiva de uma das duas versões. Aplicado por <code>saaci-prompt-tela</code> em todo prompt
+gerado.
 </p>
 </div>
 
@@ -60,24 +56,19 @@ em todo prompt gerado.
 <div class="n">Princípio 3</div>
 <h2>Acessível a quem tem dificuldade com tecnologia</h2>
 <p>
-RNF23 (<code>../produto/requisitos.html</code>): o público do SAACI inclui pessoas com pouca
-familiaridade com tecnologia e pessoas neuroatípicas (respostas 16 e 35 do questionário
-original). Isso vira regra de interface, não só de acessibilidade técnica (contraste, foco de
-teclado): evitar jargão de sistema, evitar etapa escondida atrás de ação não óbvia, preferir
-fluxo linear a navegação ramificada.
+O público do SAACI inclui pessoas com pouca familiaridade com tecnologia e pessoas
+neurodivergentes. Isso vira regra de interface, não só de acessibilidade técnica (contraste,
+foco de teclado): evitar jargão de sistema, evitar etapa escondida atrás de ação não óbvia,
+preferir fluxo linear a navegação ramificada.
 </p>
-<p><strong>Alternativa descartada:</strong> tratar acessibilidade só como checklist técnico
-(WCAG) sem mexer no fluxo. Necessário, mas insuficiente: o pedido do questionário é sobre
-clareza de fluxo, não só sobre leitor de tela.</p>
 </div>
 
 <div class="principio">
 <div class="n">Princípio 4</div>
 <h2>Erro nunca é só "não deu certo"</h2>
 <p>
-Toda mensagem de erro (RNF13) diz o que fazer a seguir. "Esse tipo de arquivo não funciona
-aqui" sem complemento é tão inútil quanto "erro 403". O complemento obrigatório é "Envie em PDF,
-JPG ou PNG" ou equivalente. Ver <code>escrita-de-interface.html</code>.
+Toda mensagem de erro diz o que fazer a seguir. Uma mensagem sem complemento é tão inútil
+quanto um código de erro genérico. Exemplos em <code>escrita-de-interface.html</code>.
 </p>
 </div>
 
