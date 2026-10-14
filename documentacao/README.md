@@ -30,7 +30,7 @@ Princípios de UI, escrita de interface, estados obrigatórios, tokens visuais.
 - [Escrita de Interface](design-system/escrita-de-interface.html)
 - [Estados e Casos de Borda](design-system/estados-e-casos-de-borda.html)
 - [Tokens Visuais](design-system/tokens-visuais.html)
-- [Referências Visuais](design-system/referencias-visuais.md) _(rascunho, vazio)_
+- [Referências Visuais](design-system/referencias-visuais.html)
 
 ## [`fluxos/`](fluxos/)
 

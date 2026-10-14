@@ -49,16 +49,14 @@ commitlint). Detalhe completo em `../../CONTRIBUTING.md`.
 planejar tarefas de verdade.
 **Critério de destrave:** as 9 revisões de documento da trilha em `roadmap.html` concluídas —
 cada documento de produto, marca e design system criado no bootstrap revisado pelo usuário
-e fechado em `.html`. A exceção é `referencias-visuais.md`, que segue rascunho até chegar material
-real. Nenhum desses documentos passou por
+e fechado em `.html`. Nenhum desses documentos passou por
 revisão humana até este ponto; a trilha existe para isso. Ver `roadmap.html`, Marco 0, para a
 lista de atividades, dependências e o comando de cada uma.
 
 **Revisão contínua, fora do critério de destrave:** `roadmap.html` também lista itens de
-completude que não bloqueiam o Marco 0 nem nenhum outro marco. Hoje o item em aberto é
-`../design-system/referencias-visuais.md` (nó 4), vazio até chegar uma referência real, e por
-isso fora das 9 revisões. `../produto/pesquisa-mercado.html` foi fechada e revisada em
-10/10/2026.
+completude que não bloqueiam o Marco 0 nem nenhum outro marco. Hoje não há item em aberto.
+`../produto/pesquisa-mercado.html` foi fechada e revisada em 10/10/2026, e
+`../design-system/referencias-visuais.html` (nó 4, fora das 9 revisões) em 14/10/2026.
 
 ### Marco 1: MVP
 

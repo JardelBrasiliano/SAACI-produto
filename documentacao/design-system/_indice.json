@@ -1,7 +1,7 @@
 {
   "pasta": "design-system",
   "descricao": "Princípios de UI, escrita de interface, estados obrigatórios e tokens visuais",
-  "atualizado": "2026-10-13",
+  "atualizado": "2026-10-14",
   "documentos": [
     {
       "arquivo": "principios-ui.html",
@@ -32,10 +32,10 @@
       "ids": []
     },
     {
-      "arquivo": "referencias-visuais.md",
+      "arquivo": "referencias-visuais.html",
       "titulo": "Referências Visuais",
-      "status": "rascunho",
-      "resumo": "Vazio por decisão consciente. Nenhuma referência visual real veio do drive/. Aguardando o usuário trazer print/link real.",
+      "status": "fechado",
+      "resumo": "3 referências (cartão de categoria com limite e estado vazio, mensagem e resumo de erro, upload de comprovante) e 3 anti-referências (placeholder no lugar do rótulo, padrões enganosos, mensagem genérica de erro), cada uma com link e nota conferida contra a página citada. Sem referência para progresso por categoria com limite.",
       "ids": []
     }
   ]
