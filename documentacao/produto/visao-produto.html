@@ -11,12 +11,13 @@
 <nav class="crumbs"><a href="../../index.html">SAACI</a> › <a href="../README.md">Documentação</a> › Produto</nav>
 <h1>SAACI — Visão de Produto</h1>
 <div class="subtitle">Sistema de Apoio Acadêmico Colaborativo do IFCE</div>
-<div class="atualizado">Última atualização: 24/09/2026</div>
+<div class="atualizado">Última atualização: 10/10/2026</div>
 <nav class="siblings">
   <span class="atual">Visão de Produto</span>
   <a href="escopo-mvp.html">Escopo do MVP</a>
   <a href="requisitos.html">Requisitos</a>
   <a href="backlog-roadmap.html">Backlog</a>
+  <a href="regras-engenharia-computacao.html">Regras: Eng. de Computação</a>
   <a href="pesquisa-questionario.html">Pesquisa com Alunos</a>
   <a href="pesquisa-mercado.html">Pesquisa de Mercado</a>
 </nav>
@@ -127,19 +128,19 @@ um tutorial, nem um "modo iniciante". Ver <code>../design-system/principios-ui.h
 <h3>Curso-piloto das regras de cálculo</h3>
 <p>
 <strong>Engenharia de Computação</strong> é o curso-piloto do MVP: o PPC (julho de 2017) e o
-formulário de solicitação de atividades complementares (matriz 6759) já estão em mãos. A regra
-de cálculo do RF15 (ver <code>requisitos.html</code>) vem do formulário, que traz a conversão e
-o limite de cada item — o PPC sozinho só fixa o total de 120 horas.
-<strong>Licenciatura em Teatro</strong> entra como segundo curso, maior grupo do questionário
-(18 de 39 respostas) e prova de que a regra de cálculo é parametrizável por curso, não fixa;
-o PPC e o formulário dele ainda não foram obtidos (ver <code>TODO/pendencias.md</code>).
+formulário de solicitação de atividades complementares (matriz 6759) já estão em mãos. As
+regras do curso estão em <code>regras-engenharia-computacao.html</code>.
+<strong>Engenharia de Telecomunicações</strong> entra como segundo curso, para provar que a
+regra de cálculo é parametrizável por curso, não fixa. A escolha feita a partir da facilidade, 
+de comunicação com a coordenação do curso, sendo o orientador do projeto parte da da mesma. 
+O PPC e o formulário do curso ainda não foram obtidos (ver <code>TODO/pendencias.md</code>). 
+Licenciatura em Teatro, maior grupo do questionário (18 de 39), foi a escolha anterior e saiu 
+do MVP por decisão da equipe.
 </p>
 <p>
-Expandir o piloto para os demais cursos da pesquisa, depois para todo o campus Fortaleza e,
-por fim, para todos os campi do IFCE é meta declarada, mas fica fora do MVP: exige repetir,
-curso a curso, o mesmo trabalho de obter PPC e formulário e converter a regra em parâmetro —
-não é só ler um documento público, como o caso de Teatro (ainda pendente) já mostra. Racional
-completo em <code>backlog-roadmap.html</code>, seção 8.
+Expandir as regras de cálculo para outros cursos do IFCE é meta declarada, mas fica fora do
+MVP. As fases da expansão e o motivo de ela depender de cada coordenação estão em
+<code>backlog-roadmap.html</code>, seção 6.
 </p>
 
 <table>
@@ -171,45 +172,49 @@ Metodologia, perfil de cada concorrente e fontes completas em
 </p>
 
 <table>
-<tr><th>Critério</th><th>SIGAA (UFC)</th><th>SUAP (IFs)</th><th>PWAC-IFRS</th><th>Sou UFPR</th><th>SAACI</th></tr>
-<tr><td>Tipo</td><td>ERP acadêmico</td><td>ERP dos IFs</td><td>Protótipo de AC</td><td>App de serviços</td><td>Plataforma do aluno</td></tr>
+<tr><th>Critério</th><th>SIGAA (UFC)</th><th>SUAP (IFs)</th><th>PWAC-IFRS</th><th>Sou UFPR</th><th>SAACI (proposto)</th></tr>
+<tr><td>Tipo de sistema</td><td>ERP acadêmico</td><td>ERP dos IFs</td><td>Protótipo de AC</td><td>Aplicação web de serviços</td><td>Plataforma do aluno</td></tr>
 <tr><td>Gestão de atividades complementares</td><td>Sim</td><td>Sim</td><td>Sim</td><td>Não</td><td>Sim</td></tr>
-<tr><td>Cálculo automático de horas</td><td>Não</td><td>Sim</td><td>Sim</td><td>N/A</td><td>Sim</td></tr>
-<tr><td>Controle de limite por categoria</td><td>Não inf.</td><td>Sim</td><td>Sim</td><td>N/A</td><td>Sim</td></tr>
+<tr><td>Cálculo automático por regras de conversão</td><td>Não</td><td>Sim</td><td>Não</td><td>N/A</td><td>Sim</td></tr>
+<tr><td>Controle de limite por categoria</td><td>Parcial (alerta, sem bloqueio)</td><td>Sim</td><td>Sim</td><td>N/A</td><td>Sim</td></tr>
 <tr><td>Orientação/simulação antes do envio</td><td>Não</td><td>Não</td><td>Parcial</td><td>N/A</td><td><strong>Sim</strong></td></tr>
-<tr><td>Registro/gestão de estágio</td><td>Sim</td><td>Não inf.</td><td>Não</td><td>Não</td><td>Sim</td></tr>
-<tr><td>Grade curricular / estrutura do curso</td><td>Sim</td><td>Sim</td><td>Não</td><td>Não</td><td>Sim</td></tr>
+<tr><td>Registro/gestão de estágio</td><td>Sim</td><td>Não</td><td>Não</td><td>Não</td><td>Sim</td></tr>
+<tr><td>Grade curricular / estrutura do curso</td><td>Sim*</td><td>Sim*</td><td>Não</td><td>Não</td><td>Sim</td></tr>
 <tr><td>Feedback de disciplinas por IA</td><td>Não</td><td>Não</td><td>Não</td><td>Não</td><td><strong>Sim</strong></td></tr>
 <tr><td>Serviços de rotina ao aluno (ex.: cardápio do RU)</td><td>Não</td><td>Não</td><td>Não</td><td>Sim</td><td>Sim</td></tr>
-<tr><td>Painel visual de progresso</td><td>Não</td><td>Não</td><td>Não</td><td>Não</td><td><strong>Sim</strong></td></tr>
-<tr><td>Gamificação / acompanhamento de meta</td><td>Não</td><td>Não</td><td>Não</td><td>Não</td><td><strong>Sim</strong></td></tr>
-<tr><td>Foco na experiência do aluno (UX)</td><td>Baixo</td><td>Baixo</td><td>Baixo</td><td>Alto</td><td>Alto</td></tr>
-<tr><td>Situação</td><td>Em produção</td><td>Em produção</td><td>Protótipo (TCC)</td><td>Beta (2025)</td><td>Proposto</td></tr>
+<tr><td>Painel visual de progresso (dashboard)</td><td>Parcial (tabela, sem recursos visuais)</td><td>Parcial (tabela, sem recursos visuais)</td><td>Não</td><td>Não</td><td><strong>Sim</strong></td></tr>
+<tr><td>Acompanhamento de meta de horas</td><td>Sim</td><td>Sim</td><td>Parcial (relatório de horas)</td><td>N/A</td><td>Sim</td></tr>
+<tr><td>Gamificação</td><td>Não</td><td>Não</td><td>Não</td><td>Não</td><td><strong>Sim</strong></td></tr>
+<tr><td>Foco na experiência do aluno (UX)</td><td>Baixo</td><td>Baixo</td><td>Alto</td><td>Alto</td><td>Alto</td></tr>
+<tr><td>Situação</td><td>Em produção</td><td>Em produção</td><td>Protótipo (TCC)</td><td>Em produção (2025)</td><td>Proposto</td></tr>
 </table>
-<p class="fonte">N/A = fora do escopo da solução. Não inf. = sem informação pública verificável. Em negrito, na coluna SAACI, os diferenciais exclusivos da proposta. Estágio, grade curricular, feedback por IA, serviços de rotina e gamificação estão fora do MVP (ver <code>escopo-mvp.html</code>). Dado completo, fonte por concorrente e metodologia em <a href="pesquisa-mercado.html">Pesquisa de Mercado</a>.</p>
+<p class="fonte">N/A = fora do escopo da solução. * = conhecimento da equipe como usuária, sem fonte documental. Em negrito, na coluna SAACI, os diferenciais exclusivos da proposta. A linha de UX mede a aparência da interface, não usabilidade testada. Estágio, grade curricular, feedback por IA, serviços de rotina e gamificação estão fora do MVP (ver <code>escopo-mvp.html</code>). Definição de cada critério, fonte por concorrente e metodologia em <a href="pesquisa-mercado.html">Pesquisa de Mercado</a>.</p>
 
 <h3>Leitura por concorrente</h3>
 <ul>
-<li><strong>SIGAA (UFC):</strong> ERP completo (Java EE). AC é módulo secundário e funciona
-como repositório de solicitações, com pouca orientação prévia, o que gera retrabalho de
-análise.</li>
-<li><strong>SUAP (Rede Federal):</strong> ERP multicampi (Django/PostgreSQL) com forte
-parametrização por matriz, mas ênfase administrativa. Cálculo só no processamento, sem
-simulação prévia.</li>
-<li><strong>PWAC-IFRS:</strong> protótipo de TCC (Java/JSF/PostgreSQL) focado só em AC.
-Calcula automaticamente e impede ultrapassar limite, mas nunca operou institucionalmente e
-não tem perfil do aluno, estágio, RU ou grade curricular.</li>
-<li><strong>Sou UFPR:</strong> app de serviços, não acadêmico, forte em UX e sem nenhum
-fluxo de AC. Cardápio institucional, não colaborativo.</li>
+<li><strong>SIGAA (UFC):</strong> ERP completo, em que AC é um módulo entre muitos. O aluno
+digita as horas que quer aproveitar e o sistema só soma, sem regra de conversão; o alerta de
+teto aparece depois do cadastro e não bloqueia, o que deixa o corte para o avaliador.</li>
+<li><strong>SUAP (Rede Federal):</strong> ERP multicampi que converte as horas por regras
+parametrizadas na matriz, mas a configuração é opcional por curso e não há simulação antes do
+envio.</li>
+<li><strong>PWAC-IFRS:</strong> protótipo de TCC focado só em AC. Bloqueia a categoria quando o
+limite é atingido, mas não aplica regra de conversão e segue no nível 4 de 9 de maturidade
+tecnológica, sem uso por alunos reais.</li>
+<li><strong>Sou UFPR:</strong> aplicação web de serviços, não acadêmica, forte em experiência
+do aluno e sem nenhum fluxo de AC. Cardápio institucional, não colaborativo.</li>
 </ul>
 
 <h3>Conclusão</h3>
 <p>
-Cálculo automático e controle de limite já existem isoladamente (PWAC-IFRS, SUAP); boa UX
-de serviços já existe isoladamente (Sou UFPR). Nenhum desses itens sozinho é diferencial do
-SAACI. O diferencial é reunir, com boa usabilidade, o que hoje está fragmentado: gestão
-orientada de horas, cardápio colaborativo, grade curricular com feedback sintetizado por IA e
-painel visual de progresso: uma combinação ausente em todas as quatro soluções analisadas.
+Entre os quatro, o SUAP é o mais completo para o aluno, e o Sou UFPR é a referência de
+experiência. Cálculo por regra, controle de limite e boa UX já existem isoladamente, então
+nenhum desses itens sozinho é diferencial do SAACI. O diferencial é mostrar, antes do envio,
+quanto cada atividade vale pela regra do curso, numa ferramenta complementar e exclusiva do
+aluno, que não substitui o sistema acadêmico institucional. No escopo pleno, o SAACI reúne o
+que hoje está fragmentado: gestão orientada de horas, acompanhamento de estágio, cardápio
+colaborativo, grade curricular com feedback por IA, painel visual de progresso e gamificação,
+uma combinação ausente nas quatro soluções analisadas.
 </p>
 
 <h2>5. Horizonte</h2>

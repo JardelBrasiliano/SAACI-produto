@@ -55,7 +55,7 @@
 <nav class="crumbs"><a href="../../index.html">SAACI</a> › <a href="../README.md">Documentação</a> › Roadmap</nav>
 <h1>SAACI — Roadmap</h1>
 <div class="subtitle">Trilha executável, por marco. Progresso salvo neste navegador.</div>
-<div class="atualizado">Última atualização: 24/09/2026</div>
+<div class="atualizado">Última atualização: 11/10/2026</div>
 <nav class="siblings">
   <a href="README.md">Racional (README)</a>
   <span class="atual">roadmap.html (trilha)</span>
@@ -95,14 +95,8 @@ fechados (.html). Enquanto isso não acontece, o Marco 1 não destrava.</div>
 <h2>Revisão contínua (não bloqueante)</h2>
 <div class="obj">Itens de completude que não travam nenhum marco. Ficam aqui até alguém trazer
 o dado que falta.</div>
-<ul>
-<li><strong>Pesquisa de Mercado</strong> —
-<a href="../produto/pesquisa-mercado.html">../produto/pesquisa-mercado.html</a>: documento
-fechado, mas com campos <span class="badge badge-warn">REVISÃO</span> sobre a coleta original
-(quem conduziu, período exato, critério de avaliação de UX usado). Confirmar contra
-<code>SAACI - pesquisa de mercado.docx</code> quando possível. Comando:
-<code>/saaci-revisar documentacao/produto/pesquisa-mercado.html</code>.</li>
-</ul>
+<p>Nenhum item em aberto. A Pesquisa de Mercado foi fechada em 10/10/2026, conferida contra a
+versão final do PDF da pesquisa.</p>
 </div>
 
 <div class="meta">Progresso salvo em <code>localStorage</code> deste navegador. Não sincroniza
@@ -122,7 +116,7 @@ marco aqui sem adicionar lá é inconsistência a ser pega por <code>/saaci-cons
 <script>
 (function(){
   var STORAGE_KEY = 'saaci-roadmap-marco0';
-  var DONE_ESTATICO = { 0: true, 1: true, 2: true, 3: true, 5: true, 6: true };
+  var DONE_ESTATICO = { 0: true, 1: true, 2: true, 3: true, 5: true, 6: true, 7: true, 8: true, 9: true };
   var done = Object.assign({}, DONE_ESTATICO);
   try { done = Object.assign(done, JSON.parse(localStorage.getItem(STORAGE_KEY) || '{}')); } catch (e) {}
   function salvar() { try { localStorage.setItem(STORAGE_KEY, JSON.stringify(done)); } catch (e) {} }
@@ -140,8 +134,8 @@ marco aqui sem adicionar lá é inconsistência a ser pega por <code>/saaci-cons
     },
     {
       id: 1, fase: 'Fase 1 — Fundações', titulo: 'Visão de Produto', arquivo: '../produto/visao-produto.html',
-      fonte: ['SAACI - pesquisa de mercado.docx (benchmarking, já conferido e expandido em documentacao/produto/pesquisa-mercado.html)', 'SAACI - repostas questionario.xlsx (já processada em pesquisa-questionario.html)'],
-      pergunta: 'Seção 4 (leitura de mercado / benchmarking) já foi conferida contra fonte pública e virou documentacao/produto/pesquisa-mercado.html. Os números do questionário já foram conferidos e viraram documentacao/produto/pesquisa-questionario.html.',
+      fonte: ['SAACI - pesquisa de mercado.pdf (versão final do benchmarking, base de documentacao/produto/pesquisa-mercado.html)', 'SAACI - repostas questionario.xlsx (já processada em pesquisa-questionario.html)'],
+      pergunta: 'Seção 4 (leitura de mercado / benchmarking) resume documentacao/produto/pesquisa-mercado.html, fechada e revisada contra a versão final do PDF da pesquisa. Os números do questionário já foram conferidos e viraram documentacao/produto/pesquisa-questionario.html.',
       dependeDe: [], comando: '/saaci-revisar documentacao/produto/visao-produto.html'
     },
     {
@@ -165,7 +159,7 @@ marco aqui sem adicionar lá é inconsistência a ser pega por <code>/saaci-cons
     {
       id: 5, fase: 'Fase 2 — Detalhamento', titulo: 'Escopo do MVP', arquivo: '../produto/escopo-mvp.html',
       fonte: ['Cronograma de Desenvolvimento - SAACI.pdf'],
-      pergunta: 'Conferir se o recorte do MVP ainda bate com o cronograma original. SAACI - Relatorio Tecnico.docx NÃO é fonte válida — é um template ABNT de TCC ainda não preenchido, sem conteúdo técnico real (conferido nesta conversa).',
+      pergunta: 'Revisado e fechado via /saaci-revisar (PR #18): lacunas do escopo fechadas e RF37 adicionado. Depois disso, o documento só recebeu ajustes de referência ao backlog, sem mudar o que entra ou sai do MVP. SAACI - Relatorio Tecnico.docx NÃO é fonte válida: é um template ABNT de TCC ainda não preenchido, sem conteúdo técnico real.',
       dependeDe: [1], comando: '/saaci-revisar documentacao/produto/escopo-mvp.html'
     },
     {
@@ -177,19 +171,19 @@ marco aqui sem adicionar lá é inconsistência a ser pega por <code>/saaci-cons
     {
       id: 7, fase: 'Fase 2 — Detalhamento', titulo: 'Escrita de Interface', arquivo: '../design-system/escrita-de-interface.html',
       fonte: null,
-      pergunta: 'Conferir consistência com o tom de voz fechado no nó 2.',
+      pergunta: 'Revisado e fechado via /saaci-revisar: exemplos com categorias que não existem no curso-piloto (Pesquisa/Extensão) trocados pelo aviso do RF38 e pelo alerta de limite de palestras como ouvinte; categoria cheia tratada como alerta, não erro. O documento virou fonte única dos exemplos de copy (identidade-marca e principios-ui passam a referenciar), recebeu as regras de produto que só existiam na skill saaci-copy e trocou "número antes de rótulo" por "comece pelo que a pessoa precisa saber ou fazer". Divergência sobre quem identifica a categoria do certificado (backlog-roadmap.html vs estados-e-casos-de-borda.html) fica para /saaci-consistencia.',
       dependeDe: [2], comando: '/saaci-revisar documentacao/design-system/escrita-de-interface.html'
     },
     {
       id: 8, fase: 'Fase 3 — Fechamento', titulo: 'Requisitos', arquivo: '../produto/requisitos.html',
-      fonte: ['SAACI - rf e rnf.docx', 'SAACI - levantamento de requisitos.docx'],
-      pergunta: 'Conferir RF01–RF34 e RNF01–RNF23 contra o levantamento original, depois que o escopo do MVP (nó 5) fechar.',
+      fonte: ['SAACI - rf e rnf.docx', 'SAACI - levantamento de requisitos.docx', 'Formulário para Solicitação de Atividades Complementares (matriz 6759)', 'PPC do Bacharelado em Engenharia de Computação (2017)'],
+      pergunta: 'Revisado e fechado via /saaci-revisar: requisitos.html conferido contra o levantamento original junto com o escopo do MVP. <a href="../produto/regras-engenharia-computacao.html" target="_blank">regras-engenharia-computacao.html</a> promovido a fechado: transcrição dos 24 itens e da tabela Qualis conferida contra o formulário, arredondamento definido no RF14 (1 casa decimal por atividade, total em horas inteiras, sempre para baixo), máximo do item valendo para a soma dos certificados e versão única do formulário com recálculo (versão por registro foi para o backlog). Pontos a confirmar com a coordenação seguem em TODO/pendencias.md.',
       dependeDe: [5], comando: '/saaci-revisar documentacao/produto/requisitos.html'
     },
     {
       id: 9, fase: 'Fase 3 — Fechamento', titulo: 'Backlog', arquivo: '../produto/backlog-roadmap.html',
       fonte: ['Cronograma de Desenvolvimento - SAACI.pdf'],
-      pergunta: 'Conferir se o que ficou fora do MVP (nó 5) ainda bate com o cronograma original.',
+      pergunta: 'Revisado e fechado via /saaci-revisar: item 6 alinhado à visão de produto (a expansão depende do formulário de cada coordenação), caminho da expansão mantido só aqui, exemplo de estágio limitado ao que a Lei 11.788/2008 prevê e texto revisado. O conflito com o cronograma original deixou de ser registrado por decisão da equipe.',
       dependeDe: [5], comando: '/saaci-revisar documentacao/produto/backlog-roadmap.html'
     },
     {

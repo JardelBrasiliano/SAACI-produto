@@ -1,7 +1,7 @@
 # SAACI — Racional do Roadmap
 
 > [SAACI](../../index.html) › [Documentação](../README.md) › Roadmap
-> Última atualização: 24/09/2026
+> Última atualização: 04/10/2026
 
 Fonte de verdade para **por que** cada marco existe, sua métrica e o que destrava o próximo.
 A lista de tarefas executáveis vive em [`roadmap.html`](./roadmap.html). As duas coisas não
@@ -19,10 +19,6 @@ core do MVP, módulos complementares, painel de acompanhamento) segue, em essên
 de fases descrita em `../produto/escopo-mvp.html` e `../produto/requisitos.html`. Detalhe de
 calendário e de quem executa cada fase não é registrado aqui. O roadmap deste repositório é
 por meta, não por data ou por pessoa.
-
-> "Validação pela coordenação", presente no planejamento original de uma das fases, é o item
-> que conflita com o escopo fechado do MVP (só aluno). Conflito já registrado em
-> `../produto/backlog-roadmap.html`, seção 5.
 
 ## Horizonte
 
@@ -58,9 +54,8 @@ revisão humana até este ponto; a trilha existe para isso. Ver `roadmap.html`, 
 lista de atividades, dependências e o comando de cada uma.
 
 **Revisão contínua, fora do critério de destrave:** `roadmap.html` também lista itens de
-completude que não bloqueiam o Marco 0 nem nenhum outro marco — hoje só
-`../produto/pesquisa-mercado.html`, fechado com alguns campos da coleta original ainda
-marcados para revisão.
+completude que não bloqueiam o Marco 0 nem nenhum outro marco. Hoje não há item em aberto:
+`../produto/pesquisa-mercado.html` foi fechada e revisada em 10/10/2026.
 
 ### Marco 1: MVP
 
@@ -80,8 +75,7 @@ sem RF hoje. Ver `../produto/backlog-roadmap.html`, seção 1.
 ### Marcos futuros (candidatos, não comprometidos)
 
 Estágio, cardápio do RU colaborativo, grade curricular com feedback por IA, perfil de
-coordenação/validação institucional, expansão do curso-piloto das regras de cálculo (9 cursos
-da pesquisa → campus Fortaleza → todos os campi do IFCE), intenção de adoção institucional
+coordenação/validação institucional, expansão do curso-piloto das regras de cálculo, intenção de adoção institucional
 pelo IFCE. Todos documentados com racional em `../produto/backlog-roadmap.html`. Nenhum tem
 critério de destrave definido; não presumir prioridade entre eles até serem discutidos.
 

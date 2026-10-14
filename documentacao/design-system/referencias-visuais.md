@@ -14,7 +14,7 @@ referência real, ou até a primeira tela em `../fluxos/` tornar necessário dec
 
 ## O que já sabemos por dedução, não por referência visual direta
 
-A pesquisa de mercado (`../produto/visao-produto.html`) aponta o que **evitar**: interface
+A pesquisa de mercado (`../produto/pesquisa-mercado.html`) aponta o que **evitar**: interface
 densa como SIGAA/SUAP, "peso de ERP". E aponta o que **mirar**: a UX de serviço do Sou UFPR,
 um app de serviços com foco no cotidiano do aluno, mesmo sem nenhum fluxo acadêmico equivalente
 ao do SAACI. Isso é direção de princípio, não referência visual concreta.

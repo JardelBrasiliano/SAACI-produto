@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SAACI — Regras de Atividades Complementares: Engenharia de Computação</title>
+<link rel="stylesheet" href="../../shared/base.css">
+</head>
+<body>
+
+<nav class="crumbs"><a href="../../index.html">SAACI</a> › <a href="../README.md">Documentação</a> › Produto</nav>
+<h1>SAACI — Regras de Atividades Complementares: Engenharia de Computação</h1>
+<div class="subtitle">Conversão, limites e entrega do pedido no curso-piloto</div>
+<div class="atualizado">Última atualização: 04/10/2026</div>
+<nav class="siblings">
+  <a href="visao-produto.html">Visão de Produto</a>
+  <a href="escopo-mvp.html">Escopo do MVP</a>
+  <a href="requisitos.html">Requisitos</a>
+  <a href="backlog-roadmap.html">Backlog</a>
+  <span class="atual">Regras: Eng. de Computação</span>
+  <a href="pesquisa-questionario.html">Pesquisa com Alunos</a>
+  <a href="pesquisa-mercado.html">Pesquisa de Mercado</a>
+</nav>
+
+<div class="box">
+<strong>Fonte de verdade para:</strong> regras de conversão e limite das atividades
+complementares de Engenharia de Computação, a relação entre o formulário de solicitação e o PPC,
+e como o aluno entrega o pedido à coordenação. Base do RF14, RF15, RF32 e RF37 em
+<code>requisitos.html</code>.
+</div>
+
+<h2>1. Fonte</h2>
+<ul>
+<li><strong>Formulário para Solicitação de Atividades Complementares</strong>, Coordenação do
+  Curso de Engenharia de Computação, IFCE campus Fortaleza, matriz curricular 6759. Traz a
+  conversão e o limite de cada item. Não tem data nem versão. Arquivo mantido fora deste
+  repositório.</li>
+<li><strong>PPC do Bacharelado em Engenharia de Computação</strong>, julho de 2017, seção 1.1.7.
+  Só fixa o total (120 HA, 6 créditos) e lista 14 tipos de atividade, sem conversão nem
+  limite.</li>
+</ul>
+<p>O formulário é a fonte das regras. O PPC é a fonte do total. Quando os dois divergem
+(seção 5), vale o formulário.</p>
+<p><strong>Unidade das horas:</strong> hora-aula (HA), como no PPC. As "horas" do formulário
+equivalem à HA do PPC.</p>
+
+<h2>2. Regras gerais</h2>
+<ul>
+<li>O aluno cumpre <strong>120 HA</strong> de atividades complementares, comprovadas por
+  certificados e declarações.</li>
+<li>Só contam atividades feitas <strong>depois do ingresso</strong> no curso (o RF11 registra o
+  semestre de início, e o RF38 avisa quando o certificado é anterior a ele).</li>
+<li>Cada item tem um limite máximo (coluna "Máx."), que vale para a soma de todos os
+  certificados daquele item. Exemplo: dois programas de iniciação científica somam no máximo
+  80 HA. O que passar do limite do item não é aproveitado.</li>
+<li>O que passar do total de 120 HA não é aproveitado.</li>
+<li><strong>Arredondamento:</strong> segue o RF14 (<code>requisitos.html</code>). O formulário
+  não define arredondamento.</li>
+<li>Em cada certificado ou declaração, o aluno identifica o <strong>número do item</strong> da
+  tabela a que ele se refere.</li>
+</ul>
+
+<h2>3. Tabela de itens</h2>
+<p>Cada item da tabela é uma <strong>categoria</strong> na tela do aluno (ver verbete Categoria
+em <code>.claude/references/glossario.md</code>).</p>
+<p>Tipos de regra: <strong>razão</strong> (horas do certificado que viram horas computadas),
+<strong>fixo</strong> (valor por unidade: período letivo, disciplina, certificação, evento,
+projeto, palestra ou dia de evento), <strong>página</strong> (horas por página) e
+<strong>fator</strong> (base multiplicada pelo fator da Tabela I, com ajuste por autoria).
+Regras de razão e de página são proporcionais: 15 páginas no item 16 contam 4,5 HA.</p>
+
+<table>
+<tr><th>Item</th><th>Atividade</th><th>Regra</th><th>Tipo</th><th>Máx. (HA)</th></tr>
+<tr><td>1</td><td>Programa de iniciação científica ou tecnológica</td><td>40h a cada período letivo</td><td>fixo</td><td>80</td></tr>
+<tr><td>2</td><td>Programa de iniciação à docência</td><td>40h a cada período letivo</td><td>fixo</td><td>80</td></tr>
+<tr><td>3</td><td>Programa de monitoria</td><td>40h para cada disciplina como monitor</td><td>fixo</td><td>80</td></tr>
+<tr><td>4</td><td>Projeto de pesquisa ou extensão</td><td>30h por projeto por período letivo. Não pode ser o mesmo projeto em que o aluno fez iniciação científica ou tecnológica (item 1)</td><td>fixo</td><td>60</td></tr>
+<tr><td>5</td><td>Atividades artístico-culturais e/ou esportivas</td><td>1h para cada 2h de atividade</td><td>razão</td><td>60</td></tr>
+<tr><td>6</td><td>Curso de línguas</td><td>1h para cada 4h de curso</td><td>razão</td><td>60</td></tr>
+<tr><td>7</td><td>Curso na área de engenharia de computação</td><td>1h para cada 4h de curso</td><td>razão</td><td>60</td></tr>
+<tr><td>8</td><td>Curso fora da área de engenharia de computação</td><td>1h para cada 6h de curso</td><td>razão</td><td>40</td></tr>
+<tr><td>9</td><td>Ministrar curso na área de engenharia da computação</td><td>2h para cada 1h de curso</td><td>razão</td><td>60</td></tr>
+<tr><td>10</td><td>Certificação técnica</td><td>30h para cada certificação</td><td>fixo</td><td>60</td></tr>
+<tr><td>11</td><td>Organização de eventos técnicos e/ou científicos na área do curso</td><td>20h por evento</td><td>fixo</td><td>40</td></tr>
+<tr><td>12</td><td>Participação em eventos técnicos e/ou científicos na área do curso</td><td>4h por dia de evento</td><td>fixo</td><td>40</td></tr>
+<tr><td>13</td><td>Participação como ouvinte em palestras relacionadas com a área do curso (as palestras não devem ser parte de eventos)</td><td>2h por palestra</td><td>fixo</td><td>30</td></tr>
+<tr><td>14</td><td>Participação como palestrante em palestras relacionadas com a área do curso</td><td>8h por palestra</td><td>fixo</td><td>30</td></tr>
+<tr><td>15</td><td>Projeto social extracurricular (fora da disciplina de Projeto Social)</td><td>15h por projeto</td><td>fixo</td><td>30</td></tr>
+<tr><td>16</td><td>Produção técnica com relatório (*)</td><td>3h para cada 10 páginas</td><td>página</td><td>30</td></tr>
+<tr><td>17</td><td>Apresentação de pôster em evento nacional (*)</td><td>4h × fator da Tabela I</td><td>fator</td><td>30</td></tr>
+<tr><td>18</td><td>Apresentação de pôster em evento internacional (*)</td><td>5h × fator da Tabela I</td><td>fator</td><td>40</td></tr>
+<tr><td>19</td><td>Publicação de resumo em evento nacional (*)</td><td>5h × fator da Tabela I</td><td>fator</td><td>40</td></tr>
+<tr><td>20</td><td>Publicação de resumo em evento internacional (*)</td><td>6h × fator da Tabela I</td><td>fator</td><td>40</td></tr>
+<tr><td>21</td><td>Publicação de artigo em evento nacional (*)</td><td>6h × fator da Tabela I</td><td>fator</td><td>80</td></tr>
+<tr><td>22</td><td>Publicação de artigo em evento internacional (*)</td><td>7h × fator da Tabela I</td><td>fator</td><td>80</td></tr>
+<tr><td>23</td><td>Publicação de artigo em periódico técnico e/ou científico nacional (*)</td><td>7h × fator da Tabela I</td><td>fator</td><td>80</td></tr>
+<tr><td>24</td><td>Publicação de artigo em periódico técnico e/ou científico internacional (*)</td><td>8h × fator da Tabela I</td><td>fator</td><td>80</td></tr>
+</table>
+<p>(*) Carga horária completa se 1º autor, metade se 2º autor e 1/3 para os demais autores.</p>
+
+<h3>Tabela I: fator por classificação Qualis na área de Ciência da Computação</h3>
+<table>
+<tr><th>Qualis</th><th>Fator</th><th>Qualis</th><th>Fator</th></tr>
+<tr><td>Sem Qualis</td><td>1</td><td>B2</td><td>6</td></tr>
+<tr><td>C</td><td>2</td><td>B1</td><td>7</td></tr>
+<tr><td>B5</td><td>3</td><td>A2</td><td>8</td></tr>
+<tr><td>B4</td><td>4</td><td>A1</td><td>9</td></tr>
+<tr><td>B3</td><td>5</td><td></td><td></td></tr>
+</table>
+
+<h2>4. O que isso exige do produto</h2>
+<p>Estes pontos saem direto da tabela e valem para o RF14, o RF15 e a tela de registro.</p>
+<ul>
+<li>O registro pede dados diferentes conforme o item: quantidade de períodos letivos, de
+  disciplinas, de dias, de páginas, posição de autoria e classificação Qualis. Uma tela só com
+  "horas do certificado" não cobre a tabela.</li>
+<li>Há quatro tipos de regra (razão, fixo, página, fator). A parametrização do RNF21 precisa
+  representar os quatro.</li>
+<li>Duas regras cruzam itens. O total de 120 HA vale sobre a soma de todos os itens. E o item 4
+  não pode ser o mesmo projeto do item 1: ao registrar no item 4, o sistema avisa o aluno, que
+  decide se continua, sabendo que a coordenação pode invalidar a atividade.</li>
+<li>Palestra que faz parte de evento não entra no item 13. Ela conta pelo item 12, por dia de
+  evento. A tela do RF32 precisa deixar isso visível ao aluno que escolhe o item 13.</li>
+<li>O ajuste de 1/3 por autoria gera dízima (7h × 1/3 = 2,333...h). O valor computado segue o
+  arredondamento do RF14.</li>
+<li>Só a soma dos máximos já passa muito de 120 HA. O aviso de limite (tese do produto) precisa
+  distinguir o limite do item do limite do total.</li>
+</ul>
+
+<h2>5. Divergências entre formulário e PPC</h2>
+<ul>
+<li>10 itens do formulário não estão na lista do PPC: 7, 8, 9, 14, 15, 17, 18, 19, 20 e 22.</li>
+<li>O PPC cita "publicação de artigo em evento de iniciação científica", que não existe no
+  formulário.</li>
+<li>O PPC não separa artigo em periódico nacional e internacional. O formulário separa (itens 23
+  e 24).</li>
+</ul>
+<p>Em todos esses casos vale o formulário (seção 1).</p>
+
+<h2>6. Versão do formulário</h2>
+<p>O formulário não tem data nem versão. O SAACI aplica uma única versão das regras por curso:
+quando a regra muda, todos os registros são recalculados com a regra nova. Guardar a versão da
+regra em cada registro está no backlog (<code>backlog-roadmap.html</code>, seção 8).</p>
+
+<h2>7. Entrega do pedido à coordenação</h2>
+<p>Base do passo a passo do RF37. Fonte: relato de alunos do curso (set.–out. 2026). Não está
+escrito no formulário nem no PPC.</p>
+<p>Nos dois caminhos o aluno precisa do formulário preenchido e dos certificados. O formulário
+não precisa de assinatura: basta preencher os campos Aluno e Matrícula e a coluna "CH
+Solicitada" de cada item. Não existe envio direto à coordenação.</p>
+<ol>
+<li><strong>Processo no SEI.</strong> O aluno abre o processo de solicitação, e as seções do
+  próprio processo pedem o formulário preenchido e os certificados.</li>
+<li><strong>Protocolo na recepção.</strong> O aluno abre um protocolo presencialmente. O setor de
+  protocolo informa o e-mail para onde o aluno envia o formulário preenchido e os
+  certificados.</li>
+</ol>
+
+<div class="meta">Documento por curso. Outro curso ganha o próprio arquivo de regras quando o
+formulário dele for obtido (ver <code>backlog-roadmap.html</code>, seção 6).</div>
+
+</body>
+</html>
