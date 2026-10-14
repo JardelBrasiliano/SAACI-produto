@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SAACI — Referências Visuais</title>
+<link rel="stylesheet" href="../../shared/base.css">
+</head>
+<body>
+
+<nav class="crumbs"><a href="../../index.html">SAACI</a> › <a href="../README.md">Documentação</a> › Design System</nav>
+<h1>SAACI — Referências Visuais</h1>
+<div class="subtitle">Produtos e telas que inspiram, e o que o SAACI evita</div>
+<div class="atualizado">Última atualização: 14/10/2026</div>
+<nav class="siblings">
+  <a href="principios-ui.html">Princípios de UI</a>
+  <a href="escrita-de-interface.html">Escrita de Interface</a>
+  <a href="estados-e-casos-de-borda.html">Estados e Casos de Borda</a>
+  <a href="tokens-visuais.html">Tokens Visuais</a>
+  <span class="atual">Referências Visuais</span>
+</nav>
+
+<div class="box">
+<strong>Fonte de verdade para:</strong> as referências e anti-referências de interface do
+SAACI. Das referências se aproveita estrutura, hierarquia e clareza. Cor e tipografia vêm de
+<a href="tokens-visuais.html">Tokens Visuais</a>. As regras que o SAACI adota a partir delas
+estão em <a href="principios-ui.html">Princípios de UI</a> e em
+<a href="estados-e-casos-de-borda.html">Estados e Casos de Borda</a>. Sistemas acadêmicos
+densos, como SIGAA e SUAP, são o contraponto geral e estão analisados em
+<a href="../produto/pesquisa-mercado.html">Pesquisa de Mercado</a>.
+</div>
+
+<h2>1. Referências</h2>
+
+<h3>1.1 Cartão de categoria com limite e estado vazio</h3>
+<p>Screensdesign,
+<a href="https://screensdesign.com/articles/budget-app-dashboard-design/">Budget app dashboard design</a>
+(artigo sobre apps de orçamento).</p>
+<ul>
+<li><strong>Padrão:</strong> o Budget app mostra um cartão por categoria com valor mensal, gasto
+real e percentual. O EveryDollar mostra planejado, gasto e restante. O SubPilot, num painel sem
+transações, explica qual fonte falta e oferece conectar a conta.</li>
+<li><strong>O que inspira:</strong> o cartão por categoria com limite e percentual é o modelo
+mais próximo do painel de progresso. O painel vazio que diz o que falta e oferece a ação é o
+modelo do primeiro acesso do aluno.</li>
+<li><strong>Limite:</strong> são apps de dinheiro, em que chegar ao limite é ruim. No SAACI,
+preencher a categoria é bom, e o verde significa "ainda cabe".</li>
+</ul>
+
+<h3>1.2 Mensagem de erro e resumo de erros</h3>
+<p>GOV.UK Design System,
+<a href="https://design-system.service.gov.uk/components/error-message">Error message</a> e
+<a href="https://design-system.service.gov.uk/components/error-summary">Error summary</a>.</p>
+<ul>
+<li><strong>Padrão:</strong> a mensagem fica em vermelho depois da pergunta e da dica, com uma
+borda vermelha que a liga à pergunta e ao campo. Explica o que deu errado e como corrigir, e
+não limpa os campos já preenchidos. O resumo fica no topo da página, com o título "Há um
+problema" (no original, "There is a problem") e um link por erro que leva ao campo. O foco do
+teclado vai para o resumo, que aparece mesmo quando há um erro só.</li>
+<li><strong>O que inspira:</strong> erro com próximo passo. No registro de atividade, um aviso
+de limite da categoria pode levar direto ao campo que resolve.</li>
+<li><strong>Limite:</strong> os exemplos são em inglês e não tratam de regra de negócio.</li>
+</ul>
+
+<h3>1.3 Upload de comprovante</h3>
+<p>Design System do governo da Escócia,
+<a href="https://designsystem.gov.scot/components/file-upload">File upload</a>.</p>
+<ul>
+<li><strong>Padrão:</strong> o nome do arquivo escolhido aparece acima do botão, no lugar do
+texto "nenhum arquivo". Cada falha tem a própria mensagem: sem arquivo, arquivo grande demais,
+arquivo vazio, falha de envio, tipo errado, vírus e arquivo protegido por senha. A página
+orienta incluir um texto com os requisitos, como os tipos de arquivo aceitos, e cita recibo e
+comprovante de identidade como usos.</li>
+<li><strong>O que inspira:</strong> os requisitos do arquivo aparecem antes do envio, e cada
+falha de upload diz o motivo.</li>
+<li><strong>Limite:</strong> a página não define tamanhos nem formatos. Os do SAACI estão em
+<a href="estados-e-casos-de-borda.html">Estados e Casos de Borda</a>.</li>
+</ul>
+
+<h2>2. Anti-referências</h2>
+
+<h3>2.1 Placeholder no lugar do rótulo</h3>
+<p>Nielsen Norman Group,
+<a href="https://www.nngroup.com/articles/form-design-placeholders/">Placeholders in form fields</a>.</p>
+<p>O texto do placeholder some quando a pessoa começa a digitar, e sem rótulos visíveis não dá
+para passar o olho no formulário antes do envio. Quem tem limitação cognitiva ou motora fica
+mais sobrecarregado. A solução que o artigo recomenda é o rótulo claro e visível, fora do campo
+vazio. A regra do SAACI está no Princípio 1 de
+<a href="principios-ui.html">Princípios de UI</a>.</p>
+
+<h3>2.2 Padrões enganosos</h3>
+<p><a href="https://www.deceptive.design/">Deceptive Design</a>, catálogo de 18 padrões.</p>
+<p>Cinco batem com o risco do SAACI: <em>Sneaking</em> (informação relevante escondida ou
+adiada), <em>Obstruction</em>, <em>Trick wording</em> (linguagem enganosa),
+<em>Preselection</em> e <em>Visual interference</em>. O que o SAACI faz no lugar está em
+<a href="estados-e-casos-de-borda.html">Estados e Casos de Borda</a>: avisa o limite antes do
+envio e nunca pré-seleciona item.</p>
+
+<h3>2.3 Mensagem genérica de erro</h3>
+<p>A página do GOV.UK
+<a href="https://design-system.service.gov.uk/components/error-message">Error message</a>
+manda evitar "An error occurred", "Answer the question", "Select an option", "Fill in the
+field" e "This field is required", além de termos como "valid", "invalid", "please", "sorry",
+"oops", "forbidden" e "you forgot". A lista serve de teste de redação para o SAACI. As regras
+de escrita estão em <a href="escrita-de-interface.html">Escrita de Interface</a>.</p>
+
+<h2>3. Lacuna</h2>
+<p>Nenhuma referência cobre progresso por categoria com limite em que chegar ao limite é o
+objetivo. O painel do SAACI parte do cartão de categoria da seção 1.1 e dos
+<a href="principios-ui.html">Princípios de UI</a>.</p>
+
+<div class="meta">Documento vivo. Nova referência entra aqui com link e a nota do que especificamente ela inspira.</div>
+
+</body>
+</html>

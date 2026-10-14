@@ -1,20 +1,20 @@
 {
   "pasta": "roadmap",
   "descricao": "Racional de negócio e checklist executável do roadmap do SAACI",
-  "atualizado": "2026-10-13",
+  "atualizado": "2026-10-14",
   "documentos": [
     {
       "arquivo": "README.md",
       "titulo": "Racional do Roadmap",
       "status": "fechado",
-      "resumo": "Roadmap por meta, não por data, sem data fixa em nenhum marco. Horizonte pós-MVP (OSS público). Marco 0 (9 revisões de documento; Referências Visuais fica fora do critério); Marco 1 (MVP); Marco 2 (sugestões de eventos); revisão contínua não bloqueante (hoje: referencias-visuais.md) fora do critério de destrave.",
+      "resumo": "Roadmap por meta, não por data, sem data fixa em nenhum marco. Horizonte pós-MVP (OSS público). Marco 0 (9 revisões de documento; Referências Visuais, nó 4, fechada fora do critério); Marco 1 (MVP); Marco 2 (sugestões de eventos); revisão contínua não bloqueante (hoje sem item em aberto) fora do critério de destrave.",
       "ids": []
     },
     {
       "arquivo": "roadmap.html",
       "titulo": "Roadmap (checklist)",
       "status": "ferramenta",
-      "resumo": "Checklist interativo com localStorage, um marco por seção. Marco 0 tem 9 nós de revisão que fecham o marco (1, 2, 3 e 5 a 10), mais o nó 4 (Referências Visuais), bloqueado e fora do critério, e o nó 0 de introdução. O nó 8 (Requisitos) também cobre a revisão de regras-engenharia-computacao.html. Marcos 1 e 2 ainda sem tarefas. Seção extra 'Revisão contínua' lista itens não bloqueantes (hoje: referencias-visuais.md). Não é 'fechado' no sentido de decisão validada. É ferramenta funcional, mantida em HTML por natureza.",
+      "resumo": "Checklist interativo com localStorage, um marco por seção. Marco 0 tem 9 nós de revisão que fecham o marco (1, 2, 3 e 5 a 10), mais o nó 4 (Referências Visuais), fechado e fora do critério, e o nó 0 de introdução. O nó 8 (Requisitos) também cobre a revisão de regras-engenharia-computacao.html. Marcos 1 e 2 ainda sem tarefas. Seção extra 'Revisão contínua' lista itens não bloqueantes (hoje sem item em aberto). Não é 'fechado' no sentido de decisão validada. É ferramenta funcional, mantida em HTML por natureza.",
       "ids": []
     }
   ]

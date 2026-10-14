@@ -56,7 +56,7 @@ só a pasta: o arquivo troca de `.md` para `.html` quando fecha, e quem sabe o n
 | Princípio de UI (ex.: orientação embutida) | `documentacao/design-system/principios-ui.html` |
 | Texto de interface, microcopy | `documentacao/design-system/escrita-de-interface.html` + `.claude/references/glossario.md` |
 | Estado vazio, erro, texto longo, campo obrigatório | `documentacao/design-system/estados-e-casos-de-borda.html` |
-| Referência visual, inspiração | `documentacao/design-system/` (ver `_indice.json`, doc referencias-visuais; hoje vazio) |
+| Referência visual, inspiração | `documentacao/design-system/` (ver `_indice.json`, doc referencias-visuais) |
 | Tela ou fluxo de um módulo específico | `documentacao/fluxos/<modulo>.html` (se existir) |
 | Objetivo de negócio, métrica, critério de destrave de marco | `documentacao/roadmap/README.md` |
 | Lista de tarefas do marco atual | `documentacao/roadmap/roadmap.html` |
