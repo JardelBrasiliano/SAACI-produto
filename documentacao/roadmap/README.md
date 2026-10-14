@@ -1,7 +1,7 @@
 # SAACI — Racional do Roadmap
 
 > [SAACI](../../index.html) › [Documentação](../README.md) › Roadmap
-> Última atualização: 04/10/2026
+> Última atualização: 13/10/2026
 
 Fonte de verdade para **por que** cada marco existe, sua métrica e o que destrava o próximo.
 A lista de tarefas executáveis vive em [`roadmap.html`](./roadmap.html). As duas coisas não
@@ -47,21 +47,24 @@ commitlint). Detalhe completo em `../../CONTRIBUTING.md`.
 
 **Objetivo:** ter documentação viva, roadmap e ferramental de processo prontos para começar a
 planejar tarefas de verdade.
-**Critério de destrave:** as 11 atividades da trilha de revisão em `roadmap.html` concluídas —
-cada documento de produto, marca e design system criado no bootstrap revisado pelo usuário,
-com rascunhos (`.md`) promovidos a fechados (`.html`). Nenhum desses documentos passou por
+**Critério de destrave:** as 9 revisões de documento da trilha em `roadmap.html` concluídas —
+cada documento de produto, marca e design system criado no bootstrap revisado pelo usuário
+e fechado em `.html`. A exceção é `referencias-visuais.md`, que segue rascunho até chegar material
+real. Nenhum desses documentos passou por
 revisão humana até este ponto; a trilha existe para isso. Ver `roadmap.html`, Marco 0, para a
 lista de atividades, dependências e o comando de cada uma.
 
 **Revisão contínua, fora do critério de destrave:** `roadmap.html` também lista itens de
-completude que não bloqueiam o Marco 0 nem nenhum outro marco. Hoje não há item em aberto:
-`../produto/pesquisa-mercado.html` foi fechada e revisada em 10/10/2026.
+completude que não bloqueiam o Marco 0 nem nenhum outro marco. Hoje o item em aberto é
+`../design-system/referencias-visuais.md` (nó 4), vazio até chegar uma referência real, e por
+isso fora das 9 revisões. `../produto/pesquisa-mercado.html` foi fechada e revisada em
+10/10/2026.
 
 ### Marco 1: MVP
 
 **Objetivo:** MVP funcionando (cadastro, login institucional, recuperação de senha, perfil,
 registro de horas com comprovante, cálculo automático parametrizado por curso, painel de
-progresso; ver `../produto/escopo-mvp.html`) pronto para uso real.
+progresso e demais módulos do escopo; ver `../produto/escopo-mvp.html`) pronto para uso real.
 **Critério de destrave:** a definir quando o Marco 0 estiver fechado e o repositório de
 desenvolvimento existir. Não é decisão de produto, é decisão técnica que ainda não tem onde
 morar.
